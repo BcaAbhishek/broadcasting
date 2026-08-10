@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX, Users } from "lucide-react";
+import { Volume2, VolumeX, Users, AlertTriangle, X } from "lucide-react";
 
 // Point this at your running server (see server/README).
 const SERVER_URL = "https://broadcasting-github-io.onrender.com";
@@ -44,6 +44,7 @@ export default function BroadcastingRadioPlayer() {
   const [listeners, setListeners] = useState(0);
   const [nowPlaying, setNowPlaying] = useState(null);
   const [displayElapsed, setDisplayElapsed] = useState(0);
+  const [showNotice, setShowNotice] = useState(true);
   const currentTrackIdRef = useRef(null);
   const pendingSyncRef = useRef(null); // latest sync msg, applied once the player is ready
 
@@ -204,6 +205,39 @@ export default function BroadcastingRadioPlayer() {
           white-space: nowrap;
         }
 
+        .dsr-notice {
+          position: absolute;
+          top: clamp(10px, 2.5vw, 18px);
+          left: clamp(10px, 2.5vw, 18px);
+          right: clamp(10px, 2.5vw, 18px);
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          padding: clamp(8px, 2vw, 10px) clamp(10px, 2.5vw, 13px);
+          border-radius: 12px;
+          background: rgba(28,16,8,0.72);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(232,161,58,0.35);
+          color: rgba(255,246,232,0.92);
+          font-size: clamp(10.5px, 2.6vw, 12px);
+          line-height: 1.4;
+          z-index: 5;
+        }
+        .dsr-notice-close {
+          border: none;
+          background: rgba(255,255,255,0.1);
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex-shrink: 0;
+          margin-left: auto;
+        }
+
         .dsr-pill {
           position: absolute;
           left: clamp(10px, 2.5vw, 18px);
@@ -279,7 +313,25 @@ export default function BroadcastingRadioPlayer() {
         </>
       )}
 
-      <div className="dsr-badge">
+      {showNotice && (
+        <div className="dsr-notice">
+          <AlertTriangle size={15} strokeWidth={2.25} style={{ flexShrink: 0, marginTop: 1, color: "#e8a13a" }} />
+          <span>
+            Heads up — a few tracks may glitch out and play with no sound.
+            If that happens, just wait for the next song, or refresh the page —
+            your listening picks back up right where the broadcast is.
+          </span>
+          <button
+            className="dsr-notice-close"
+            aria-label="Dismiss notice"
+            onClick={() => setShowNotice(false)}
+          >
+            <X size={12} color="#fbf3e6" />
+          </button>
+        </div>
+      )}
+
+      <div className="dsr-badge" style={{ top: showNotice ? "auto" : undefined, bottom: showNotice ? "calc(clamp(10px, 2.5vw, 18px) + 78px)" : "auto" }}>
         <span
           style={{
             width: 7,
