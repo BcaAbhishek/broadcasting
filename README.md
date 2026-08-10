@@ -17,7 +17,4 @@ https://broadcasting-github-io.vercel.app/
 
 
 ```text
-screenshots/
-├── home.png
-├── player.png
-└── mobile.png
+
