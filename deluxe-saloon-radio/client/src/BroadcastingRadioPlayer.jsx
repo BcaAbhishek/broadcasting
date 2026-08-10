@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX, Users } from "lucide-react";
 
 // Point this at your running server (see server/README).
-const SERVER_URL = "http://localhost:8787";
+const SERVER_URL = "https://broadcasting-github-io.onrender.com";
 const WS_URL = SERVER_URL.replace(/^http/, "ws");
 
 function formatTime(s) {
