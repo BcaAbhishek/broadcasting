@@ -176,7 +176,7 @@ export default function BroadcastingRadioPlayer() {
           .dsr-root { aspect-ratio: 3 / 4; border-radius: 16px; }
         }
         @media (min-width: 1300px) {
-          .dsr-root { max-width: 960px; aspect-ratio: 16 / 12; }
+          .dsr-root { max-width: 960px; }
         }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes drift1 { 0% { transform: translate(0,0); opacity:0; } 15% { opacity:0.5; } 100% { transform: translate(30px,-90px); opacity:0; } }
