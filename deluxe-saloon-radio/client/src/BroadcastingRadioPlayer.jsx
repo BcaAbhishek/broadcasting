@@ -163,7 +163,7 @@ export default function BroadcastingRadioPlayer() {
         .dsr-root {
           font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
           width: 100%;
-          max-width: 720px;
+          max-width: 880px;
           margin: 0 auto;
           position: relative;
           border-radius: clamp(14px, 3vw, 22px);
@@ -174,6 +174,9 @@ export default function BroadcastingRadioPlayer() {
         }
         @media (max-width: 480px) {
           .dsr-root { aspect-ratio: 3 / 4; border-radius: 16px; }
+        }
+        @media (min-width: 1300px) {
+          .dsr-root { max-width: 960px; aspect-ratio: 16 / 12; }
         }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes drift1 { 0% { transform: translate(0,0); opacity:0; } 15% { opacity:0.5; } 100% { transform: translate(30px,-90px); opacity:0; } }
@@ -200,7 +203,7 @@ export default function BroadcastingRadioPlayer() {
           background: rgba(15,8,3,0.42);
           backdrop-filter: blur(6px);
           color: rgba(255,246,232,0.92);
-          font-size: clamp(10.5px, 2.6vw, 12px);
+          font-size: clamp(10.5px, 1.4vw, 14px);
           font-weight: 500;
           white-space: nowrap;
         }
@@ -213,14 +216,14 @@ export default function BroadcastingRadioPlayer() {
           display: flex;
           align-items: flex-start;
           gap: 8px;
-          padding: clamp(8px, 2vw, 10px) clamp(10px, 2.5vw, 13px);
+          padding: clamp(8px, 1.4vw, 13px) clamp(10px, 1.6vw, 16px);
           border-radius: 12px;
           background: rgba(28,16,8,0.72);
           backdrop-filter: blur(6px);
           border: 1px solid rgba(232,161,58,0.35);
           color: rgba(255,246,232,0.92);
-          font-size: clamp(10.5px, 2.6vw, 12px);
-          line-height: 1.4;
+          font-size: clamp(10.5px, 1.4vw, 14px);
+          line-height: 1.5;
           z-index: 5;
         }
         .dsr-notice-close {
@@ -248,16 +251,16 @@ export default function BroadcastingRadioPlayer() {
           backdrop-filter: blur(14px);
           -webkit-backdrop-filter: blur(14px);
           border: 1px solid rgba(255,255,255,0.08);
-          padding: clamp(7px, 1.8vw, 10px) clamp(10px, 2.5vw, 16px) clamp(7px, 1.8vw, 10px) clamp(6px, 1.5vw, 10px);
+          padding: clamp(7px, 1.4vw, 15px) clamp(10px, 1.8vw, 22px) clamp(7px, 1.4vw, 15px) clamp(6px, 1.2vw, 14px);
           display: flex;
           align-items: center;
-          gap: clamp(8px, 2vw, 12px);
+          gap: clamp(8px, 1.4vw, 16px);
           transition: opacity 0.4s ease;
         }
 
         .dsr-album {
-          width: clamp(42px, 11vw, 52px);
-          height: clamp(42px, 11vw, 52px);
+          width: clamp(42px, 6vw, 72px);
+          height: clamp(42px, 6vw, 72px);
           border-radius: 50%;
           flex-shrink: 0;
           display: flex;
@@ -266,13 +269,13 @@ export default function BroadcastingRadioPlayer() {
           box-shadow: 0 2px 8px rgba(0,0,0,0.35);
         }
 
-        .dsr-title { margin: 0; color: #fbf3e6; font-size: clamp(12.5px, 3.4vw, 15px); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .dsr-artist { margin: 1px 0 0; color: rgba(251,243,230,0.62); font-size: clamp(10.5px, 2.9vw, 12.5px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .dsr-time { font-size: clamp(9.5px, 2.4vw, 10.5px); color: rgba(251,243,230,0.55); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .dsr-title { margin: 0; color: #fbf3e6; font-size: clamp(12.5px, 1.8vw, 20px); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .dsr-artist { margin: 1px 0 0; color: rgba(251,243,230,0.62); font-size: clamp(10.5px, 1.4vw, 15px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .dsr-time { font-size: clamp(9.5px, 1.1vw, 13px); color: rgba(251,243,230,0.55); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
         .dsr-icon-btn {
-          width: clamp(30px, 8vw, 34px);
-          height: clamp(30px, 8vw, 34px);
+          width: clamp(30px, 4.5vw, 42px);
+          height: clamp(30px, 4.5vw, 42px);
           min-width: 30px;
           min-height: 30px;
           border-radius: 50%;
@@ -286,8 +289,8 @@ export default function BroadcastingRadioPlayer() {
         }
 
         .dsr-join-circle {
-          width: clamp(52px, 14vw, 68px);
-          height: clamp(52px, 14vw, 68px);
+          width: clamp(52px, 8vw, 92px);
+          height: clamp(52px, 8vw, 92px);
           border-radius: 50%;
           background: #fbf3e6;
           display: flex;
@@ -295,8 +298,8 @@ export default function BroadcastingRadioPlayer() {
           justify-content: center;
           box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
-        .dsr-join-title { margin: 0; color: #fbf3e6; font-size: clamp(13px, 3.6vw, 15px); font-weight: 600; text-align: center; padding: 0 12px; }
-        .dsr-join-sub { margin: 0; color: rgba(251,243,230,0.65); font-size: clamp(11px, 2.9vw, 12.5px); }
+        .dsr-join-title { margin: 0; color: #fbf3e6; font-size: clamp(13px, 2vw, 20px); font-weight: 600; text-align: center; padding: 0 12px; }
+        .dsr-join-sub { margin: 0; color: rgba(251,243,230,0.65); font-size: clamp(11px, 1.5vw, 16px); }
       `}</style>
       {/* Hidden YouTube player — audio only, no visible video frame */}
       <div style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}>
