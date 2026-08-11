@@ -6,44 +6,72 @@ import { readFileSync, existsSync } from "fs";
 import path from "path";
 
 const PORT = process.env.PORT || 8787;
-const PLAYLIST_PATH = path.join(process.cwd(), "playlist.json");
+const DATA_PATH = path.join(process.cwd(), "playlists.json");
 
-if (!existsSync(PLAYLIST_PATH)) {
+if (!existsSync(DATA_PATH)) {
   console.error(
-    "playlist.json not found. Set YOUTUBE_API_KEY and YOUTUBE_PLAYLIST_ID in .env, then run `npm run build-playlist`"
+    "playlists.json not found. Set YOUTUBE_API_KEY and either YOUTUBE_PLAYLIST_ID " +
+    "or YOUTUBE_SCHEDULE in .env, then run `npm run build-playlist`"
   );
   process.exit(1);
 }
 
-const playlist = JSON.parse(readFileSync(PLAYLIST_PATH, "utf-8"));
-const TOTAL_DURATION = playlist.reduce((sum, t) => sum + t.duration, 0);
+const data = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
+const { timezone, schedule, fallbackPlaylistId, playlists } = data;
 
-if (TOTAL_DURATION <= 0) {
-  console.error("Playlist has zero total duration. Check playlist.json.");
-  process.exit(1);
+for (const [id, tracks] of Object.entries(playlists)) {
+  if (!tracks || tracks.length === 0) {
+    console.error(`Playlist ${id} has no tracks. Check playlists.json.`);
+    process.exit(1);
+  }
+}
+
+// Which playlist ID is "on air" right now, based on the configured
+// schedule and timezone. Falls back to fallbackPlaylistId outside any
+// scheduled window (or if no schedule is configured at all).
+function getActivePlaylistId(nowMs = Date.now()) {
+  if (!schedule || schedule.length === 0) return fallbackPlaylistId;
+
+  const hour = Number(
+    new Intl.DateTimeFormat("en-US", { hour: "numeric", hour12: false, timeZone: timezone }).format(nowMs)
+  ) % 24;
+
+  for (const slot of schedule) {
+    const { start, end, playlistId } = slot;
+    const inRange = start < end
+      ? hour >= start && hour < end // normal same-day window, e.g. 6-9
+      : hour >= start || hour < end; // wraps past midnight, e.g. 22-6
+    if (inRange) return playlistId;
+  }
+  return fallbackPlaylistId;
 }
 
 // Deterministic "what's playing right now" — a pure function of wall-clock
 // time, so every server instance and every client agree without needing to
-// share any state. The playlist loops forever.
+// share any state. Whichever playlist is scheduled for this hour loops on
+// its own independent clock.
 function getPlaybackState(nowMs = Date.now()) {
-  let t = (nowMs / 1000) % TOTAL_DURATION;
-  for (let i = 0; i < playlist.length; i++) {
-    const track = playlist[i];
+  const activePlaylistId = getActivePlaylistId(nowMs);
+  const tracks = playlists[activePlaylistId];
+  const totalDuration = tracks.reduce((sum, t) => sum + t.duration, 0);
+
+  let t = (nowMs / 1000) % totalDuration;
+  for (let i = 0; i < tracks.length; i++) {
+    const track = tracks[i];
     if (t < track.duration) {
-      return { trackIndex: i, track, offset: t };
+      return { playlistId: activePlaylistId, trackIndex: i, track, offset: t };
     }
     t -= track.duration;
   }
-  // floating point edge case — fall back to first track
-  return { trackIndex: 0, track: playlist[0], offset: 0 };
+  return { playlistId: activePlaylistId, trackIndex: 0, track: tracks[0], offset: 0 };
 }
 
 const app = express();
 app.use(cors());
 
 app.get("/api/playlist", (req, res) => {
-  res.json(playlist.map(({ id, title, artist, duration, cover }) => ({
+  const state = getPlaybackState();
+  res.json(playlists[state.playlistId].map(({ id, title, artist, duration, cover }) => ({
     id,
     title,
     artist,
@@ -52,9 +80,10 @@ app.get("/api/playlist", (req, res) => {
   })));
 });
 
-app.get("/api/now-playing", (req, res) => {
+function syncPayload() {
   const state = getPlaybackState();
-  res.json({
+  return {
+    playlistId: state.playlistId,
     trackIndex: state.trackIndex,
     track: {
       id: state.track.id,
@@ -65,65 +94,60 @@ app.get("/api/now-playing", (req, res) => {
     },
     offset: state.offset,
     serverTime: Date.now(),
-    listeners: wss ? wss.clients.size : 0,
+  };
+}
+
+app.get("/api/now-playing", (req, res) => {
+  res.json({ ...syncPayload(), listeners: wss ? wss.clients.size : 0 });
+});
+
+app.get("/api/schedule", (req, res) => {
+  const stripTrack = ({ title, artist, duration }) => ({ title, artist, duration });
+  res.json({
+    timezone,
+    schedule: (schedule || []).map((slot) => ({
+      start: slot.start,
+      end: slot.end,
+      playlistId: slot.playlistId,
+      tracks: (playlists[slot.playlistId] || []).map(stripTrack),
+    })),
+    fallback: fallbackPlaylistId
+      ? {
+          playlistId: fallbackPlaylistId,
+          tracks: (playlists[fallbackPlaylistId] || []).map(stripTrack),
+        }
+      : null,
   });
 });
+
 
 const httpServer = createServer(app);
 const wss = new WebSocketServer({ server: httpServer });
 
 function broadcastSync() {
-  const state = getPlaybackState();
-  const payload = JSON.stringify({
-    type: "sync",
-    trackIndex: state.trackIndex,
-    track: {
-      id: state.track.id,
-      title: state.track.title,
-      artist: state.track.artist,
-      duration: state.track.duration,
-      cover: state.track.cover,
-    },
-    offset: state.offset,
-    serverTime: Date.now(),
-    listeners: wss.clients.size,
-  });
+  const payload = JSON.stringify({ type: "sync", ...syncPayload(), listeners: wss.clients.size });
   for (const client of wss.clients) {
     if (client.readyState === client.OPEN) client.send(payload);
   }
 }
 
-let lastTrackIndex = getPlaybackState().trackIndex;
+let lastKey = `${getPlaybackState().playlistId}:${getPlaybackState().trackIndex}`;
 
 // Broadcast a correction every 5s (drift correction), and immediately
-// whenever the track changes (checked every second).
+// whenever the track (or the active playlist, at a schedule boundary)
+// changes — checked every second.
 setInterval(broadcastSync, 5000);
 setInterval(() => {
   const state = getPlaybackState();
-  if (state.trackIndex !== lastTrackIndex) {
-    lastTrackIndex = state.trackIndex;
+  const key = `${state.playlistId}:${state.trackIndex}`;
+  if (key !== lastKey) {
+    lastKey = key;
     broadcastSync();
   }
 }, 1000);
 
 wss.on("connection", (ws) => {
-  const state = getPlaybackState();
-  ws.send(
-    JSON.stringify({
-      type: "sync",
-      trackIndex: state.trackIndex,
-      track: {
-        id: state.track.id,
-        title: state.track.title,
-        artist: state.track.artist,
-        duration: state.track.duration,
-        cover: state.track.cover,
-      },
-      offset: state.offset,
-      serverTime: Date.now(),
-      listeners: wss.clients.size,
-    })
-  );
+  ws.send(JSON.stringify({ type: "sync", ...syncPayload(), listeners: wss.clients.size }));
   // let everyone know the listener count changed
   broadcastSync();
 
@@ -132,5 +156,11 @@ wss.on("connection", (ws) => {
 
 httpServer.listen(PORT, () => {
   console.log(`Broadcasting Radio server running on http://localhost:${PORT}`);
-  console.log(`${playlist.length} tracks loaded, total duration ${TOTAL_DURATION}s`);
+  if (schedule && schedule.length > 0) {
+    console.log(`Schedule active (${timezone}):`);
+    for (const s of schedule) console.log(`  ${s.start}:00–${s.end}:00 -> ${s.playlistId}`);
+    if (fallbackPlaylistId) console.log(`  outside schedule -> ${fallbackPlaylistId} (fallback)`);
+  } else {
+    console.log(`Single playlist: ${fallbackPlaylistId}`);
+  }
 });
