@@ -127,6 +127,40 @@ export default function BroadcastingRadioPlayer() {
     return () => clearInterval(id);
   }, [nowPlaying]);
 
+  // Media Session API — shows lock-screen / notification media controls
+  // (title, artist, cover art) and tells the OS this is active media,
+  // which helps background playback survive on Android and desktop.
+  // Note: this can't override iOS Safari's background-suspension of
+  // third-party iframe audio — that's an OS-level restriction.
+  useEffect(() => {
+    if (!("mediaSession" in navigator) || !nowPlaying) return;
+    const t = nowPlaying.track;
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: t.title,
+      artist: t.artist,
+      artwork: t.cover ? [{ src: t.cover, sizes: "512x512", type: "image/jpeg" }] : [],
+    });
+    navigator.mediaSession.playbackState = joined ? "playing" : "none";
+
+    navigator.mediaSession.setActionHandler("play", () => {
+      if (!joined) handleJoin();
+      else {
+        playerRef.current?.unMute?.();
+        setMuted(false);
+      }
+    });
+    navigator.mediaSession.setActionHandler("pause", () => {
+      playerRef.current?.mute?.();
+      setMuted(true);
+    });
+
+    return () => {
+      navigator.mediaSession.setActionHandler("play", null);
+      navigator.mediaSession.setActionHandler("pause", null);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [nowPlaying, joined]);
+    
   const handleJoin = () => {
     const player = playerRef.current;
     if (!player || !nowPlaying || !playerReadyRef.current) return;
