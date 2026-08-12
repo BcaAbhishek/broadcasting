@@ -23,15 +23,27 @@ if (!API_KEY) {
 }
 
 // "6-9:PLaaa,9-16:PLbbb,16-18:PLccc" -> [{start:6,end:9,playlistId:"PLaaa"}, ...]
+// "6-9:PLxxxx:90s Songs,9-16:PLyyyy:Latest Bollywood" -> [{start, end, playlistId, label}, ...]
+// The label is optional — "6-9:PLxxxx" (no label) still works fine.
 function parseSchedule(raw) {
   if (!raw) return [];
   return raw.split(",").map((entry) => {
-    const [range, playlistId] = entry.trim().split(":");
+    const trimmed = entry.trim();
+    const firstColon = trimmed.indexOf(":");
+    if (firstColon === -1) {
+      throw new Error(`Bad YOUTUBE_SCHEDULE entry: "${entry}". Expected format like "6-9:PLxxxx" or "6-9:PLxxxx:90s Songs".`);
+    }
+    const range = trimmed.slice(0, firstColon);
+    const rest = trimmed.slice(firstColon + 1);
+    const secondColon = rest.indexOf(":");
+    const playlistId = (secondColon === -1 ? rest : rest.slice(0, secondColon)).trim();
+    const label = secondColon === -1 ? null : rest.slice(secondColon + 1).trim() || null;
+
     const [start, end] = range.split("-").map(Number);
     if (Number.isNaN(start) || Number.isNaN(end) || !playlistId) {
-      throw new Error(`Bad YOUTUBE_SCHEDULE entry: "${entry}". Expected format like "6-9:PLxxxx".`);
+      throw new Error(`Bad YOUTUBE_SCHEDULE entry: "${entry}". Expected format like "6-9:PLxxxx" or "6-9:PLxxxx:90s Songs".`);
     }
-    return { start, end, playlistId: playlistId.trim() };
+    return { start, end, playlistId, label };
   });
 }
 
@@ -97,7 +109,12 @@ async function fetchVideoDetails(ids) {
 
 async function buildOnePlaylist(playlistId) {
   console.log(`Fetching playlist ${playlistId}…`);
-  const videoIds = await fetchAllPlaylistVideoIds(playlistId);
+  const rawVideoIds = await fetchAllPlaylistVideoIds(playlistId);
+  const videoIds = [...new Set(rawVideoIds)]; // drop duplicate entries in the same playlist
+  const duplicateCount = rawVideoIds.length - videoIds.length;
+  if (duplicateCount > 0) {
+    console.log(`  Skipped ${duplicateCount} duplicate track(s) already in this playlist.`);
+  }
 
   if (videoIds.length === 0) {
     throw new Error(`Playlist ${playlistId} is empty (or private/unlisted in a way the API can't read).`);
@@ -150,7 +167,7 @@ async function run() {
   if (schedule.length > 0) {
     console.log("Schedule (times are in " + TIMEZONE + "):");
     for (const s of schedule) {
-      console.log(`  ${s.start}:00–${s.end}:00 -> ${s.playlistId} (${playlists[s.playlistId].length} tracks)`);
+      console.log(`  ${s.start}:00–${s.end}:00${s.label ? ` (${s.label})` : ""} -> ${s.playlistId} (${playlists[s.playlistId].length} tracks)`);
     }
     if (output.fallbackPlaylistId) {
       console.log(`  outside schedule -> ${output.fallbackPlaylistId} (fallback)`);

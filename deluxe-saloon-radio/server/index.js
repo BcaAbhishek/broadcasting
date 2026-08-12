@@ -108,12 +108,13 @@ app.get("/api/now-playing", (req, res) => {
 });
 
 app.get("/api/schedule", (req, res) => {
-  const stripTrack = ({ title, artist, duration }) => ({ title, artist, duration });
+  const stripTrack = ({ id, title, artist, duration }) => ({ id, title, artist, duration });
   res.json({
     timezone,
     schedule: (schedule || []).map((slot) => ({
       start: slot.start,
       end: slot.end,
+      label: slot.label || null,
       playlistId: slot.playlistId,
       tracks: (playlists[slot.playlistId] || []).map(stripTrack),
     })),
