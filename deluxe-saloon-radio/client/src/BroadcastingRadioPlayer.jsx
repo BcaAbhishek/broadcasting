@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX, Users, AlertTriangle, X } from "lucide-react";
+import { Volume2, VolumeX, Users, AlertTriangle, X, Share2, Check, WifiOff, SkipForward } from "lucide-react";
 
 // Point this at your running server (see server/README).
 const SERVER_URL = "https://broadcasting-github-io.onrender.com";
@@ -97,22 +97,45 @@ export default function BroadcastingRadioPlayer() {
   }
 
   useEffect(() => {
-    const ws = new WebSocket(WS_URL);
-    wsRef.current = ws;
+    let stopped = false;
+    let reconnectDelay = 1000;
+    let reconnectTimer = null;
 
-    ws.onopen = () => setConnected(true);
-    ws.onclose = () => setConnected(false);
+    function connect() {
+      const ws = new WebSocket(WS_URL);
+      wsRef.current = ws;
 
-    ws.onmessage = (event) => {
-      const msg = JSON.parse(event.data);
-      if (msg.type !== "sync") return;
+      ws.onopen = () => {
+        setConnected(true);
+        reconnectDelay = 1000; // reset backoff on a successful connection
+      };
 
-      setListeners(msg.listeners);
-      setNowPlaying(msg);
-      applySync(msg);
+      ws.onclose = () => {
+        setConnected(false);
+        if (stopped) return;
+        reconnectTimer = setTimeout(connect, reconnectDelay);
+        reconnectDelay = Math.min(reconnectDelay * 1.6, 15000); // back off, cap at 15s
+      };
+
+      ws.onerror = () => ws.close();
+
+      ws.onmessage = (event) => {
+        const msg = JSON.parse(event.data);
+        if (msg.type !== "sync") return;
+
+        setListeners(msg.listeners);
+        setNowPlaying(msg);
+        applySync(msg);
+      };
+    }
+
+    connect();
+
+    return () => {
+      stopped = true;
+      clearTimeout(reconnectTimer);
+      wsRef.current?.close();
     };
-
-    return () => ws.close();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [joined]);
 
@@ -159,8 +182,54 @@ export default function BroadcastingRadioPlayer() {
       navigator.mediaSession.setActionHandler("pause", null);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [nowPlaying, joined]);
-    
+  }, [nowPlaying, joined]);
+
+  // Dynamic tab title — shows what's playing so the tab is easy to find
+  // among others, and reverts once you navigate away.
+  useEffect(() => {
+    const track = nowPlaying?.track;
+    document.title = track ? `♪ ${track.title} — Broadcasting Radio` : "Broadcasting Radio";
+    return () => {
+      document.title = "Broadcasting Radio";
+    };
+  }, [nowPlaying]);
+
+  // Only show the "connection lost" banner after a short grace period,
+  // so a brief reconnect blip doesn't flash an alarming message.
+  const [showOffline, setShowOffline] = useState(false);
+  useEffect(() => {
+    if (connected) {
+      setShowOffline(false);
+      return;
+    }
+    const id = setTimeout(() => setShowOffline(true), 3000);
+    return () => clearTimeout(id);
+  }, [connected]);
+
+  const [shareCopied, setShareCopied] = useState(false);
+  const handleShare = async () => {
+    const shareData = {
+      title: "Broadcasting Radio",
+      text: nowPlaying?.track ? `Listening to "${nowPlaying.track.title}" on Broadcasting Radio — tune in live:` : "Tune in to Broadcasting Radio, live:",
+      url: window.location.href,
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // user cancelled the share sheet — no-op
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    } catch {
+      // clipboard unavailable — nothing more we can do silently
+    }
+  };
+
   const handleJoin = () => {
     const player = playerRef.current;
     if (!player || !nowPlaying || !playerReadyRef.current) return;
@@ -185,6 +254,7 @@ export default function BroadcastingRadioPlayer() {
   };
 
   const track = nowPlaying?.track;
+  const nextTrack = nowPlaying?.nextTrack;
   const progressPct = track ? (displayElapsed / track.duration) * 100 : 0;
 
   return (
@@ -225,10 +295,23 @@ export default function BroadcastingRadioPlayer() {
         .dsr-eq span:nth-child(2){ animation: eqB 0.9s ease-in-out infinite 0.15s; }
         .dsr-eq span:nth-child(3){ animation: eqC 0.9s ease-in-out infinite 0.3s; }
 
-        .dsr-badge {
+        .dsr-top-stack {
           position: absolute;
           top: clamp(10px, 2.5vw, 18px);
+          left: clamp(10px, 2.5vw, 18px);
           right: clamp(10px, 2.5vw, 18px);
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          z-index: 5;
+        }
+
+        .dsr-badge-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .dsr-badge {
           display: flex;
           align-items: center;
           gap: 6px;
@@ -240,13 +323,36 @@ export default function BroadcastingRadioPlayer() {
           font-size: clamp(10.5px, 1.4vw, 14px);
           font-weight: 500;
           white-space: nowrap;
+          margin-left: auto;
+        }
+        .dsr-share-btn {
+          width: clamp(26px, 3.4vw, 32px);
+          height: clamp(26px, 3.4vw, 32px);
+          border-radius: 50%;
+          border: none;
+          background: rgba(15,8,3,0.42);
+          backdrop-filter: blur(6px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex-shrink: 0;
+        }
+
+        .dsr-offline {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: clamp(8px, 1.4vw, 13px) clamp(10px, 1.6vw, 16px);
+          border-radius: 12px;
+          background: rgba(58,20,14,0.75);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(220,110,90,0.4);
+          color: #fbf3e6;
+          font-size: clamp(10.5px, 1.4vw, 14px);
         }
 
         .dsr-notice {
-          position: absolute;
-          top: clamp(10px, 2.5vw, 18px);
-          left: clamp(10px, 2.5vw, 18px);
-          right: clamp(10px, 2.5vw, 18px);
           display: flex;
           align-items: flex-start;
           gap: 8px;
@@ -258,7 +364,6 @@ export default function BroadcastingRadioPlayer() {
           color: rgba(255,246,232,0.92);
           font-size: clamp(10.5px, 1.4vw, 14px);
           line-height: 1.5;
-          z-index: 5;
         }
         .dsr-notice-close {
           border: none;
@@ -275,11 +380,38 @@ export default function BroadcastingRadioPlayer() {
           margin-left: auto;
         }
 
-        .dsr-pill {
+        .dsr-bottom-stack {
           position: absolute;
           left: clamp(10px, 2.5vw, 18px);
           right: clamp(10px, 2.5vw, 18px);
           bottom: clamp(10px, 2.5vw, 18px);
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+
+        .dsr-nextup {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          align-self: flex-start;
+          max-width: 100%;
+          padding: 4px clamp(9px, 1.6vw, 12px);
+          border-radius: 999px;
+          background: rgba(15,8,3,0.42);
+          backdrop-filter: blur(6px);
+          color: rgba(251,243,230,0.75);
+          font-size: clamp(9.5px, 1.1vw, 12px);
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .dsr-nextup span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .dsr-pill {
           border-radius: 999px;
           background: linear-gradient(90deg, rgba(24,13,6,0.85) 0%, rgba(42,20,8,0.75) 100%);
           backdrop-filter: blur(14px);
@@ -350,37 +482,51 @@ export default function BroadcastingRadioPlayer() {
         </>
       )}
 
-      {showNotice && (
-        <div className="dsr-notice">
-          <AlertTriangle size={15} strokeWidth={2.25} style={{ flexShrink: 0, marginTop: 1, color: "#e8a13a" }} />
-          <span>
-            Heads up — a few tracks may glitch out and play with no sound.
-            If that happens, just wait for the next song, or refresh the page —
-            your listening picks back up right where the broadcast is.
-          </span>
-          <button
-            className="dsr-notice-close"
-            aria-label="Dismiss notice"
-            onClick={() => setShowNotice(false)}
-          >
-            <X size={12} color="#fbf3e6" />
+      <div className="dsr-top-stack">
+        <div className="dsr-badge-row">
+          <div className="dsr-badge">
+            <span
+              style={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                background: connected ? "#7ed858" : "#8a5a5a",
+                animation: connected ? "pulseGlow 2s ease-out infinite" : "none",
+                flexShrink: 0,
+              }}
+            />
+            <Users size={13} strokeWidth={2.25} style={{ flexShrink: 0 }} />
+            <span>{listeners} listening</span>
+          </div>
+          <button className="dsr-share-btn" onClick={handleShare} aria-label="Share">
+            {shareCopied ? <Check size={14} color="#7ed858" /> : <Share2 size={14} color="#fbf3e6" />}
           </button>
         </div>
-      )}
 
-      <div className="dsr-badge" style={{ top: showNotice ? "auto" : undefined, bottom: showNotice ? "calc(clamp(10px, 2.5vw, 18px) + 78px)" : "auto" }}>
-        <span
-          style={{
-            width: 7,
-            height: 7,
-            borderRadius: "50%",
-            background: connected ? "#7ed858" : "#8a5a5a",
-            animation: connected ? "pulseGlow 2s ease-out infinite" : "none",
-            flexShrink: 0,
-          }}
-        />
-        <Users size={13} strokeWidth={2.25} style={{ flexShrink: 0 }} />
-        <span>{listeners} listening</span>
+        {showOffline && (
+          <div className="dsr-offline">
+            <WifiOff size={14} strokeWidth={2.25} style={{ flexShrink: 0, color: "#e88a72" }} />
+            <span>Connection lost — reconnecting…</span>
+          </div>
+        )}
+
+        {showNotice && (
+          <div className="dsr-notice">
+            <AlertTriangle size={15} strokeWidth={2.25} style={{ flexShrink: 0, marginTop: 1, color: "#e8a13a" }} />
+            <span>
+              Heads up — a few tracks may glitch out and play with no sound.
+              If that happens, just wait for the next song, or refresh the page —
+              your listening picks back up right where the broadcast is.
+            </span>
+            <button
+              className="dsr-notice-close"
+              aria-label="Dismiss notice"
+              onClick={() => setShowNotice(false)}
+            >
+              <X size={12} color="#fbf3e6" />
+            </button>
+          </div>
+        )}
       </div>
 
       {!joined && track && (
@@ -417,49 +563,58 @@ export default function BroadcastingRadioPlayer() {
         </div>
       )}
 
-      <div className="dsr-pill" style={{ opacity: joined ? 1 : 0.5 }}>
-        <AlbumArt cover={track?.cover || null} spinning={joined} />
-
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <div style={{ minWidth: 0, flex: 1 }}>
-              <p className="dsr-title">{track ? track.title : "Loading…"}</p>
-              <p className="dsr-artist">{track ? track.artist : ""}</p>
-            </div>
-
-            {joined && (
-              <div className="dsr-eq" style={{ display: "flex", alignItems: "flex-end", gap: 2, height: 14, marginRight: 2, flexShrink: 0 }}>
-                <span style={{ height: 4 }} />
-                <span style={{ height: 10 }} />
-                <span style={{ height: 6 }} />
-              </div>
-            )}
-
-            {joined && (
-              <button onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"} className="dsr-icon-btn">
-                {muted ? <VolumeX size={15} color="#fbf3e6" /> : <Volume2 size={15} color="#fbf3e6" />}
-              </button>
-            )}
+      <div className="dsr-bottom-stack">
+        {track && nextTrack && (
+          <div className="dsr-nextup">
+            <SkipForward size={11} strokeWidth={2.25} style={{ flexShrink: 0, color: "#e8a13a" }} />
+            <span>Up next: {nextTrack.title} — {nextTrack.artist}</span>
           </div>
+        )}
 
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 7 }}>
-            <div style={{ flex: 1, height: 4, borderRadius: 999, background: "rgba(255,255,255,0.16)", position: "relative" }}>
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: `${progressPct}%`,
-                  borderRadius: 999,
-                  background: "#e8a13a",
-                  transition: "width 0.9s linear",
-                }}
-              />
+        <div className="dsr-pill" style={{ opacity: joined ? 1 : 0.5 }}>
+          <AlbumArt cover={track?.cover || null} spinning={joined} />
+
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <p className="dsr-title">{track ? track.title : "Loading…"}</p>
+                <p className="dsr-artist">{track ? track.artist : ""}</p>
+              </div>
+
+              {joined && (
+                <div className="dsr-eq" style={{ display: "flex", alignItems: "flex-end", gap: 2, height: 14, marginRight: 2, flexShrink: 0 }}>
+                  <span style={{ height: 4 }} />
+                  <span style={{ height: 10 }} />
+                  <span style={{ height: 6 }} />
+                </div>
+              )}
+
+              {joined && (
+                <button onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"} className="dsr-icon-btn">
+                  {muted ? <VolumeX size={15} color="#fbf3e6" /> : <Volume2 size={15} color="#fbf3e6" />}
+                </button>
+              )}
             </div>
-            <span className="dsr-time" style={{ minWidth: 60, textAlign: "right" }}>
-              {track ? `${formatTime(displayElapsed)} / ${formatTime(track.duration)}` : "0:00 / 0:00"}
-            </span>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 7 }}>
+              <div style={{ flex: 1, height: 4, borderRadius: 999, background: "rgba(255,255,255,0.16)", position: "relative" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    bottom: 0,
+                    width: `${progressPct}%`,
+                    borderRadius: 999,
+                    background: "#e8a13a",
+                    transition: "width 0.9s linear",
+                  }}
+                />
+              </div>
+              <span className="dsr-time" style={{ minWidth: 60, textAlign: "right" }}>
+                {track ? `${formatTime(displayElapsed)} / ${formatTime(track.duration)}` : "0:00 / 0:00"}
+              </span>
+            </div>
           </div>
         </div>
       </div>
