@@ -82,6 +82,8 @@ app.get("/api/playlist", (req, res) => {
 
 function syncPayload() {
   const state = getPlaybackState();
+  const tracks = playlists[state.playlistId];
+  const nextTrack = tracks[(state.trackIndex + 1) % tracks.length];
   return {
     playlistId: state.playlistId,
     trackIndex: state.trackIndex,
@@ -91,6 +93,10 @@ function syncPayload() {
       artist: state.track.artist,
       duration: state.track.duration,
       cover: state.track.cover,
+    },
+    nextTrack: {
+      title: nextTrack.title,
+      artist: nextTrack.artist,
     },
     offset: state.offset,
     serverTime: Date.now(),
