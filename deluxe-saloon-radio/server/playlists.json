@@ -1,0 +1,3261 @@
+{
+  "timezone": "Asia/Kolkata",
+  "schedule": [
+    {
+      "start": 6,
+      "end": 14,
+      "playlistId": "PLQeubVHFkz3U",
+      "label": "90s Songs"
+    },
+    {
+      "start": 12,
+      "end": 18,
+      "playlistId": "PLOO6hotaxcvE",
+      "label": "Latest Bollywood"
+    },
+    {
+      "start": 18,
+      "end": 0,
+      "playlistId": "PLRviTFa2HgVA",
+      "label": "Old is Gold Songs"
+    }
+  ],
+  "fallbackPlaylistId": "PLXbutJfFlwLI",
+  "playlists": {
+    "PLQeubVHFkz3U": [
+      {
+        "id": "N0jnLZxYwYc",
+        "title": "Mujhse Mohabbat Ka Izhaar (HD)| Hum Hain Rahi Pyar Ke (1993)| Aamir Khan| Juhi Chawla| Romantic Song",
+        "artist": "Shemaroo Filmi Gaane",
+        "duration": 304,
+        "cover": "https://i.ytimg.com/vi/N0jnLZxYwYc/hqdefault.jpg"
+      },
+      {
+        "id": "3NWMK2MRqIk",
+        "title": "Tumsa Koi Pyaara | Khuddar | Govinda, Karisma Kapoor | Kumar Sanu, Alka Yagnik |Anu Malik, 90s Hits",
+        "artist": "Tips Official",
+        "duration": 376,
+        "cover": "https://i.ytimg.com/vi/3NWMK2MRqIk/hqdefault.jpg"
+      },
+      {
+        "id": "bga_0ziOOfQ",
+        "title": "Woh Meri Neend Mera Chain Lyrical - Hum Hain Rahi Pyar Ke | Aamir Khan, Juhi Chawla | Sadhana Sargam",
+        "artist": "Tips Official",
+        "duration": 297,
+        "cover": "https://i.ytimg.com/vi/bga_0ziOOfQ/hqdefault.jpg"
+      },
+      {
+        "id": "oFxbBeYhLqM",
+        "title": "Saaton Janam Main Tere Full Lyrical |Video Song | Dilwale | Ajay Devgan, Raveena Tandon | Kumar Sanu",
+        "artist": "Ishtar Music",
+        "duration": 362,
+        "cover": "https://i.ytimg.com/vi/oFxbBeYhLqM/hqdefault.jpg"
+      },
+      {
+        "id": "nNhv8A_rJTg",
+        "title": "Oye Raju Pyar Na Kariyo Lyrical Video |Hadh Kar Di Aapne|Anand Bakshi|Anand Raj Anand|Govinda,Rani M",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 353,
+        "cover": "https://i.ytimg.com/vi/nNhv8A_rJTg/hqdefault.jpg"
+      },
+      {
+        "id": "d3lZvNexPL0",
+        "title": "Bahut Pyar Karte Hain (Male) [Full Song] (HQ) W/ Lyrics + English Translation - Saajan",
+        "artist": "thebollysongs8",
+        "duration": 185,
+        "cover": "https://i.ytimg.com/vi/d3lZvNexPL0/hqdefault.jpg"
+      },
+      {
+        "id": "CTuvMubzXpU",
+        "title": "Jeeta Tha Jiske Liye Full Lyrical Video Song | Dilwale | Ajay Devgan, Raveena Tandon |",
+        "artist": "Ishtar Music",
+        "duration": 482,
+        "cover": "https://i.ytimg.com/vi/CTuvMubzXpU/hqdefault.jpg"
+      },
+      {
+        "id": "i1IsLVz6T9Q",
+        "title": "Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana",
+        "artist": "Chintan Ramola",
+        "duration": 179,
+        "cover": "https://i.ytimg.com/vi/i1IsLVz6T9Q/hqdefault.jpg"
+      },
+      {
+        "id": "5y_TCKNzAMI",
+        "title": "Tumse Milne Ko Dil Karta Hai ❤️🎶 | Phool Aur Kaante | Ajay Devgn & Madhoo | Kumar Sanu, Alka Yagnik",
+        "artist": "Zee Music Classic",
+        "duration": 279,
+        "cover": "https://i.ytimg.com/vi/5y_TCKNzAMI/hqdefault.jpg"
+      },
+      {
+        "id": "fBylcT-TWZw",
+        "title": "\"Bas Ek Sanam Chahiye Aashiqui Ke Liye\" Lyrical Video | Aashiqui | Kumar Sanu | Rahul R, Anu Agarwal",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 371,
+        "cover": "https://i.ytimg.com/vi/fBylcT-TWZw/hqdefault.jpg"
+      },
+      {
+        "id": "CTNgz5gb3D8",
+        "title": "TU PYAR HAI KISI AUR KA ( Singers, Babla Mehta & Anuradha Paudwal )",
+        "artist": "Swati Channel",
+        "duration": 406,
+        "cover": "https://i.ytimg.com/vi/CTNgz5gb3D8/hqdefault.jpg"
+      },
+      {
+        "id": "lFdSi01tpYM",
+        "title": "Sochenge Tumhe Pyar- Lyrical | #Deewana | #RishiKapoor, Divya Bharti | 90's Best Song",
+        "artist": "Ishtar Music",
+        "duration": 390,
+        "cover": "https://i.ytimg.com/vi/lFdSi01tpYM/hqdefault.jpg"
+      },
+      {
+        "id": "dDR4oiyjUBA",
+        "title": "Raah Mein Unse Mulaqat - Lyrical | Ajay Devgn, Tabu | Kumar Sanu, Alka Yagnik |Vijaypath | Anu Malik",
+        "artist": "Tips Official",
+        "duration": 456,
+        "cover": "https://i.ytimg.com/vi/dDR4oiyjUBA/hqdefault.jpg"
+      },
+      {
+        "id": "otQmzlm-s7Q",
+        "title": "Main Duniya Bhula Doonga - Lyrical Video Song || Aashiqui | Kumar Sanu | Rahul Roy, Anu Agarwal",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/otQmzlm-s7Q/hqdefault.jpg"
+      },
+      {
+        "id": "tPNwGuu_rQ4",
+        "title": "Lyrical: Tumhein Apna Banane Ki Kasam | Sadak | Kumar Sanu,Anuradha Paudwal |Sanjay Dutt,Pooja Bhatt",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 337,
+        "cover": "https://i.ytimg.com/vi/tPNwGuu_rQ4/hqdefault.jpg"
+      },
+      {
+        "id": "2OsyNo53MzU",
+        "title": "Ustad Nusrat Fateh Ali Khan - Dulhe Ka Sehra Suhana in HD",
+        "artist": "tgdproduction10",
+        "duration": 516,
+        "cover": "https://i.ytimg.com/vi/2OsyNo53MzU/hqdefault.jpg"
+      },
+      {
+        "id": "-N-k56i7M2k",
+        "title": "Maine Pyaar Tumhi Se Kiya Hai Lyrical- Phool Aur Kaante | Ajay Devgn & Madhoo | Anuradha & Kumar",
+        "artist": "Tips Official",
+        "duration": 450,
+        "cover": "https://i.ytimg.com/vi/-N-k56i7M2k/hqdefault.jpg"
+      },
+      {
+        "id": "rXHY4Cv9cA8",
+        "title": "Ab Tere Bin Jee Lenge Hum Lyrical Video | Aashiqui | Kumar Sanu | Sameer | Anu Agarwal, Rahul Roy",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 346,
+        "cover": "https://i.ytimg.com/vi/rXHY4Cv9cA8/hqdefault.jpg"
+      },
+      {
+        "id": "qGOTe3KmCdY",
+        "title": "Kitna Haseen Chehra Full Lyrical Video Song | Dilwale | Ajay Devgan, Raveena Tandon | Kumar Sanu",
+        "artist": "Ishtar Music",
+        "duration": 365,
+        "cover": "https://i.ytimg.com/vi/qGOTe3KmCdY/hqdefault.jpg"
+      },
+      {
+        "id": "cGKBs7rokos",
+        "title": "Tujhko Na Dekhu Toh (Jaanwar) Sunidhi Chauhan, Udit Narayan",
+        "artist": "Sunidhi Songs",
+        "duration": 296,
+        "cover": "https://i.ytimg.com/vi/cGKBs7rokos/hqdefault.jpg"
+      },
+      {
+        "id": "BtdiNnrftYM",
+        "title": "Chand Tare Phool - 4K Video | Tum Se Achcha Kaun Hai | Nakul Kapoor | 90's Best Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 294,
+        "cover": "https://i.ytimg.com/vi/BtdiNnrftYM/hqdefault.jpg"
+      },
+      {
+        "id": "nRJ8vHpi6_g",
+        "title": "Tum Dil Ki Dhadkan Mein - VIDEO | Suniel Shetty | Dhadkan | Singer : Kumar Sanu | Romantic Song",
+        "artist": "Ishtar Music",
+        "duration": 334,
+        "cover": "https://i.ytimg.com/vi/nRJ8vHpi6_g/hqdefault.jpg"
+      },
+      {
+        "id": "xKx_80QM2LU",
+        "title": "Sab Kuchh Bhula Diya Lyrical Video | Hum Tumhare Hain Sanam | Sonu N,Sapna A|Shahrukh Khan,Madhuri D",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 473,
+        "cover": "https://i.ytimg.com/vi/xKx_80QM2LU/hqdefault.jpg"
+      },
+      {
+        "id": "zuPoUsdXrqM",
+        "title": "Dheere Dheere Pyar Ko Badhana Hai | Phool Aur Kaante | Kumar Sanu, Alka Yagnik | Ajay Devgn & Madhoo",
+        "artist": "Zee Music Classic",
+        "duration": 305,
+        "cover": "https://i.ytimg.com/vi/zuPoUsdXrqM/hqdefault.jpg"
+      },
+      {
+        "id": "wYdXuNtJkPk",
+        "title": "Jeeye To Jeeye Kaise -Lyrical | Saajan | Pankaj Udhas | Salman Khan & Madhuri | 90's Hindi Sad Songs",
+        "artist": "Ishtar Music",
+        "duration": 217,
+        "cover": "https://i.ytimg.com/vi/wYdXuNtJkPk/hqdefault.jpg"
+      },
+      {
+        "id": "wuLJtA0uJro",
+        "title": "Hum Lakh Chupaye Pyar Magar | 4K Video Song | Jaan Tere Naam - Kumar Sanu, Asha Bhosle",
+        "artist": "Ultra Bollywood",
+        "duration": 277,
+        "cover": "https://i.ytimg.com/vi/wuLJtA0uJro/hqdefault.jpg"
+      },
+      {
+        "id": "RjJxWRFfG3s",
+        "title": "Nahin Yeh Ho Nahin Sakta -Lyrical | Bobby Deol, Twinkle Khanna | Kumar Sanu, Sadhana Sargam| Barsaat",
+        "artist": "Tips Official",
+        "duration": 382,
+        "cover": "https://i.ytimg.com/vi/RjJxWRFfG3s/hqdefault.jpg"
+      },
+      {
+        "id": "wV8njoRVefQ",
+        "title": "Kitna Pyaara Tujhe Rabne Banaya | Raja Hindustani | Alka Yagnik, Udit Narayan | 90's Hits",
+        "artist": "Tips Official",
+        "duration": 267,
+        "cover": "https://i.ytimg.com/vi/wV8njoRVefQ/hqdefault.jpg"
+      },
+      {
+        "id": "4ImdbyqnH8w",
+        "title": "Hum Pyaar Hai Tumhare",
+        "artist": "Kumar Sanu - Topic",
+        "duration": 426,
+        "cover": "https://i.ytimg.com/vi/4ImdbyqnH8w/hqdefault.jpg"
+      },
+      {
+        "id": "htMvfOfixuM",
+        "title": "Ek Ladki Ko Dekha | एक लडकी को देखा | 1942 A love story | Kumar Sanu | Anil Kapoor | Manisha Koirala",
+        "artist": "Saregama Music",
+        "duration": 283,
+        "cover": "https://i.ytimg.com/vi/htMvfOfixuM/hqdefault.jpg"
+      },
+      {
+        "id": "5dWbn_qER3s",
+        "title": "Tere Dar Par Sanam - Male Version - Phir Teri Kahani Yaad Aayee | Kumar Sanu | Rahul Roy",
+        "artist": "Zee Music Classic",
+        "duration": 389,
+        "cover": "https://i.ytimg.com/vi/5dWbn_qER3s/hqdefault.jpg"
+      },
+      {
+        "id": "6Na7GSV9bVY",
+        "title": "Chura Ke Dil Mera - JHANKAR BEATS | | Akshay & Shilpa",
+        "artist": "Ishtar Music",
+        "duration": 449,
+        "cover": "https://i.ytimg.com/vi/6Na7GSV9bVY/hqdefault.jpg"
+      },
+      {
+        "id": "oEg_iXEWlt4",
+        "title": "Lyrical : Tu Meri Zindagi Hai | Aashiqui | Anuradha Paudwal, Kumar Sanu |Rahul Roy, Anu Agarwal",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 280,
+        "cover": "https://i.ytimg.com/vi/oEg_iXEWlt4/hqdefault.jpg"
+      },
+      {
+        "id": "QjqKXFGM3eI",
+        "title": "Chori Chori Dil Tera (HD) - Kumar Sanu Songs - Romantic Songs - 90's Love Song",
+        "artist": "Shemaroo Filmi Gaane",
+        "duration": 413,
+        "cover": "https://i.ytimg.com/vi/QjqKXFGM3eI/hqdefault.jpg"
+      },
+      {
+        "id": "Dz1Ad3cdtQA",
+        "title": "Ek Aisi Ladki Thi Jise Mai Pyar Karta Tha...      Kumar Sanu and Alka Yagnik ...  Nadeem Shravan.flv",
+        "artist": "Asim Ghulam",
+        "duration": 437,
+        "cover": "https://i.ytimg.com/vi/Dz1Ad3cdtQA/hqdefault.jpg"
+      },
+      {
+        "id": "G7AdjVDBLO8",
+        "title": "Achha Sila Diya Toone Mere Pyar Ka Full Video | Bewafa Sanam | Krishan Kumar, Shilpa S | Sonu Nigam",
+        "artist": "T-Series",
+        "duration": 312,
+        "cover": "https://i.ytimg.com/vi/G7AdjVDBLO8/hqdefault.jpg"
+      },
+      {
+        "id": "TgHYW8ubFko",
+        "title": "Tere Dard Se Dil (Jhankar Beats)",
+        "artist": "Kumar Sanu - Topic",
+        "duration": 282,
+        "cover": "https://i.ytimg.com/vi/TgHYW8ubFko/hqdefault.jpg"
+      },
+      {
+        "id": "uIOrAkrjwp4",
+        "title": "Hum Yaar Hai Tumhare | Alka Yagnik | Udit Narayan | Haan Maine Bhi Pyaar Kiya (2002)",
+        "artist": "Bollywood Sadabahar",
+        "duration": 431,
+        "cover": "https://i.ytimg.com/vi/uIOrAkrjwp4/hqdefault.jpg"
+      },
+      {
+        "id": "HoMSu1iw0Zw",
+        "title": "Aitbaar Nahi Karna - Abhijeet Bhattacharya | Qayamat | Best Hindi Song",
+        "artist": "Madhur Sangeet",
+        "duration": 325,
+        "cover": "https://i.ytimg.com/vi/HoMSu1iw0Zw/hqdefault.jpg"
+      },
+      {
+        "id": "WAgJ8KM5AVQ",
+        "title": "Dekha Hai Pehli Baar -| Saajan | Alka Yagnik Live Performance",
+        "artist": "Ashirbad Studio Official",
+        "duration": 103,
+        "cover": "https://i.ytimg.com/vi/WAgJ8KM5AVQ/hqdefault.jpg"
+      },
+      {
+        "id": "OgocnLh9P1M",
+        "title": "Aankh Hai Bhari Bhari (Male)  | Tum Se Achcha Kaun Hai | Ishtar Music #bollywood",
+        "artist": "Ishtar Music",
+        "duration": 456,
+        "cover": "https://i.ytimg.com/vi/OgocnLh9P1M/hqdefault.jpg"
+      },
+      {
+        "id": "Zi9UBJQMz3I",
+        "title": "Kya Karte They Sajna [Full Song] Phir Lehraya Lal Dupatta",
+        "artist": "T-Series",
+        "duration": 382,
+        "cover": "https://i.ytimg.com/vi/Zi9UBJQMz3I/hqdefault.jpg"
+      },
+      {
+        "id": "_dUAVM5ERXA",
+        "title": "देखने वालों ने क्या-क्या | Dekhne Waalon Ne | Chori Chori Chupke Chupke | Udit Narayan | Alka Yagnik",
+        "artist": "Shemaroo Filmi Gaane",
+        "duration": 274,
+        "cover": "https://i.ytimg.com/vi/_dUAVM5ERXA/hqdefault.jpg"
+      },
+      {
+        "id": "lRBIcaSV-Ns",
+        "title": "Tum To Thehre Pardesi | Altaf Raja | Hindi Album Songs | Video Jukebox - #RomanticSong",
+        "artist": "Ishtar Music",
+        "duration": 3230,
+        "cover": "https://i.ytimg.com/vi/lRBIcaSV-Ns/hqdefault.jpg"
+      },
+      {
+        "id": "9v2bq2JHt4I",
+        "title": "Chehra Kya Dekhte Ho - Kumar Sanu | Asha Bhosle | Romantic Song| Kumar Sanu Hits Songs",
+        "artist": "Madhur Sangeet",
+        "duration": 451,
+        "cover": "https://i.ytimg.com/vi/9v2bq2JHt4I/hqdefault.jpg"
+      },
+      {
+        "id": "Gg9ZUppafLo",
+        "title": "Too Shayar Hai Main Teri Shayari - Saajan Alka Yagnik.",
+        "artist": "IDeal Music",
+        "duration": 391,
+        "cover": "https://i.ytimg.com/vi/Gg9ZUppafLo/hqdefault.jpg"
+      },
+      {
+        "id": "w89fWEelFns",
+        "title": "Paas Woh Aane Lage | Main Khiladi Tu Anari | Kumar Sanu & Alka Yagnik | 90's Hindi Songs",
+        "artist": "Ishtar Music",
+        "duration": 304,
+        "cover": "https://i.ytimg.com/vi/w89fWEelFns/hqdefault.jpg"
+      },
+      {
+        "id": "fg9G1dacXjk",
+        "title": "Chhupana Bhi Nahin Aata Full Video Song | Baazigar | Shahrukh Khan, Kajol | Vinod Rathod",
+        "artist": "Venus Movies",
+        "duration": 253,
+        "cover": "https://i.ytimg.com/vi/fg9G1dacXjk/hqdefault.jpg"
+      },
+      {
+        "id": "Y-o8NQ8Y36A",
+        "title": "Is Tarah Aashiqui Ka Lyrical | Imtihan | Kumar Sanu | Saif Ali Khan, Raveena Tandon | Anu Malik",
+        "artist": "Tips Official",
+        "duration": 469,
+        "cover": "https://i.ytimg.com/vi/Y-o8NQ8Y36A/hqdefault.jpg"
+      },
+      {
+        "id": "526hvVlBP1U",
+        "title": "Tumse Milna Lyrical Video | Tere Naam | Himesh Reshammiya | Salman Khan, Bhoomika Chawla",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 277,
+        "cover": "https://i.ytimg.com/vi/526hvVlBP1U/hqdefault.jpg"
+      },
+      {
+        "id": "iCZfjggJg3M",
+        "title": "Kyo Kisi Ko (Video Song)| Tere Naam | Salman Khan, Bhumika Chawla  |Udit Narayan, Himesh Reshammiya",
+        "artist": "T-Series",
+        "duration": 303,
+        "cover": "https://i.ytimg.com/vi/iCZfjggJg3M/hqdefault.jpg"
+      },
+      {
+        "id": "BaAoZA0fup0",
+        "title": "Dil Ka Aalam (Full Song) | Aashiqui | Kumar Sanu | T-Series",
+        "artist": "T-Series",
+        "duration": 255,
+        "cover": "https://i.ytimg.com/vi/BaAoZA0fup0/hqdefault.jpg"
+      },
+      {
+        "id": "cBGDDBHN22U",
+        "title": "Pehli Pehli Baar Mohabbat Ki Hai Full Video Song | Sirf Tum|Kumar Sanu,Alka Yagnik|Sanjay K, Priya G",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 457,
+        "cover": "https://i.ytimg.com/vi/cBGDDBHN22U/hqdefault.jpg"
+      },
+      {
+        "id": "nG85YFR3o6U",
+        "title": "तूने दिल मेरा तोड़ा | Tune Dil Mera Toda Kahi | Sanam Bewafa (1990) | Lata Mangeshkar | 90s Sad Song",
+        "artist": "Shemaroo Filmi Gaane",
+        "duration": 357,
+        "cover": "https://i.ytimg.com/vi/nG85YFR3o6U/hqdefault.jpg"
+      },
+      {
+        "id": "TRUuSFW80Rk",
+        "title": "Kaash Kahin Aisa Hota - LYRICAL | Akshay Kumar & Raveena Tandon | Mohra | 90s Best Romantic Sad Song",
+        "artist": "Ishtar Music",
+        "duration": 307,
+        "cover": "https://i.ytimg.com/vi/TRUuSFW80Rk/hqdefault.jpg"
+      },
+      {
+        "id": "-pIMyf5dOnA",
+        "title": "Aawara Hawa Ka Jhonka Hoon  Song - Altaf Raja",
+        "artist": "Ishtar Music",
+        "duration": 618,
+        "cover": "https://i.ytimg.com/vi/-pIMyf5dOnA/hqdefault.jpg"
+      },
+      {
+        "id": "GxaTSDnI71w",
+        "title": "Love Tujhe Love Main Karta Hoon | Teri Adaaon Pe Marta Hoon ❤️| Kumar Sanu | Alka Y | Barsaat | 1995",
+        "artist": "Bollywood Dhamaka",
+        "duration": 271,
+        "cover": "https://i.ytimg.com/vi/GxaTSDnI71w/hqdefault.jpg"
+      },
+      {
+        "id": "XWKazQwFFdY",
+        "title": "Tere Dard Se Dil Aabad Raha  | Deewana Movie | Shahrukh Khan | Rishi Kapoor | Divya Bharti",
+        "artist": "Shemaroo Musical Maestros",
+        "duration": 591,
+        "cover": "https://i.ytimg.com/vi/XWKazQwFFdY/hqdefault.jpg"
+      },
+      {
+        "id": "9f6GhUb-WdM",
+        "title": "Dil Cheer Ke Dekh | Divya Bharti | Kamal Sadanah | Kumar Sanu | Rang Movie | 90's Romantic Song",
+        "artist": "Tips Official",
+        "duration": 287,
+        "cover": "https://i.ytimg.com/vi/9f6GhUb-WdM/hqdefault.jpg"
+      },
+      {
+        "id": "rMbQufI9xQw",
+        "title": "Premi Aashiq Aawaara - Phool Aur Kaante | Kumar Sanu | Ajay Devgn & Madhoo",
+        "artist": "Zee Music Classic",
+        "duration": 247,
+        "cover": "https://i.ytimg.com/vi/rMbQufI9xQw/hqdefault.jpg"
+      },
+      {
+        "id": "Mfeg92XPXik",
+        "title": "Dil Diwana (Duet)",
+        "artist": "Anuradha Paudwal - Topic",
+        "duration": 377,
+        "cover": "https://i.ytimg.com/vi/Mfeg92XPXik/hqdefault.jpg"
+      },
+      {
+        "id": "iSUK1QoK9-E",
+        "title": "Pehla Nasha - Lyrical | Aamir Khan | Sadhana Sargam | Udit Narayan |  Valentine's Day Love Song",
+        "artist": "Saregama Music",
+        "duration": 303,
+        "cover": "https://i.ytimg.com/vi/iSUK1QoK9-E/hqdefault.jpg"
+      },
+      {
+        "id": "w2iozAbNXAo",
+        "title": "Pehla Pehla Pyar Hai (HD) | Hum Aapke Hain Koun | Best Of SPB | SPB Classic Hits",
+        "artist": "Bollywood Classics",
+        "duration": 249,
+        "cover": "https://i.ytimg.com/vi/w2iozAbNXAo/hqdefault.jpg"
+      },
+      {
+        "id": "Vzt2wFAg4og",
+        "title": "Aaye Ho Meri Zindagi Mein Tum Bahar Banke - Female | Aamir Khan, Karisma Kapoor | Alka Yagnik | 90's",
+        "artist": "Tips Official",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/Vzt2wFAg4og/hqdefault.jpg"
+      },
+      {
+        "id": "MvcNeQlqtes",
+        "title": "Dil Ne Ye Kaha Hai Dil Se - Video Song | Dhadkan | #AkshayKumar, #SunielShetty & #ShilpaShetty",
+        "artist": "Ishtar Music",
+        "duration": 467,
+        "cover": "https://i.ytimg.com/vi/MvcNeQlqtes/hqdefault.jpg"
+      },
+      {
+        "id": "x_elT6zkqN0",
+        "title": "\"Oh Oh Jane Jaana\" Salman Khan Full Song | Pyaar Kiya Toh Darna Kya",
+        "artist": "T-Series",
+        "duration": 257,
+        "cover": "https://i.ytimg.com/vi/x_elT6zkqN0/hqdefault.jpg"
+      },
+      {
+        "id": "bKZTnnFU9HA",
+        "title": "Kuch Kuch Hota Hai: Title Track | 4K Video | Shah Rukh Khan| Kajol| Rani| Alka Yagnik |Udit Narayan",
+        "artist": "Sony Music India",
+        "duration": 309,
+        "cover": "https://i.ytimg.com/vi/bKZTnnFU9HA/hqdefault.jpg"
+      },
+      {
+        "id": "9J_isuHe8bw",
+        "title": "Saathiya Tune Kya Kiya - Lyrical | Love | Salman Khan & Revathi | Ishtar Music",
+        "artist": "Ishtar Music",
+        "duration": 315,
+        "cover": "https://i.ytimg.com/vi/9J_isuHe8bw/hqdefault.jpg"
+      },
+      {
+        "id": "eQPEtbTbzVM",
+        "title": "To Chalun - Official Lyrical Video | Border | Sunny Deol, Sunil Shetty | 90's Hindi Hits",
+        "artist": "Ishtar Music",
+        "duration": 443,
+        "cover": "https://i.ytimg.com/vi/eQPEtbTbzVM/hqdefault.jpg"
+      },
+      {
+        "id": "mNSYPtzpfd4",
+        "title": "Jab Koi Baat Bigad Jaaye (Lyrical) 🎶 | Kumar Sanu & Sadhna Sargam | Rajesh Roshan",
+        "artist": "Ishtar Music",
+        "duration": 499,
+        "cover": "https://i.ytimg.com/vi/mNSYPtzpfd4/hqdefault.jpg"
+      },
+      {
+        "id": "VcbzW874Qag",
+        "title": "Is Kadar Pyar Hai Video Song Sonu Nigam's Super Hit Hindi Album \"Deewana\" Feat. Milind Soman",
+        "artist": "Pop Chartbusters",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/VcbzW874Qag/hqdefault.jpg"
+      },
+      {
+        "id": "hZuwe72Rtcc",
+        "title": "Hoshwalon Ko Khabar Kya | Aamir Khan | Sonali Bendre | Sarfarosh Movie | Jagjit Singh | 90's Hits",
+        "artist": "Tips Official",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/hZuwe72Rtcc/hqdefault.jpg"
+      },
+      {
+        "id": "9b0iydtDZLU",
+        "title": "Waada Raha Sanam -4K | Akshay K & Ayesha J | Alka Y & Abhijeet | Khiladi | 90's Hindi Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 365,
+        "cover": "https://i.ytimg.com/vi/9b0iydtDZLU/hqdefault.jpg"
+      },
+      {
+        "id": "iupGwQqjgOk",
+        "title": "Bahut Pyaar Karte Hai - Lyrical Video | Saajan | Madhuri Dixit | 90's Best Hindi Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 268,
+        "cover": "https://i.ytimg.com/vi/iupGwQqjgOk/hqdefault.jpg"
+      },
+      {
+        "id": "n_oP9Onj0r0",
+        "title": "Jaadu Teri Nazar Song | Darr | Shah Rukh Khan, Juhi Chawla | Udit Narayan | Shiv-Hari | Anand Bakshi",
+        "artist": "YRF",
+        "duration": 158,
+        "cover": "https://i.ytimg.com/vi/n_oP9Onj0r0/hqdefault.jpg"
+      },
+      {
+        "id": "5kZ5o-oM0RI",
+        "title": "Yeh Haseen Vadiyan - Roja |A.R. Rahman |S.P. Balasubrahmanyam |K.S.Chithra |Madhoo |Arvind",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/5kZ5o-oM0RI/hqdefault.jpg"
+      },
+      {
+        "id": "xxhThAj7aSA",
+        "title": "Sonu Nigam - Tu - Official Music Video | Sonu Nigam | Biddu | Kismat",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 254,
+        "cover": "https://i.ytimg.com/vi/xxhThAj7aSA/hqdefault.jpg"
+      },
+      {
+        "id": "05o4kCUY2Ys",
+        "title": "Tere Dar Par Sanam - Vídeo Song | Phir Teri Kahani Yaad Aayi | Pooja Bhatt, Rahul Roy | Kumar Sanu",
+        "artist": "Tips Official",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/05o4kCUY2Ys/hqdefault.jpg"
+      },
+      {
+        "id": "jqA-sQVsB3U",
+        "title": "\"Bahut Khoobsurat Ho [Full Song]\" | Khoobsurat | Sanjay Dutt | Urmila",
+        "artist": "T-Series",
+        "duration": 276,
+        "cover": "https://i.ytimg.com/vi/jqA-sQVsB3U/hqdefault.jpg"
+      },
+      {
+        "id": "_IcVb6hFhPs",
+        "title": "Ghar Se Nikalte Hi [Full Song] Papa Kehte Hain | Jugal Hansraj, Mayuri Kango",
+        "artist": "T-Series",
+        "duration": 424,
+        "cover": "https://i.ytimg.com/vi/_IcVb6hFhPs/hqdefault.jpg"
+      },
+      {
+        "id": "KsFCVaDiegU",
+        "title": "Woh Pehli Baar Full Video - Pyaar Mein Kabhi Kabhi | Dino, Sanjay | Shaan | Vishal Dadlani",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 248,
+        "cover": "https://i.ytimg.com/vi/KsFCVaDiegU/hqdefault.jpg"
+      },
+      {
+        "id": "waTwDgK2tkk",
+        "title": "Tu Hi Re (Music Video) | A. R. Rahman | Bombay Movie | Hariharan, Kavita K | Bollywood Hindi Song",
+        "artist": "Universal Music India",
+        "duration": 425,
+        "cover": "https://i.ytimg.com/vi/waTwDgK2tkk/hqdefault.jpg"
+      },
+      {
+        "id": "5EZagydXjNU",
+        "title": "Ek Sanam Chahiye Aashiqui Ke Liye",
+        "artist": "Kumar Sanu - Topic",
+        "duration": 371,
+        "cover": "https://i.ytimg.com/vi/5EZagydXjNU/hqdefault.jpg"
+      },
+      {
+        "id": "ecPMVO7JuTo",
+        "title": "Dooba Dooba - Boondein | Silk Route | Mohit Chauhan, Kem Trivedi, Atul Mittal",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 311,
+        "cover": "https://i.ytimg.com/vi/ecPMVO7JuTo/hqdefault.jpg"
+      },
+      {
+        "id": "nNtGRkTdU9Q",
+        "title": "Hum Yaar Hain Tumhare Lyrical - Haan Maine Bhi Pyaar Kiya | Akshay, Karisma, Abhishek | Alka, Udit",
+        "artist": "Tips Official",
+        "duration": 453,
+        "cover": "https://i.ytimg.com/vi/nNtGRkTdU9Q/hqdefault.jpg"
+      },
+      {
+        "id": "ieu6xnwJxdA",
+        "title": "किताबें बहुत सी | | Baazigar | Shah Rukh Khan & Kajol | Asha Bhosle | Vinod Rathod   Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 376,
+        "cover": "https://i.ytimg.com/vi/ieu6xnwJxdA/hqdefault.jpg"
+      },
+      {
+        "id": "KraIQ85y68s",
+        "title": "MUJHE RAAT DIN BAS",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 308,
+        "cover": "https://i.ytimg.com/vi/KraIQ85y68s/hqdefault.jpg"
+      },
+      {
+        "id": "5ahWUJsgqGg",
+        "title": "Musu Musu Full Video - Pyaar Mein Kabhi Kabhi|Dino Morea,Rinke|Shaan|Vishal Dadlani",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 207,
+        "cover": "https://i.ytimg.com/vi/5ahWUJsgqGg/hqdefault.jpg"
+      },
+      {
+        "id": "_okskYynYPc",
+        "title": "Hum Tere Bin Kahin Reh Nahin Paate",
+        "artist": "Anuradha Paudwal - Topic",
+        "duration": 489,
+        "cover": "https://i.ytimg.com/vi/_okskYynYPc/hqdefault.jpg"
+      },
+      {
+        "id": "2xITabSUf-A",
+        "title": "Aaja Shaam Hone Aaee | Maine Pyar Kiya | Lata Mangeshkar | S.P. B | Salman | Bhagyashree | Love Song",
+        "artist": "Best of 90s songs",
+        "duration": 334,
+        "cover": "https://i.ytimg.com/vi/2xITabSUf-A/hqdefault.jpg"
+      },
+      {
+        "id": "gmJW33derRY",
+        "title": "Do Dil Mil Rahe Hain | Pardes | Shah Rukh Khan, Mahima | Kumar Sanu | 90s Hits Hindi songs",
+        "artist": "Tips Official",
+        "duration": 372,
+        "cover": "https://i.ytimg.com/vi/gmJW33derRY/hqdefault.jpg"
+      },
+      {
+        "id": "GrmdJqRB628",
+        "title": "Ishq Bina",
+        "artist": "Anuradha Sriram - Topic",
+        "duration": 466,
+        "cover": "https://i.ytimg.com/vi/GrmdJqRB628/hqdefault.jpg"
+      },
+      {
+        "id": "3462nGSSHnE",
+        "title": "Pyar Ke Liye Full Video - Dil Kya Kare | Ajay Devgan, Kajol | Alka Yagnik | Jatin-Lalit",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 244,
+        "cover": "https://i.ytimg.com/vi/3462nGSSHnE/hqdefault.jpg"
+      },
+      {
+        "id": "lz7y3qzSAxU",
+        "title": "Chappa Chappa",
+        "artist": "Vishal Bhardwaj - Topic",
+        "duration": 266,
+        "cover": "https://i.ytimg.com/vi/lz7y3qzSAxU/hqdefault.jpg"
+      },
+      {
+        "id": "PqiddY3o3aY",
+        "title": "Dil Kehta Hai | Akele Hum Akele Tum | Kumar Sanu, Alka Yagnik | Aamir Khan | 90s Love Song",
+        "artist": "Ishtar Music",
+        "duration": 403,
+        "cover": "https://i.ytimg.com/vi/PqiddY3o3aY/hqdefault.jpg"
+      },
+      {
+        "id": "mmgdG4UvF3Y",
+        "title": "Tujhe Na Dekhu Toh Chain | Divya Bharti | Kumar Sanu, Alka Yagnik | Rang | Kahin Mujhe Pyaar | 90's",
+        "artist": "Tips Official",
+        "duration": 384,
+        "cover": "https://i.ytimg.com/vi/mmgdG4UvF3Y/hqdefault.jpg"
+      },
+      {
+        "id": "Yqj1_V90KJo",
+        "title": "Chura Ke Dil Mera - 4K VIDEO | Akshay & Shilpa | Main Khiladi Tu Anari | Kumar Sanu & Alka Yagnik",
+        "artist": "Ishtar Music",
+        "duration": 454,
+        "cover": "https://i.ytimg.com/vi/Yqj1_V90KJo/hqdefault.jpg"
+      },
+      {
+        "id": "plB0ytzIlqI",
+        "title": "Paas Woh Aane Lage  | Main Khiladi Tu Anari | Kumar Sanu & Alka Yagnik | 90's Hindi Songs",
+        "artist": "Ishtar Music",
+        "duration": 374,
+        "cover": "https://i.ytimg.com/vi/plB0ytzIlqI/hqdefault.jpg"
+      },
+      {
+        "id": "vzlXfZlH5dk",
+        "title": "Main Koi Aisa Geet Gaoon - HD VIDEO | Shah Rukh Khan & Juhi Chawla | Yes Boss | 90's Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 333,
+        "cover": "https://i.ytimg.com/vi/vzlXfZlH5dk/hqdefault.jpg"
+      },
+      {
+        "id": "BtlnpBb4O8E",
+        "title": "Tip Tip Barsa Paani - LYRICAL | #AkshayKumar & #RaveenaTandon | Mohra | Alka & Udit | 90's Love Song",
+        "artist": "Ishtar Music",
+        "duration": 365,
+        "cover": "https://i.ytimg.com/vi/BtlnpBb4O8E/hqdefault.jpg"
+      },
+      {
+        "id": "xvevXfFGPFY",
+        "title": "Teri Umeed Tera Intezar - LYRICAL VIDEO | Deewana | Rishi Kapoor, Divya Bharti | 90's Romantic Song",
+        "artist": "Ishtar Music",
+        "duration": 407,
+        "cover": "https://i.ytimg.com/vi/xvevXfFGPFY/hqdefault.jpg"
+      },
+      {
+        "id": "XaPnZTljQbI",
+        "title": "Teri Chunariya Dil Le Gayi Lyrical | Hello Brother|Salman Khan, Rani Mukerji,Kumar Sanu, Alka Yagnik",
+        "artist": "Tips Official",
+        "duration": 392,
+        "cover": "https://i.ytimg.com/vi/XaPnZTljQbI/hqdefault.jpg"
+      },
+      {
+        "id": "RVQsBlI35vw",
+        "title": "Mera Dil Bhi Kitna Pagal Hai -Lyrical | Madhuri Dixit | Sanjay Dutt | Saajan | 90's Hindi Love Songs",
+        "artist": "Ishtar Music",
+        "duration": 327,
+        "cover": "https://i.ytimg.com/vi/RVQsBlI35vw/hqdefault.jpg"
+      },
+      {
+        "id": "_YjSmLlmqLM",
+        "title": "Aisi Deewangi - Lyrical Video | Deewana | Shahrukh Khan | Divya Bharti | Ishtar Music",
+        "artist": "Ishtar Music",
+        "duration": 446,
+        "cover": "https://i.ytimg.com/vi/_YjSmLlmqLM/hqdefault.jpg"
+      },
+      {
+        "id": "L3gOr6vwSjg",
+        "title": "Is Pyar Se Meri Taraf Na Dekho (Male) | Chamatkar | Shah Rukh khan, Urmila | Kumar Sanu | 90's Hits",
+        "artist": "Tips Official",
+        "duration": 324,
+        "cover": "https://i.ytimg.com/vi/L3gOr6vwSjg/hqdefault.jpg"
+      },
+      {
+        "id": "UMYvW7qDcFg",
+        "title": "Chandani | Salman Khan, Urmila | Udit Narayan | Jaanam Samjha Karo | 90's Songs | Anu Malik",
+        "artist": "Tips Official",
+        "duration": 350,
+        "cover": "https://i.ytimg.com/vi/UMYvW7qDcFg/hqdefault.jpg"
+      },
+      {
+        "id": "OEpFiDKqH7E",
+        "title": "Are Re Are Song | Dil To Pagal Hai | Shah Rukh Khan, Madhuri Dixit | Lata Mangeshkar, Udit Narayan",
+        "artist": "YRF",
+        "duration": 333,
+        "cover": "https://i.ytimg.com/vi/OEpFiDKqH7E/hqdefault.jpg"
+      },
+      {
+        "id": "AHdo6gJKAk8",
+        "title": "Saathiya Bin Tere Dil Mane Na - Lyrical | Himmat | Kumar Sanu, Alka Yagnik | Sunny Deol, Tabu | 90's",
+        "artist": "Tips Official",
+        "duration": 403,
+        "cover": "https://i.ytimg.com/vi/AHdo6gJKAk8/hqdefault.jpg"
+      },
+      {
+        "id": "ryxeZdtfo1I",
+        "title": "Hum To Deewane Huye -HD VIDEO | Shahrukh Khan & Twinkle Khanna | Baadshah |90's Romantic Hindi Song",
+        "artist": "Ishtar Music",
+        "duration": 278,
+        "cover": "https://i.ytimg.com/vi/ryxeZdtfo1I/hqdefault.jpg"
+      },
+      {
+        "id": "h_fCN4pinqs",
+        "title": "'Pyar Kiya To Nibhana' Video Song - Major Saab | Udit Narayan, Anuradha Paudwal | Ajay Devgn, Sonali",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 278,
+        "cover": "https://i.ytimg.com/vi/h_fCN4pinqs/hqdefault.jpg"
+      },
+      {
+        "id": "Jtg2zyS_y_c",
+        "title": "Ae Kash Ke Hum Full Video - Kabhi Haan Kabhi Naa | Shah Rukh Khan, Suchitra | Kumar Sanu",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 296,
+        "cover": "https://i.ytimg.com/vi/Jtg2zyS_y_c/hqdefault.jpg"
+      },
+      {
+        "id": "3C4sUKbEKrw",
+        "title": "Raja Ko Rani Se - 4K Video | Akele Hum Akele Tum | Aamir khan & Manisha | Ishtar Music",
+        "artist": "Ishtar Music",
+        "duration": 297,
+        "cover": "https://i.ytimg.com/vi/3C4sUKbEKrw/hqdefault.jpg"
+      },
+      {
+        "id": "QPiBVh62VUI",
+        "title": "Aawaz Do Humko with lyrics | आवाज़ दो हमको गाने के बोल | Dushman | Sanjay Dutt | Kajol",
+        "artist": "Saregama Music",
+        "duration": 379,
+        "cover": "https://i.ytimg.com/vi/QPiBVh62VUI/hqdefault.jpg"
+      },
+      {
+        "id": "tvxXAZo1Hlg",
+        "title": "Pyar Kar Song | Dil To Pagal Hai | Shah Rukh Khan, Madhuri, Karisma | Lata Mangeshkar, Udit Narayan",
+        "artist": "YRF",
+        "duration": 403,
+        "cover": "https://i.ytimg.com/vi/tvxXAZo1Hlg/hqdefault.jpg"
+      },
+      {
+        "id": "qwJxDcuW538",
+        "title": "Soldier Soldier | Bobby Deol, Preity Zinta | Kumar Sanu, Alka Yagnik | Soldier | Anu Malik",
+        "artist": "Tips Official",
+        "duration": 365,
+        "cover": "https://i.ytimg.com/vi/qwJxDcuW538/hqdefault.jpg"
+      },
+      {
+        "id": "Uk6CB2o2eY0",
+        "title": "Humko Sirf Tumse Pyar Hai | Barsaat | Bobby Deol, Twinkle Khanna | Kumar Sanu, Alka Yagnik|90's Hits",
+        "artist": "Tips Official",
+        "duration": 286,
+        "cover": "https://i.ytimg.com/vi/Uk6CB2o2eY0/hqdefault.jpg"
+      },
+      {
+        "id": "-Hmf-prCzTg",
+        "title": "Keh Do Ek Baar Sajana with lyrics | के दो एक बार साजना के बोल | Udit & Alka | Mrityu Dand | HD Song",
+        "artist": "Saregama Music",
+        "duration": 381,
+        "cover": "https://i.ytimg.com/vi/-Hmf-prCzTg/hqdefault.jpg"
+      },
+      {
+        "id": "HHgVlMrkloQ",
+        "title": "Ek Din Aap",
+        "artist": "Kumar Sanu - Topic",
+        "duration": 267,
+        "cover": "https://i.ytimg.com/vi/HHgVlMrkloQ/hqdefault.jpg"
+      },
+      {
+        "id": "wjmoMhMZqWs",
+        "title": "Chal Pyar Karegi | Sonu Nigam | Alka Yagnik | Jab Pyar Kisise Hota Hai | Salman Khan | Twinkle | 90s",
+        "artist": "Tips Official",
+        "duration": 315,
+        "cover": "https://i.ytimg.com/vi/wjmoMhMZqWs/hqdefault.jpg"
+      },
+      {
+        "id": "TT0ohcldcow",
+        "title": "Bahon Ke Darmiyan (Music Video) Salman Khan, Manisha Koirala | Alka Yagnik, Hariharan | Khamoshi",
+        "artist": "UMusicIndiaVEVO",
+        "duration": 334,
+        "cover": "https://i.ytimg.com/vi/TT0ohcldcow/hqdefault.jpg"
+      },
+      {
+        "id": "hNGQag8NS-0",
+        "title": "Lyrical : Dhak Dhak Karne Laga | Beta | Anuradha Paudwal, Udit Narayan | Anil Kapoor, Madhuri Dixit",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/hNGQag8NS-0/hqdefault.jpg"
+      },
+      {
+        "id": "5m8PFW6enuY",
+        "title": "Gawah Hai Chand Tare with lyrics | गवाह है चाँद तारे | Damini | Rishi Kapoor | Meenakshi",
+        "artist": "Saregama Music",
+        "duration": 402,
+        "cover": "https://i.ytimg.com/vi/5m8PFW6enuY/hqdefault.jpg"
+      },
+      {
+        "id": "2hpBJd-YcpI",
+        "title": "Aankhon Ki Gustakhiyan Lyrical Video | Hum Dil De Chuke Sanam | Kumar Sanu.Kavita K|Aishwarya,Salman",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 301,
+        "cover": "https://i.ytimg.com/vi/2hpBJd-YcpI/hqdefault.jpg"
+      },
+      {
+        "id": "R9snTOBEWso",
+        "title": "Jadoo Hai Tera | Aamir Khan & Rani Mukherjee | Ghulam Movie | Kumar & Alka | 90's Hindi Songs",
+        "artist": "Tips Official",
+        "duration": 390,
+        "cover": "https://i.ytimg.com/vi/R9snTOBEWso/hqdefault.jpg"
+      },
+      {
+        "id": "OzJ6m0tpVIo",
+        "title": "Nahin Saamne Tu | Taal | Aishwarya Rai, Akshaye Khanna | Hariharan, Sukhwinder Singh | A.R.Rahman",
+        "artist": "Tips Official",
+        "duration": 236,
+        "cover": "https://i.ytimg.com/vi/OzJ6m0tpVIo/hqdefault.jpg"
+      },
+      {
+        "id": "k0DeuDTrJBM",
+        "title": "Mera Chand Mujhe Aaya Hai Nazar | Mr. Aashiq | Kumar Sanu | Jatin-Lalit | Indiwar",
+        "artist": "Saregama Music",
+        "duration": 220,
+        "cover": "https://i.ytimg.com/vi/k0DeuDTrJBM/hqdefault.jpg"
+      },
+      {
+        "id": "7JnKVPtRqVE",
+        "title": "Tujhe Dekha To Ye Jana Sanam - Lyrical | Shah Rukh Khan | Kajol | DDLJ | Lata Mangeshkar, Kumar Sanu",
+        "artist": "Saregama Music",
+        "duration": 328,
+        "cover": "https://i.ytimg.com/vi/7JnKVPtRqVE/hqdefault.jpg"
+      },
+      {
+        "id": "5BMZoU66Z9k",
+        "title": "Bin Tere Sanam - Lyrical Video | JHANKAR BEATS | Yaara Dildara | Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 397,
+        "cover": "https://i.ytimg.com/vi/5BMZoU66Z9k/hqdefault.jpg"
+      },
+      {
+        "id": "kNaXjvKPiS0",
+        "title": "Mere Mehboob Mere Sanam | Lyrical Video | Alka Yagnik | Udit Narayan | Duplicate",
+        "artist": "Saregama Music",
+        "duration": 427,
+        "cover": "https://i.ytimg.com/vi/kNaXjvKPiS0/hqdefault.jpg"
+      },
+      {
+        "id": "CLGEV7CqvBs",
+        "title": "जबसे तुमको देखा | Jab Se Tumko Dekha with lyrics | Damini | Rishi Kapoor | Sunny Deol",
+        "artist": "Saregama Music",
+        "duration": 335,
+        "cover": "https://i.ytimg.com/vi/CLGEV7CqvBs/hqdefault.jpg"
+      },
+      {
+        "id": "myds4MqB_pQ",
+        "title": "Ab Mujhe Raat Din",
+        "artist": "Sajid-Wajid - Topic",
+        "duration": 383,
+        "cover": "https://i.ytimg.com/vi/myds4MqB_pQ/hqdefault.jpg"
+      },
+      {
+        "id": "MYfaX0BH2AY",
+        "title": "Dil Se Re Full Lyrical Video | Dil Se | Melody Maker - A.R Rahman",
+        "artist": "Ishtar Music",
+        "duration": 402,
+        "cover": "https://i.ytimg.com/vi/MYfaX0BH2AY/hqdefault.jpg"
+      },
+      {
+        "id": "_5b4BnwEzcw",
+        "title": "Satarangi Re",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 446,
+        "cover": "https://i.ytimg.com/vi/_5b4BnwEzcw/hqdefault.jpg"
+      },
+      {
+        "id": "atKqgEQoERI",
+        "title": "Chanda Re Chanda Re (Lyrical) | Sapnay | Kajol, Prabhu Deva | Hariharan, Sadhana Sargam, A.R. Rahman",
+        "artist": "70s, 80s, 90s, Songs",
+        "duration": 351,
+        "cover": "https://i.ytimg.com/vi/atKqgEQoERI/hqdefault.jpg"
+      },
+      {
+        "id": "9lX8GkzdNIE",
+        "title": "Tu Mile Dil Khile with Lyrics | तू मिले दिल खेले गाने के बोल | Kumar Sanu| Alka | Criminal | Manisha",
+        "artist": "Saregama Music",
+        "duration": 385,
+        "cover": "https://i.ytimg.com/vi/9lX8GkzdNIE/hqdefault.jpg"
+      },
+      {
+        "id": "wI-xNuJcr0M",
+        "title": "Meri Duniya Hai Song With Ek Villain | Bollywood Twisters | T-series",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 267,
+        "cover": "https://i.ytimg.com/vi/wI-xNuJcr0M/hqdefault.jpg"
+      },
+      {
+        "id": "pqFU_ZX5qfo",
+        "title": "Tumhein Apna Banane Ki Kasam | Sadak | Full Song | Kumar Sanu,Anuradha Paudwal|Sanjay Dutt, Pooja B",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 170,
+        "cover": "https://i.ytimg.com/vi/pqFU_ZX5qfo/hqdefault.jpg"
+      }
+    ],
+    "PLOO6hotaxcvE": [
+      {
+        "id": "MbWpPuuU1Vc",
+        "title": "Bole Chudiyan",
+        "artist": "Jatin Lalit - Topic",
+        "duration": 409,
+        "cover": "https://i.ytimg.com/vi/MbWpPuuU1Vc/hqdefault.jpg"
+      },
+      {
+        "id": "C0S0PMpNybM",
+        "title": "Tum Mile",
+        "artist": "Pritam - Topic",
+        "duration": 344,
+        "cover": "https://i.ytimg.com/vi/C0S0PMpNybM/hqdefault.jpg"
+      },
+      {
+        "id": "tYHrT837H0M",
+        "title": "In Dino",
+        "artist": "Soham Chakraborty - Topic",
+        "duration": 398,
+        "cover": "https://i.ytimg.com/vi/tYHrT837H0M/hqdefault.jpg"
+      },
+      {
+        "id": "vtfS-7VJDQM",
+        "title": "Desi Girl",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 307,
+        "cover": "https://i.ytimg.com/vi/vtfS-7VJDQM/hqdefault.jpg"
+      },
+      {
+        "id": "ic7dA4wYpFk",
+        "title": "Say \"Shava Shava\"",
+        "artist": "Aadesh Shrivastava - Topic",
+        "duration": 409,
+        "cover": "https://i.ytimg.com/vi/ic7dA4wYpFk/hqdefault.jpg"
+      },
+      {
+        "id": "jG6DiGhSt8o",
+        "title": "Chor Bazaari",
+        "artist": "Pritam - Topic",
+        "duration": 258,
+        "cover": "https://i.ytimg.com/vi/jG6DiGhSt8o/hqdefault.jpg"
+      },
+      {
+        "id": "1nrKhy0z6JI",
+        "title": "Kal Ho Naa Ho",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 322,
+        "cover": "https://i.ytimg.com/vi/1nrKhy0z6JI/hqdefault.jpg"
+      },
+      {
+        "id": "FYHKeHYlVA4",
+        "title": "Pee Loon",
+        "artist": "Mohit Chauhan - Topic",
+        "duration": 286,
+        "cover": "https://i.ytimg.com/vi/FYHKeHYlVA4/hqdefault.jpg"
+      },
+      {
+        "id": "AQ5qWopu_uU",
+        "title": "Sajdaa (From \"My Name Is Khan\")",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 366,
+        "cover": "https://i.ytimg.com/vi/AQ5qWopu_uU/hqdefault.jpg"
+      },
+      {
+        "id": "_xQuobKhasg",
+        "title": "Maahi Ve",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 367,
+        "cover": "https://i.ytimg.com/vi/_xQuobKhasg/hqdefault.jpg"
+      },
+      {
+        "id": "cK9h5PVzRpk",
+        "title": "GUZARISH",
+        "artist": "Javed Ali - Topic",
+        "duration": 328,
+        "cover": "https://i.ytimg.com/vi/cK9h5PVzRpk/hqdefault.jpg"
+      },
+      {
+        "id": "V1_5SHc21m8",
+        "title": "Zara Sa",
+        "artist": "Pritam - Topic",
+        "duration": 304,
+        "cover": "https://i.ytimg.com/vi/V1_5SHc21m8/hqdefault.jpg"
+      },
+      {
+        "id": "Fi3GovijpWA",
+        "title": "Tere Bina",
+        "artist": "A. R. Rahman - Topic",
+        "duration": 310,
+        "cover": "https://i.ytimg.com/vi/Fi3GovijpWA/hqdefault.jpg"
+      },
+      {
+        "id": "3jPv11cJEcU",
+        "title": "Yeh Ladka Hai Allah",
+        "artist": "Jatin Lalit - Topic",
+        "duration": 328,
+        "cover": "https://i.ytimg.com/vi/3jPv11cJEcU/hqdefault.jpg"
+      },
+      {
+        "id": "iKs0WgXjTKI",
+        "title": "Gal Mitthi Mitthi",
+        "artist": "Amit Trivedi - Topic",
+        "duration": 256,
+        "cover": "https://i.ytimg.com/vi/iKs0WgXjTKI/hqdefault.jpg"
+      },
+      {
+        "id": "IE4gZ9smLkk",
+        "title": "You Are My Soniya",
+        "artist": "Sandesh Shandilya - Topic",
+        "duration": 344,
+        "cover": "https://i.ytimg.com/vi/IE4gZ9smLkk/hqdefault.jpg"
+      },
+      {
+        "id": "tlZO7G-D0mg",
+        "title": "Jashn-E-Bahaaraa (From \"Jodhaa Akbar\")",
+        "artist": "A. R. Rahman - Topic",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/tlZO7G-D0mg/hqdefault.jpg"
+      },
+      {
+        "id": "o-9VdyXZKsQ",
+        "title": "Tujhe Bhula Diya",
+        "artist": "Mohit Chauhan - Topic",
+        "duration": 280,
+        "cover": "https://i.ytimg.com/vi/o-9VdyXZKsQ/hqdefault.jpg"
+      },
+      {
+        "id": "Fg4CANalLNE",
+        "title": "Tumhi Dekho Naa",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 348,
+        "cover": "https://i.ytimg.com/vi/Fg4CANalLNE/hqdefault.jpg"
+      },
+      {
+        "id": "KayWQCbGirU",
+        "title": "Dil Chahta Hai",
+        "artist": "Shankar Mahadevan - Topic",
+        "duration": 311,
+        "cover": "https://i.ytimg.com/vi/KayWQCbGirU/hqdefault.jpg"
+      },
+      {
+        "id": "r6yFwzExp0w",
+        "title": "Bahara",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 326,
+        "cover": "https://i.ytimg.com/vi/r6yFwzExp0w/hqdefault.jpg"
+      },
+      {
+        "id": "lVyc2564rDs",
+        "title": "Barso Re",
+        "artist": "A. R. Rahman - Topic",
+        "duration": 330,
+        "cover": "https://i.ytimg.com/vi/lVyc2564rDs/hqdefault.jpg"
+      },
+      {
+        "id": "rXVot29Ez6Y",
+        "title": "O Meri Jaan",
+        "artist": "Pritam - Topic",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/rXVot29Ez6Y/hqdefault.jpg"
+      },
+      {
+        "id": "hLaZVAeQh38",
+        "title": "Ek Pal Ka Jeena",
+        "artist": "Lucky Ali - Topic",
+        "duration": 398,
+        "cover": "https://i.ytimg.com/vi/hLaZVAeQh38/hqdefault.jpg"
+      },
+      {
+        "id": "9zk5Lu2n4o4",
+        "title": "Baatein Kuch Ankahee",
+        "artist": "Pritam - Topic",
+        "duration": 276,
+        "cover": "https://i.ytimg.com/vi/9zk5Lu2n4o4/hqdefault.jpg"
+      },
+      {
+        "id": "9HzMR9abGAI",
+        "title": "Kajra Re",
+        "artist": "Alisha Chinai - Topic",
+        "duration": 483,
+        "cover": "https://i.ytimg.com/vi/9HzMR9abGAI/hqdefault.jpg"
+      },
+      {
+        "id": "F8jufkW0SP8",
+        "title": "Yeh Ladka Hai Deewana",
+        "artist": "Jatin Lalit - Topic",
+        "duration": 398,
+        "cover": "https://i.ytimg.com/vi/F8jufkW0SP8/hqdefault.jpg"
+      },
+      {
+        "id": "bC9ZAQHm1wM",
+        "title": "Mann Mera",
+        "artist": "Gajendra Verma - Topic",
+        "duration": 201,
+        "cover": "https://i.ytimg.com/vi/bC9ZAQHm1wM/hqdefault.jpg"
+      },
+      {
+        "id": "xteZNX3B4yA",
+        "title": "TUSE MILKE DIL KA HAI JO HAAL",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 360,
+        "cover": "https://i.ytimg.com/vi/xteZNX3B4yA/hqdefault.jpg"
+      },
+      {
+        "id": "gOvkROOMhzs",
+        "title": "Shut Up & Bounce",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 278,
+        "cover": "https://i.ytimg.com/vi/gOvkROOMhzs/hqdefault.jpg"
+      },
+      {
+        "id": "fa4l-vJ_5ic",
+        "title": "Teri Ore",
+        "artist": "Pritam - Topic",
+        "duration": 340,
+        "cover": "https://i.ytimg.com/vi/fa4l-vJ_5ic/hqdefault.jpg"
+      },
+      {
+        "id": "-rSOvmWRG4Y",
+        "title": "Uff Teri Adaa",
+        "artist": "Shankar Mahadevan - Topic",
+        "duration": 305,
+        "cover": "https://i.ytimg.com/vi/-rSOvmWRG4Y/hqdefault.jpg"
+      },
+      {
+        "id": "d_QDYIJSkB8",
+        "title": "Ye Ishq Hai",
+        "artist": "Shreya Ghoshal - Topic",
+        "duration": 281,
+        "cover": "https://i.ytimg.com/vi/d_QDYIJSkB8/hqdefault.jpg"
+      },
+      {
+        "id": "FA_J8XwpCaQ",
+        "title": "Tu Jaane Na",
+        "artist": "Pritam - Topic",
+        "duration": 342,
+        "cover": "https://i.ytimg.com/vi/FA_J8XwpCaQ/hqdefault.jpg"
+      },
+      {
+        "id": "nYpYzeW8Ci4",
+        "title": "Jaane Kyun",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 278,
+        "cover": "https://i.ytimg.com/vi/nYpYzeW8Ci4/hqdefault.jpg"
+      },
+      {
+        "id": "Z1hUfzTZS04",
+        "title": "Ajj Din Chadheya",
+        "artist": "Pritam - Topic",
+        "duration": 316,
+        "cover": "https://i.ytimg.com/vi/Z1hUfzTZS04/hqdefault.jpg"
+      },
+      {
+        "id": "bfUhkXFNIig",
+        "title": "Jab Se Tere Naina",
+        "artist": "Shani Kumar Saniya - Topic",
+        "duration": 285,
+        "cover": "https://i.ytimg.com/vi/bfUhkXFNIig/hqdefault.jpg"
+      },
+      {
+        "id": "sS0Ak2IQ1ds",
+        "title": "Surili Akhiyon Wale",
+        "artist": "Sajid-Wajid - Topic",
+        "duration": 332,
+        "cover": "https://i.ytimg.com/vi/sS0Ak2IQ1ds/hqdefault.jpg"
+      },
+      {
+        "id": "yRbI73zR_m4",
+        "title": "Tujhko Jo Paaya",
+        "artist": "Pritam - Topic",
+        "duration": 185,
+        "cover": "https://i.ytimg.com/vi/yRbI73zR_m4/hqdefault.jpg"
+      },
+      {
+        "id": "qO4qS1U6gbc",
+        "title": "AYE KHUDA",
+        "artist": "Salim Merchant - Topic",
+        "duration": 281,
+        "cover": "https://i.ytimg.com/vi/qO4qS1U6gbc/hqdefault.jpg"
+      },
+      {
+        "id": "VzXPGIFDde8",
+        "title": "Tera Deedar Hua",
+        "artist": "Pritam - Topic",
+        "duration": 348,
+        "cover": "https://i.ytimg.com/vi/VzXPGIFDde8/hqdefault.jpg"
+      },
+      {
+        "id": "MzhsLzOTZNA",
+        "title": "MAIN HOON NA",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 362,
+        "cover": "https://i.ytimg.com/vi/MzhsLzOTZNA/hqdefault.jpg"
+      },
+      {
+        "id": "gLBoyzFnAdE",
+        "title": "Haule Haule",
+        "artist": "Sukhwinder Singh - Topic",
+        "duration": 264,
+        "cover": "https://i.ytimg.com/vi/gLBoyzFnAdE/hqdefault.jpg"
+      },
+      {
+        "id": "PpiHfZbtQv8",
+        "title": "I Hate Luv Storys",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 286,
+        "cover": "https://i.ytimg.com/vi/PpiHfZbtQv8/hqdefault.jpg"
+      },
+      {
+        "id": "6IdzEmpH4dk",
+        "title": "Where's the Party Tonight",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 379,
+        "cover": "https://i.ytimg.com/vi/6IdzEmpH4dk/hqdefault.jpg"
+      },
+      {
+        "id": "qR8FtO0o6Fg",
+        "title": "Koi Kahe Kehta Rahe",
+        "artist": "Shankar Mahadevan - Topic",
+        "duration": 347,
+        "cover": "https://i.ytimg.com/vi/qR8FtO0o6Fg/hqdefault.jpg"
+      },
+      {
+        "id": "DybAYiAEl3c",
+        "title": "Pretty Woman",
+        "artist": "Shankar Ehsaan Loy - Topic",
+        "duration": 354,
+        "cover": "https://i.ytimg.com/vi/DybAYiAEl3c/hqdefault.jpg"
+      },
+      {
+        "id": "S-6LT5lvHKE",
+        "title": "Billo Rani",
+        "artist": "Anand Raj Anand - Topic",
+        "duration": 330,
+        "cover": "https://i.ytimg.com/vi/S-6LT5lvHKE/hqdefault.jpg"
+      },
+      {
+        "id": "9MX-QejdVaQ",
+        "title": "Chaiyya Chaiyya",
+        "artist": "Sukhwinder Singh - Topic",
+        "duration": 407,
+        "cover": "https://i.ytimg.com/vi/9MX-QejdVaQ/hqdefault.jpg"
+      },
+      {
+        "id": "s_GR_TDK07I",
+        "title": "Mann Mera (Original Version)",
+        "artist": "Gajendra Verma - Topic",
+        "duration": 228,
+        "cover": "https://i.ytimg.com/vi/s_GR_TDK07I/hqdefault.jpg"
+      },
+      {
+        "id": "dWHIcMeAIMw",
+        "title": "Wo Ajnabee",
+        "artist": "Mithoon - Topic",
+        "duration": 303,
+        "cover": "https://i.ytimg.com/vi/dWHIcMeAIMw/hqdefault.jpg"
+      },
+      {
+        "id": "g3wCsN5BsaU",
+        "title": "Alvida",
+        "artist": "Pritam - Topic",
+        "duration": 339,
+        "cover": "https://i.ytimg.com/vi/g3wCsN5BsaU/hqdefault.jpg"
+      },
+      {
+        "id": "E8zOp4Kqcls",
+        "title": "Chikni Chameli",
+        "artist": "Ajay Gogavale - Topic",
+        "duration": 304,
+        "cover": "https://i.ytimg.com/vi/E8zOp4Kqcls/hqdefault.jpg"
+      },
+      {
+        "id": "5nyvC8-YUTg",
+        "title": "Jab Mila Tu",
+        "artist": "Vishal - Shekhar - Topic",
+        "duration": 252,
+        "cover": "https://i.ytimg.com/vi/5nyvC8-YUTg/hqdefault.jpg"
+      },
+      {
+        "id": "_yOrZ9dKAzI",
+        "title": "Judai",
+        "artist": "Pritam - Topic",
+        "duration": 303,
+        "cover": "https://i.ytimg.com/vi/_yOrZ9dKAzI/hqdefault.jpg"
+      },
+      {
+        "id": "_wMsvhz8YSk",
+        "title": "Subha Hone Na De",
+        "artist": "Pritam - Topic",
+        "duration": 289,
+        "cover": "https://i.ytimg.com/vi/_wMsvhz8YSk/hqdefault.jpg"
+      }
+    ],
+    "PLRviTFa2HgVA": [
+      {
+        "id": "YSRQfSmi9pI",
+        "title": "Aapke Pyaar Mein Hum",
+        "artist": "Alka Yagnik - Topic",
+        "duration": 330,
+        "cover": "https://i.ytimg.com/vi/YSRQfSmi9pI/hqdefault.jpg"
+      },
+      {
+        "id": "8-aagqHnx7M",
+        "title": "HUM TUMKO NIGAHON MEIN",
+        "artist": "Udit Narayan - Topic",
+        "duration": 363,
+        "cover": "https://i.ytimg.com/vi/8-aagqHnx7M/hqdefault.jpg"
+      },
+      {
+        "id": "HHgVlMrkloQ",
+        "title": "Ek Din Aap",
+        "artist": "Kumar Sanu - Topic",
+        "duration": 267,
+        "cover": "https://i.ytimg.com/vi/HHgVlMrkloQ/hqdefault.jpg"
+      },
+      {
+        "id": "mDqooripK-o",
+        "title": "2000s Bollywood Hits | Audio Jukebox | Best Bollywood Songs | 2000 to 2010 Songs",
+        "artist": "YRF Music",
+        "duration": 8335,
+        "cover": "https://i.ytimg.com/vi/mDqooripK-o/hqdefault.jpg"
+      },
+      {
+        "id": "rrzSZ0NMID4",
+        "title": "Barsaat Ke Mausam Mein | Naajayaz | Naseeruddin Shah | Kumar Sanu | Roop Kumar Rathod",
+        "artist": "Bollywood Hits",
+        "duration": 326,
+        "cover": "https://i.ytimg.com/vi/rrzSZ0NMID4/hqdefault.jpg"
+      },
+      {
+        "id": "oE1ZvwPH4Xw",
+        "title": "My College Dance Performance",
+        "artist": "Odyverse",
+        "duration": 121,
+        "cover": "https://i.ytimg.com/vi/oE1ZvwPH4Xw/hqdefault.jpg"
+      },
+      {
+        "id": "N_dV7--eGFc",
+        "title": "Ishq Ka Raja - Addy Nagar (Official Video)- Hamsar Hayat - New Hindi Songs 2022",
+        "artist": "Lokdhun",
+        "duration": 240,
+        "cover": "https://i.ytimg.com/vi/N_dV7--eGFc/hqdefault.jpg"
+      },
+      {
+        "id": "3BsFE3WD0kA",
+        "title": "Aye Udi Udi Udi",
+        "artist": "Adnan Sami - Topic",
+        "duration": 277,
+        "cover": "https://i.ytimg.com/vi/3BsFE3WD0kA/hqdefault.jpg"
+      },
+      {
+        "id": "Fg_9gLeVV2E",
+        "title": "Daddy Mummy FULL VIDEO Song | Urvashi Rautela | Kunal Khemu | DSP | Bhaag Johnny | T-Series",
+        "artist": "T-Series",
+        "duration": 233,
+        "cover": "https://i.ytimg.com/vi/Fg_9gLeVV2E/hqdefault.jpg"
+      },
+      {
+        "id": "JYRtKF4wknQ",
+        "title": "Poison Baby | Thamma | Malaika A, Ayushmann K, Rashmika M | Sachin-Jigar,Jasmine S, Divya, Amitabh B",
+        "artist": "Universal Music India",
+        "duration": 183,
+        "cover": "https://i.ytimg.com/vi/JYRtKF4wknQ/hqdefault.jpg"
+      },
+      {
+        "id": "YmXJp4RtBCM",
+        "title": "Proper Patola - Official Video | Namaste England | Arjun | Parineeti | Badshah | Diljit | Aastha",
+        "artist": "Sony Music India",
+        "duration": 181,
+        "cover": "https://i.ytimg.com/vi/YmXJp4RtBCM/hqdefault.jpg"
+      },
+      {
+        "id": "44cPHKhIha0",
+        "title": "Hawa Banke",
+        "artist": "Darshan Raval - Topic",
+        "duration": 172,
+        "cover": "https://i.ytimg.com/vi/44cPHKhIha0/hqdefault.jpg"
+      },
+      {
+        "id": "3msnuy4JQpo",
+        "title": "Rafta Rafta Wo Meri",
+        "artist": "Muhammad Ali - Topic",
+        "duration": 279,
+        "cover": "https://i.ytimg.com/vi/3msnuy4JQpo/hqdefault.jpg"
+      },
+      {
+        "id": "w8LcxY43N5Y",
+        "title": "Pal - Lyrical Video | Jalebi | Arijit Singh | Shreya Ghoshal | Rhea & Varun | Javed - Mohsin",
+        "artist": "Sony Music India",
+        "duration": 252,
+        "cover": "https://i.ytimg.com/vi/w8LcxY43N5Y/hqdefault.jpg"
+      },
+      {
+        "id": "NPeStSJEFT4",
+        "title": "Yeh Teri Aankhen Jhuki Jhuki - Fareb | Abhijeet | Faraaz Khan & Suman Ranganathan | Romantic Song",
+        "artist": "Zee Music Classic",
+        "duration": 199,
+        "cover": "https://i.ytimg.com/vi/NPeStSJEFT4/hqdefault.jpg"
+      },
+      {
+        "id": "ZG6zDWbp_6U",
+        "title": "Kyaa Dil Ne Kahaa Title Song (Lyrical Video) | Tusshar Kapoor | Esha | Udit Narayan | Alka Yagnik",
+        "artist": "Sony Music India",
+        "duration": 302,
+        "cover": "https://i.ytimg.com/vi/ZG6zDWbp_6U/hqdefault.jpg"
+      },
+      {
+        "id": "VcbzW874Qag",
+        "title": "Is Kadar Pyar Hai Video Song Sonu Nigam's Super Hit Hindi Album \"Deewana\" Feat. Milind Soman",
+        "artist": "Pop Chartbusters",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/VcbzW874Qag/hqdefault.jpg"
+      },
+      {
+        "id": "82drVqKrp9M",
+        "title": "Aaho Raja",
+        "artist": "Pawan Singh - Topic",
+        "duration": 167,
+        "cover": "https://i.ytimg.com/vi/82drVqKrp9M/hqdefault.jpg"
+      },
+      {
+        "id": "eL2vQyP6DQE",
+        "title": "FIGHTER: Sher Khul Gaye Song, Hrithik, Deepika, Vishal-Sheykhar, Benny, Shilpa, Kumaar, Bosco-Caesar",
+        "artist": "T-Series",
+        "duration": 169,
+        "cover": "https://i.ytimg.com/vi/eL2vQyP6DQE/hqdefault.jpg"
+      },
+      {
+        "id": "dznJcA5y6gc",
+        "title": "Sang Hoon Tere - Lyrical Video | Emraan Hashmi, Esha | Nikhil Dsouza | Pritam Chakraborty | Jannat 2",
+        "artist": "Sony Music India",
+        "duration": 268,
+        "cover": "https://i.ytimg.com/vi/dznJcA5y6gc/hqdefault.jpg"
+      },
+      {
+        "id": "WRQHV3kDcyo",
+        "title": "SAB TERA Video Song | BAAGHI | Tiger Shroff, Shraddha Kapoor | Armaan Malik | Amaal Mallik |T-Series",
+        "artist": "T-Series",
+        "duration": 146,
+        "cover": "https://i.ytimg.com/vi/WRQHV3kDcyo/hqdefault.jpg"
+      },
+      {
+        "id": "gIOea2pgfIo",
+        "title": "Tere Sang Yaara - Full Video | Rustom | Akshay Kumar & Ileana D'cruz | Arko | Manoj M",
+        "artist": "Zee Music Company",
+        "duration": 295,
+        "cover": "https://i.ytimg.com/vi/gIOea2pgfIo/hqdefault.jpg"
+      },
+      {
+        "id": "fw31zV1Pxbk",
+        "title": "Mann Ki Lagan",
+        "artist": "Rahat Fateh Ali Khan - Topic",
+        "duration": 292,
+        "cover": "https://i.ytimg.com/vi/fw31zV1Pxbk/hqdefault.jpg"
+      },
+      {
+        "id": "FWHcd8TH7dE",
+        "title": "O'Romeo: Aashiqon Ki Colony | Shahid K, Disha P | Sajid N | Vishal B | Gulzar | Madhubanti | Javed A",
+        "artist": "T-Series",
+        "duration": 203,
+        "cover": "https://i.ytimg.com/vi/FWHcd8TH7dE/hqdefault.jpg"
+      },
+      {
+        "id": "bP8ATWCvqzw",
+        "title": "Anuv Jain X Lost Stories - Arz Kiya Hai (Official Video) | Coke Studio Bharat",
+        "artist": "Coke Studio India ",
+        "duration": 306,
+        "cover": "https://i.ytimg.com/vi/bP8ATWCvqzw/hqdefault.jpg"
+      },
+      {
+        "id": "DZIcfDyBNUU",
+        "title": "Ek Deewane Ki Deewaniyat (Lyrical Video)||Tu Mera Hai Tu Mera Hai | Harshvardhan Rane | Sonam Bajwa",
+        "artist": "Barbary Leo Fitness",
+        "duration": 243,
+        "cover": "https://i.ytimg.com/vi/DZIcfDyBNUU/hqdefault.jpg"
+      },
+      {
+        "id": "BtdiNnrftYM",
+        "title": "Chand Tare Phool - 4K Video | Tum Se Achcha Kaun Hai | Nakul Kapoor | 90's Best Romantic Songs",
+        "artist": "Ishtar Music",
+        "duration": 294,
+        "cover": "https://i.ytimg.com/vi/BtdiNnrftYM/hqdefault.jpg"
+      },
+      {
+        "id": "vnlk8V-q0oU",
+        "title": "Jhalak Dikhla Ja Full Song (HD) Aksar | Emraan Hashmi",
+        "artist": "T-Series",
+        "duration": 274,
+        "cover": "https://i.ytimg.com/vi/vnlk8V-q0oU/hqdefault.jpg"
+      },
+      {
+        "id": "F6IlyB7DLzE",
+        "title": "Thug Ranjha - Official Video | AKASA | Shashvat Seth | Paresh Pahuja | Latest Hits 2018",
+        "artist": "Sony Music India",
+        "duration": 188,
+        "cover": "https://i.ytimg.com/vi/F6IlyB7DLzE/hqdefault.jpg"
+      },
+      {
+        "id": "eG-cS13QWmM",
+        "title": "DIL DOOBA",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 230,
+        "cover": "https://i.ytimg.com/vi/eG-cS13QWmM/hqdefault.jpg"
+      },
+      {
+        "id": "oGYzt9UnH0w",
+        "title": "Aaj Kehna Zaroori Hai (From \"Andaaz\")",
+        "artist": "Alka Yagnik - Topic",
+        "duration": 356,
+        "cover": "https://i.ytimg.com/vi/oGYzt9UnH0w/hqdefault.jpg"
+      },
+      {
+        "id": "5RT6QMKJTjQ",
+        "title": "Ishq Sufiyana Lyrical | The Dirty Picture | Emraan Hashmi,Vidya Balan | Vishal - Shekhar",
+        "artist": "T-Series",
+        "duration": 345,
+        "cover": "https://i.ytimg.com/vi/5RT6QMKJTjQ/hqdefault.jpg"
+      },
+      {
+        "id": "ecPMVO7JuTo",
+        "title": "Dooba Dooba - Boondein | Silk Route | Mohit Chauhan, Kem Trivedi, Atul Mittal",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 311,
+        "cover": "https://i.ytimg.com/vi/ecPMVO7JuTo/hqdefault.jpg"
+      },
+      {
+        "id": "p_oYiDR6S0E",
+        "title": "Chal Tere Ishq Mein (Female)- Gadar 2 |Utkarsh Sharma,Simratt Kaur |Vishal M,Mithoon,Neeti,Sayeed",
+        "artist": "Zee Music Company",
+        "duration": 394,
+        "cover": "https://i.ytimg.com/vi/p_oYiDR6S0E/hqdefault.jpg"
+      },
+      {
+        "id": "h6by4WdrJq0",
+        "title": "Yaad Piya Ki Aane Lagi | Video Song Pyaar Koi Khel Nahin|Falguni Pathak|Sunny Deol, Mahima Chaudhry",
+        "artist": "FalguniPathakVEVO",
+        "duration": 332,
+        "cover": "https://i.ytimg.com/vi/h6by4WdrJq0/hqdefault.jpg"
+      },
+      {
+        "id": "wuLJtA0uJro",
+        "title": "Hum Lakh Chupaye Pyar Magar | 4K Video Song | Jaan Tere Naam - Kumar Sanu, Asha Bhosle",
+        "artist": "Ultra Bollywood",
+        "duration": 277,
+        "cover": "https://i.ytimg.com/vi/wuLJtA0uJro/hqdefault.jpg"
+      },
+      {
+        "id": "AYyDX8DFmy0",
+        "title": "SONI DE NAKHRE",
+        "artist": "Wajid Ali - Topic",
+        "duration": 259,
+        "cover": "https://i.ytimg.com/vi/AYyDX8DFmy0/hqdefault.jpg"
+      },
+      {
+        "id": "ZaURV4XxdPI",
+        "title": "Chand Sifarish",
+        "artist": "Shaan - Topic",
+        "duration": 276,
+        "cover": "https://i.ytimg.com/vi/ZaURV4XxdPI/hqdefault.jpg"
+      },
+      {
+        "id": "PlN6oP-Nlno",
+        "title": "Sona Kitna Sona Hai | Govinda, Karisma Kapoor | Udit N & Poornima | Hero No.1 | 90's Hits",
+        "artist": "Tips Official",
+        "duration": 279,
+        "cover": "https://i.ytimg.com/vi/PlN6oP-Nlno/hqdefault.jpg"
+      },
+      {
+        "id": "kvgq6CLNLEs",
+        "title": "Rum Whisky - Lyrical Video | Ayushmann Khurrana, John Abraham, Yami Gautam | Vicky Donor",
+        "artist": "SonyMusicIndiaVEVO",
+        "duration": 246,
+        "cover": "https://i.ytimg.com/vi/kvgq6CLNLEs/hqdefault.jpg"
+      },
+      {
+        "id": "D49nMgP7Vzc",
+        "title": "Bol Na Halke Halke",
+        "artist": "Rahat Fateh Ali Khan - Topic",
+        "duration": 307,
+        "cover": "https://i.ytimg.com/vi/D49nMgP7Vzc/hqdefault.jpg"
+      },
+      {
+        "id": "DGVJtAHzzDQ",
+        "title": "Hua Hain Aaj Pehli Baar FULL VIDEO | SANAM RE | Pulkit Samrat, Urvashi Rautela | Divya Khosla Kumar",
+        "artist": "T-Series",
+        "duration": 248,
+        "cover": "https://i.ytimg.com/vi/DGVJtAHzzDQ/hqdefault.jpg"
+      },
+      {
+        "id": "NRHIBKNNzAk",
+        "title": "\"Phir Mohabbat Karne Chala\" Murder 2  Song   | Original Version (HD)",
+        "artist": "T-Series",
+        "duration": 127,
+        "cover": "https://i.ytimg.com/vi/NRHIBKNNzAk/hqdefault.jpg"
+      },
+      {
+        "id": "oEg_iXEWlt4",
+        "title": "Lyrical : Tu Meri Zindagi Hai | Aashiqui | Anuradha Paudwal, Kumar Sanu |Rahul Roy, Anu Agarwal",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 280,
+        "cover": "https://i.ytimg.com/vi/oEg_iXEWlt4/hqdefault.jpg"
+      },
+      {
+        "id": "bC7RmYYMqTw",
+        "title": "Pairon Mein Bandhan Hai | Full Song | Mohabbatein | Shah Rukh Khan | Jatin-Lalit | Anand Bakshi",
+        "artist": "YRF",
+        "duration": 413,
+        "cover": "https://i.ytimg.com/vi/bC7RmYYMqTw/hqdefault.jpg"
+      },
+      {
+        "id": "SfEk5W3zH98",
+        "title": "BEKHUDI Full Video Song | TERAA SURROOR | Himesh Reshammiya, Farah Karimaee | T-Series",
+        "artist": "T-Series",
+        "duration": 249,
+        "cover": "https://i.ytimg.com/vi/SfEk5W3zH98/hqdefault.jpg"
+      },
+      {
+        "id": "vQchZx9MvJ8",
+        "title": "Ek Din Teri Raahon Mein - Naqaab | Javed Ali | Bobby Deol, Urvashi Sharrma, Akshaye | Pritam",
+        "artist": "Bollywood Songs",
+        "duration": 258,
+        "cover": "https://i.ytimg.com/vi/vQchZx9MvJ8/hqdefault.jpg"
+      },
+      {
+        "id": "-KTXtRHYf70",
+        "title": "Ishq Hua",
+        "artist": "Sonu Nigam - Topic",
+        "duration": 263,
+        "cover": "https://i.ytimg.com/vi/-KTXtRHYf70/hqdefault.jpg"
+      },
+      {
+        "id": "94vimg-so20",
+        "title": "Nawabzaade: TERE NAAL NACHNA Song Feat. Athiya Shetty | Badshah, Sunanda S | Raghav Punit Dharmesh",
+        "artist": "T-Series",
+        "duration": 168,
+        "cover": "https://i.ytimg.com/vi/94vimg-so20/hqdefault.jpg"
+      },
+      {
+        "id": "FNpV3DQWUf8",
+        "title": "Aap Ke Pyaar Mein Hum Savarne Lage | Raaz | Dino Morea, Malini Sharma, Alka Yagnik | Romantic Song",
+        "artist": "Tips Official",
+        "duration": 357,
+        "cover": "https://i.ytimg.com/vi/FNpV3DQWUf8/hqdefault.jpg"
+      },
+      {
+        "id": "EpEraRui1pc",
+        "title": "BOL DO NA ZARA Full Video Song | AZHAR | Emraan Hashmi, Nargis Fakhri | Armaan Malik, Amaal Mallik",
+        "artist": "T-Series",
+        "duration": 245,
+        "cover": "https://i.ytimg.com/vi/EpEraRui1pc/hqdefault.jpg"
+      },
+      {
+        "id": "0NFxcNheoLc",
+        "title": "Banjaara Full Video Song | Ek Villain | Shraddha Kapoor, Siddharth Malhotra",
+        "artist": "T-Series",
+        "duration": 334,
+        "cover": "https://i.ytimg.com/vi/0NFxcNheoLc/hqdefault.jpg"
+      },
+      {
+        "id": "mNSYPtzpfd4",
+        "title": "Jab Koi Baat Bigad Jaaye (Lyrical) 🎶 | Kumar Sanu & Sadhna Sargam | Rajesh Roshan",
+        "artist": "Ishtar Music",
+        "duration": 499,
+        "cover": "https://i.ytimg.com/vi/mNSYPtzpfd4/hqdefault.jpg"
+      },
+      {
+        "id": "EGxJr68XhR0",
+        "title": "\"Milte Milte Haseen Wadiyon Mein\" Lyrical Video | Junoon |Vipin Sachdevan,Anuradha P|Pooja B,Avinash",
+        "artist": "T-Series Bollywood Classics",
+        "duration": 393,
+        "cover": "https://i.ytimg.com/vi/EGxJr68XhR0/hqdefault.jpg"
+      },
+      {
+        "id": "Th2Op6uvNXw",
+        "title": "Hum Pyaar Karne Wale (Lyrical) |Dhurandhar The Revenge Shashwat Sachdev,Anuradha P,Udit N,Qveen",
+        "artist": "T-Series",
+        "duration": 229,
+        "cover": "https://i.ytimg.com/vi/Th2Op6uvNXw/hqdefault.jpg"
+      },
+      {
+        "id": "V1oczq_8L0E",
+        "title": "ISHQ MUBARAK Full Video Song || Tum Bin 2 || Arijit Singh | Neha Sharma, Aditya Seal & Aashim Gulati",
+        "artist": "T-Series",
+        "duration": 293,
+        "cover": "https://i.ytimg.com/vi/V1oczq_8L0E/hqdefault.jpg"
+      },
+      {
+        "id": "0RxUcKE13ZI",
+        "title": "Bandhu 2.0 | Shahid, Kriti, Rashmika| Pritam | Kavita | Neeraj | Irshad K | Cocktail 2 | 19th June",
+        "artist": "Sony Music India",
+        "duration": 186,
+        "cover": "https://i.ytimg.com/vi/0RxUcKE13ZI/hqdefault.jpg"
+      },
+      {
+        "id": "KGn-erOG-Bs",
+        "title": "LAAL PARI (Song): Yo Yo Honey Singh | Sajid Nadiadwala | Tarun Mansukhani | Housefull 5",
+        "artist": "T-Series",
+        "duration": 185,
+        "cover": "https://i.ytimg.com/vi/KGn-erOG-Bs/hqdefault.jpg"
+      },
+      {
+        "id": "95I5VaR7GeU",
+        "title": "Laila Main Laila | Raees | Shah Rukh Khan | Sunny Leone | Pawni Pandey | Ram Sampath",
+        "artist": "Zee Music Company",
+        "duration": 161,
+        "cover": "https://i.ytimg.com/vi/95I5VaR7GeU/hqdefault.jpg"
+      },
+      {
+        "id": "AlvUuGJccKs",
+        "title": "Tere Liye - Lyrical - Prince | Vivek Oberoi | Atif Aslam, Shreya Ghoshal | Sachin Gupta |Dance Songs",
+        "artist": "Tips Official",
+        "duration": 301,
+        "cover": "https://i.ytimg.com/vi/AlvUuGJccKs/hqdefault.jpg"
+      },
+      {
+        "id": "axepn8QqxRk",
+        "title": "Soni Soni | Ishq Vishk Rebound | Rohit Saraf, Pashmina| @DarshanRavalDZ@jonitamusic, Rochak,Gurpreet",
+        "artist": "Tips Official",
+        "duration": 194,
+        "cover": "https://i.ytimg.com/vi/axepn8QqxRk/hqdefault.jpg"
+      },
+      {
+        "id": "B2aHXbnu9dI",
+        "title": "Main Agar Saamne | Raaz | Dino Morea | Bipasha Basu | Abhijeet & Alka Yagnik | Hindi Hit Songs",
+        "artist": "Tips Official",
+        "duration": 322,
+        "cover": "https://i.ytimg.com/vi/B2aHXbnu9dI/hqdefault.jpg"
+      },
+      {
+        "id": "V1fbOsHBlZE",
+        "title": "Haan Tu Hain - Full Video | Jannat | Emraan Hashmi, Sonal Chauhan | KK | Pritam | Sayeed Quadri",
+        "artist": "Sony Music India",
+        "duration": 287,
+        "cover": "https://i.ytimg.com/vi/V1fbOsHBlZE/hqdefault.jpg"
+      },
+      {
+        "id": "x_elT6zkqN0",
+        "title": "\"Oh Oh Jane Jaana\" Salman Khan Full Song | Pyaar Kiya Toh Darna Kya",
+        "artist": "T-Series",
+        "duration": 257,
+        "cover": "https://i.ytimg.com/vi/x_elT6zkqN0/hqdefault.jpg"
+      },
+      {
+        "id": "inEu2qQuGZ8",
+        "title": "\"Sun Raha Hai Na Tu Female Version\" By Shreya Ghoshal Aashiqui 2 Full Video Song |",
+        "artist": "T-Series",
+        "duration": 230,
+        "cover": "https://i.ytimg.com/vi/inEu2qQuGZ8/hqdefault.jpg"
+      },
+      {
+        "id": "oAVhUAaVCVQ",
+        "title": "Lyrical: Chammak Challo | Ra One | ShahRukh Khan | Kareena Kapoor",
+        "artist": "T-Series",
+        "duration": 246,
+        "cover": "https://i.ytimg.com/vi/oAVhUAaVCVQ/hqdefault.jpg"
+      },
+      {
+        "id": "NUo8CKI34o4",
+        "title": "Tum Hi Ho Song Aashiqui 2 | Music By Mithoon | Aditya Roy Kapur, Shraddha Kapoor",
+        "artist": "T-Series",
+        "duration": 141,
+        "cover": "https://i.ytimg.com/vi/NUo8CKI34o4/hqdefault.jpg"
+      },
+      {
+        "id": "IgK5-PUeARg",
+        "title": "'Khuda Bhi' FULL VIDEO Song | Sunny Leone | Mohit Chauhan | Ek Paheli Leela",
+        "artist": "T-Series",
+        "duration": 192,
+        "cover": "https://i.ytimg.com/vi/IgK5-PUeARg/hqdefault.jpg"
+      }
+    ],
+    "PLXbutJfFlwLI": [
+      {
+        "id": "JTu2YwYTjLU",
+        "title": "Rehab (pretty baby) for k pt2 demo Lana del rey",
+        "artist": "Brooklyn ",
+        "duration": 219,
+        "cover": "https://i.ytimg.com/vi/JTu2YwYTjLU/hqdefault.jpg"
+      },
+      {
+        "id": "WeI4KZ3JWrY",
+        "title": "Love Me Like You Do",
+        "artist": "Ellie Goulding - Topic",
+        "duration": 254,
+        "cover": "https://i.ytimg.com/vi/WeI4KZ3JWrY/hqdefault.jpg"
+      },
+      {
+        "id": "xskZZSOY65E",
+        "title": "Hallelujah",
+        "artist": "Alexandra Burke - Topic",
+        "duration": 218,
+        "cover": "https://i.ytimg.com/vi/xskZZSOY65E/hqdefault.jpg"
+      },
+      {
+        "id": "0yW7w8F2TVA",
+        "title": "James Arthur - Say You Won't Let Go",
+        "artist": "JamesAVEVO",
+        "duration": 211,
+        "cover": "https://i.ytimg.com/vi/0yW7w8F2TVA/hqdefault.jpg"
+      },
+      {
+        "id": "T3E9Wjbq44E",
+        "title": "Gym Class Heroes: Stereo Hearts ft. Adam Levine [OFFICIAL VIDEO]",
+        "artist": "Fueled By Ramen",
+        "duration": 217,
+        "cover": "https://i.ytimg.com/vi/T3E9Wjbq44E/hqdefault.jpg"
+      },
+      {
+        "id": "RY607kB2QiU",
+        "title": "Jaymes Young - Infinity [Visualizer]",
+        "artist": "Jaymes Young",
+        "duration": 238,
+        "cover": "https://i.ytimg.com/vi/RY607kB2QiU/hqdefault.jpg"
+      },
+      {
+        "id": "6FewJvQDTmA",
+        "title": "Co2",
+        "artist": "Prateek Kuhad - Topic",
+        "duration": 164,
+        "cover": "https://i.ytimg.com/vi/6FewJvQDTmA/hqdefault.jpg"
+      },
+      {
+        "id": "dsEmz4q1RGw",
+        "title": "Unholy",
+        "artist": "Sam Smith - Topic",
+        "duration": 157,
+        "cover": "https://i.ytimg.com/vi/dsEmz4q1RGw/hqdefault.jpg"
+      },
+      {
+        "id": "JGwWNGJdvx8",
+        "title": "Ed Sheeran - Shape of You (Official Music Video)",
+        "artist": "Ed Sheeran",
+        "duration": 264,
+        "cover": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg"
+      },
+      {
+        "id": "GCdwKhTtNNw",
+        "title": "The Neighbourhood - Sweater Weather (Official Video)",
+        "artist": "TheNeighbourhoodVEVO",
+        "duration": 253,
+        "cover": "https://i.ytimg.com/vi/GCdwKhTtNNw/hqdefault.jpg"
+      },
+      {
+        "id": "q0hyYWKXF0Q",
+        "title": "TONES AND I - DANCE MONKEY (OFFICIAL VIDEO)",
+        "artist": "Tones And I",
+        "duration": 237,
+        "cover": "https://i.ytimg.com/vi/q0hyYWKXF0Q/hqdefault.jpg"
+      },
+      {
+        "id": "hT_nvWreIhg",
+        "title": "OneRepublic - Counting Stars",
+        "artist": "OneRepublicVEVO",
+        "duration": 284,
+        "cover": "https://i.ytimg.com/vi/hT_nvWreIhg/hqdefault.jpg"
+      },
+      {
+        "id": "yALxAPjtcw0",
+        "title": "Toygar: Roots",
+        "artist": "Ali Toygar - Topic",
+        "duration": 168,
+        "cover": "https://i.ytimg.com/vi/yALxAPjtcw0/hqdefault.jpg"
+      },
+      {
+        "id": "mRD0-GxqHVo",
+        "title": "Glass Animals - Heat Waves (Official Video)",
+        "artist": "GlassAnimalsVEVO",
+        "duration": 236,
+        "cover": "https://i.ytimg.com/vi/mRD0-GxqHVo/hqdefault.jpg"
+      },
+      {
+        "id": "YqeW9_5kURI",
+        "title": "Major Lazer & DJ Snake - Lean On (feat. MØ) [Official 4K Music Video]",
+        "artist": "Major Lazer Official",
+        "duration": 179,
+        "cover": "https://i.ytimg.com/vi/YqeW9_5kURI/hqdefault.jpg"
+      },
+      {
+        "id": "Il-an3K9pjg",
+        "title": "Anne-Marie - 2002 [Official Video]",
+        "artist": "Anne-Marie",
+        "duration": 195,
+        "cover": "https://i.ytimg.com/vi/Il-an3K9pjg/hqdefault.jpg"
+      },
+      {
+        "id": "o2ugE70YJ_M",
+        "title": "Scream",
+        "artist": "The Movement - Topic",
+        "duration": 238,
+        "cover": "https://i.ytimg.com/vi/o2ugE70YJ_M/hqdefault.jpg"
+      },
+      {
+        "id": "oFrvRiixXcA",
+        "title": "Arcade",
+        "artist": "Duncan Laurence - Topic",
+        "duration": 184,
+        "cover": "https://i.ytimg.com/vi/oFrvRiixXcA/hqdefault.jpg"
+      },
+      {
+        "id": "v00yMGtzLjA",
+        "title": "Forester - Cambria (Official Audio)",
+        "artist": "ForesterVEVO",
+        "duration": 149,
+        "cover": "https://i.ytimg.com/vi/v00yMGtzLjA/hqdefault.jpg"
+      },
+      {
+        "id": "Ph54wQG8ynk",
+        "title": "Camila Cabello - Never Be the Same (Official Video)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 242,
+        "cover": "https://i.ytimg.com/vi/Ph54wQG8ynk/hqdefault.jpg"
+      },
+      {
+        "id": "PT2_F-1esPk",
+        "title": "The Chainsmokers - Closer (Lyric) ft. Halsey",
+        "artist": "ChainsmokersVEVO",
+        "duration": 262,
+        "cover": "https://i.ytimg.com/vi/PT2_F-1esPk/hqdefault.jpg"
+      },
+      {
+        "id": "M3mJkSqZbX4",
+        "title": "Zedd, Maren Morris, Grey - The Middle (Official Music Video)",
+        "artist": "ZEDDVEVO",
+        "duration": 191,
+        "cover": "https://i.ytimg.com/vi/M3mJkSqZbX4/hqdefault.jpg"
+      },
+      {
+        "id": "DiTd771WumE",
+        "title": "APT.",
+        "artist": "ROSÉ - Topic",
+        "duration": 170,
+        "cover": "https://i.ytimg.com/vi/DiTd771WumE/hqdefault.jpg"
+      },
+      {
+        "id": "hWG_XlkIiiQ",
+        "title": "York",
+        "artist": "Christian Löffler - Topic",
+        "duration": 477,
+        "cover": "https://i.ytimg.com/vi/hWG_XlkIiiQ/hqdefault.jpg"
+      },
+      {
+        "id": "3tuJ34YgW0c",
+        "title": "Moon River (From \"Breakfast at Tiffany's\")",
+        "artist": "Andy Williams - Topic",
+        "duration": 163,
+        "cover": "https://i.ytimg.com/vi/3tuJ34YgW0c/hqdefault.jpg"
+      },
+      {
+        "id": "BPgEgaPk62M",
+        "title": "Ariana Grande - One Last Time (Official Video)",
+        "artist": "ArianaGrandeVevo",
+        "duration": 250,
+        "cover": "https://i.ytimg.com/vi/BPgEgaPk62M/hqdefault.jpg"
+      },
+      {
+        "id": "DlvOfnSloZE",
+        "title": "J. Cole - Huntin' Wabbitz (Official Audio)",
+        "artist": "J. Cole",
+        "duration": 162,
+        "cover": "https://i.ytimg.com/vi/DlvOfnSloZE/hqdefault.jpg"
+      },
+      {
+        "id": "syFZfO_wfMQ",
+        "title": "One Direction - Night Changes",
+        "artist": "OneDirectionVEVO",
+        "duration": 241,
+        "cover": "https://i.ytimg.com/vi/syFZfO_wfMQ/hqdefault.jpg"
+      },
+      {
+        "id": "G-fCOEZnnTs",
+        "title": "Gabriela",
+        "artist": "KATSEYE - Topic",
+        "duration": 198,
+        "cover": "https://i.ytimg.com/vi/G-fCOEZnnTs/hqdefault.jpg"
+      },
+      {
+        "id": "W8a4sUabCUo",
+        "title": "Ruth B. - Dandelions (Audio)",
+        "artist": "RuthBVEVO",
+        "duration": 236,
+        "cover": "https://i.ytimg.com/vi/W8a4sUabCUo/hqdefault.jpg"
+      },
+      {
+        "id": "kTJczUoc26U",
+        "title": "The Kid LAROI, Justin Bieber - STAY (Official Video)",
+        "artist": "TheKidLAROIVEVO",
+        "duration": 158,
+        "cover": "https://i.ytimg.com/vi/kTJczUoc26U/hqdefault.jpg"
+      },
+      {
+        "id": "aatr_2MstrI",
+        "title": "Clean Bandit - Symphony (feat. Zara Larsson) [Official Video]",
+        "artist": "Clean Bandit",
+        "duration": 246,
+        "cover": "https://i.ytimg.com/vi/aatr_2MstrI/hqdefault.jpg"
+      },
+      {
+        "id": "kOkQ4T5WO9E",
+        "title": "Calvin Harris, Rihanna - This Is What You Came For (Official Video)",
+        "artist": "CalvinHarrisVEVO",
+        "duration": 240,
+        "cover": "https://i.ytimg.com/vi/kOkQ4T5WO9E/hqdefault.jpg"
+      },
+      {
+        "id": "eObNrV49ZJk",
+        "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
+        "artist": "Dawn - Topic",
+        "duration": 203,
+        "cover": "https://i.ytimg.com/vi/eObNrV49ZJk/hqdefault.jpg"
+      },
+      {
+        "id": "e-tO1A6tbBs",
+        "title": "Bass Jam",
+        "artist": "Release - Topic",
+        "duration": 216,
+        "cover": "https://i.ytimg.com/vi/e-tO1A6tbBs/hqdefault.jpg"
+      },
+      {
+        "id": "EBr7YTNBzoM",
+        "title": "Travis Scott - KICK OUT",
+        "artist": "TravisScottVEVO",
+        "duration": 120,
+        "cover": "https://i.ytimg.com/vi/EBr7YTNBzoM/hqdefault.jpg"
+      },
+      {
+        "id": "-rq0rol9Kyk",
+        "title": "Happy Times",
+        "artist": "Bert Weedon - Topic",
+        "duration": 118,
+        "cover": "https://i.ytimg.com/vi/-rq0rol9Kyk/hqdefault.jpg"
+      },
+      {
+        "id": "4fqwVBuunxY",
+        "title": "Astrid S - Hurts So Good",
+        "artist": "AstridSofficialVEVO",
+        "duration": 207,
+        "cover": "https://i.ytimg.com/vi/4fqwVBuunxY/hqdefault.jpg"
+      },
+      {
+        "id": "lpeuIu-ZYJY",
+        "title": "Serena - Safari (Official Video)",
+        "artist": "RotonMusicTV",
+        "duration": 190,
+        "cover": "https://i.ytimg.com/vi/lpeuIu-ZYJY/hqdefault.jpg"
+      },
+      {
+        "id": "uGqbJwo3EhQ",
+        "title": "Jalebi Baby",
+        "artist": "Tesher - Topic",
+        "duration": 190,
+        "cover": "https://i.ytimg.com/vi/uGqbJwo3EhQ/hqdefault.jpg"
+      },
+      {
+        "id": "Usl3amopetY",
+        "title": "Hichki",
+        "artist": "Achint - Topic",
+        "duration": 171,
+        "cover": "https://i.ytimg.com/vi/Usl3amopetY/hqdefault.jpg"
+      },
+      {
+        "id": "cENNxOOdytM",
+        "title": "Will You Love Me Tomorrow",
+        "artist": "The Shirelles - Topic",
+        "duration": 161,
+        "cover": "https://i.ytimg.com/vi/cENNxOOdytM/hqdefault.jpg"
+      },
+      {
+        "id": "bgfO00r2JJo",
+        "title": "Dream Lover",
+        "artist": "Release - Topic",
+        "duration": 152,
+        "cover": "https://i.ytimg.com/vi/bgfO00r2JJo/hqdefault.jpg"
+      },
+      {
+        "id": "Ye2OMov9dQs",
+        "title": "Shakira - Waka Waka (This Time for Africa) | 2010 FIFA World Cup Performance",
+        "artist": "FIFA",
+        "duration": 189,
+        "cover": "https://i.ytimg.com/vi/Ye2OMov9dQs/hqdefault.jpg"
+      },
+      {
+        "id": "7wtfhZwyrcc",
+        "title": "Imagine Dragons - Believer (Official Music Video)",
+        "artist": "ImagineDragonsVEVO",
+        "duration": 217,
+        "cover": "https://i.ytimg.com/vi/7wtfhZwyrcc/hqdefault.jpg"
+      },
+      {
+        "id": "ar1nngSvPtU",
+        "title": "Strength & Softness",
+        "artist": "Affirm with Music - Topic",
+        "duration": 189,
+        "cover": "https://i.ytimg.com/vi/ar1nngSvPtU/hqdefault.jpg"
+      },
+      {
+        "id": "L7mfjvdnPno",
+        "title": "Trevor Daniel - Falling (Official Music Video)",
+        "artist": "Trevor Daniel",
+        "duration": 160,
+        "cover": "https://i.ytimg.com/vi/L7mfjvdnPno/hqdefault.jpg"
+      },
+      {
+        "id": "qsNyev6Q1sE",
+        "title": "La La Land",
+        "artist": "Taba Chake - Topic",
+        "duration": 161,
+        "cover": "https://i.ytimg.com/vi/qsNyev6Q1sE/hqdefault.jpg"
+      },
+      {
+        "id": "b7RgVNeINu0",
+        "title": "Ride or Die, Pt. 2",
+        "artist": "Sevdaliza - Topic",
+        "duration": 159,
+        "cover": "https://i.ytimg.com/vi/b7RgVNeINu0/hqdefault.jpg"
+      },
+      {
+        "id": "c3K1BWeIZyo",
+        "title": "Sita Ram",
+        "artist": "Krishna Das - Topic",
+        "duration": 447,
+        "cover": "https://i.ytimg.com/vi/c3K1BWeIZyo/hqdefault.jpg"
+      },
+      {
+        "id": "56cKlT62wrQ",
+        "title": "All I Have to Do Is Dream",
+        "artist": "The Everly Brothers - Topic",
+        "duration": 161,
+        "cover": "https://i.ytimg.com/vi/56cKlT62wrQ/hqdefault.jpg"
+      },
+      {
+        "id": "WXBHCQYxwr0",
+        "title": "Ava Max - Sweet but Psycho [Official Music Video]",
+        "artist": "Ava Max",
+        "duration": 208,
+        "cover": "https://i.ytimg.com/vi/WXBHCQYxwr0/hqdefault.jpg"
+      },
+      {
+        "id": "YaEG2aWJnZ8",
+        "title": "Sia - Unstoppable (Official Video - Live from the Nostalgic For The Present Tour)",
+        "artist": "Sia",
+        "duration": 227,
+        "cover": "https://i.ytimg.com/vi/YaEG2aWJnZ8/hqdefault.jpg"
+      },
+      {
+        "id": "v8I5vDewcZo",
+        "title": "Dream A Little Dream Of Me",
+        "artist": "The Mamas & The Papas - Topic",
+        "duration": 195,
+        "cover": "https://i.ytimg.com/vi/v8I5vDewcZo/hqdefault.jpg"
+      },
+      {
+        "id": "WcIcVapfqXw",
+        "title": "Rema, Selena Gomez - Calm Down (Official Music Video)",
+        "artist": "SelenaGomezVEVO",
+        "duration": 240,
+        "cover": "https://i.ytimg.com/vi/WcIcVapfqXw/hqdefault.jpg"
+      },
+      {
+        "id": "8NAhHJ_3bQQ",
+        "title": "All My Love",
+        "artist": "Elderbrook - Topic",
+        "duration": 212,
+        "cover": "https://i.ytimg.com/vi/8NAhHJ_3bQQ/hqdefault.jpg"
+      },
+      {
+        "id": "uFeZ_x--aRg",
+        "title": "Johnny B. Goode",
+        "artist": "Chuck Berry - Topic",
+        "duration": 162,
+        "cover": "https://i.ytimg.com/vi/uFeZ_x--aRg/hqdefault.jpg"
+      },
+      {
+        "id": "UtF6Jej8yb4",
+        "title": "Avicii - The Nights",
+        "artist": "AviciiOfficialVEVO",
+        "duration": 191,
+        "cover": "https://i.ytimg.com/vi/UtF6Jej8yb4/hqdefault.jpg"
+      },
+      {
+        "id": "zXtzZfh8RSY",
+        "title": "2 good",
+        "artist": "RANJ - Topic",
+        "duration": 190,
+        "cover": "https://i.ytimg.com/vi/zXtzZfh8RSY/hqdefault.jpg"
+      },
+      {
+        "id": "50VNCymT-Cs",
+        "title": "Alec Benjamin - Let Me Down Slowly [Official Music Video]",
+        "artist": "Alec Benjamin",
+        "duration": 178,
+        "cover": "https://i.ytimg.com/vi/50VNCymT-Cs/hqdefault.jpg"
+      },
+      {
+        "id": "GxldQ9eX2wo",
+        "title": "Stephen Sanchez - Until I Found You (Official Video)",
+        "artist": "StephenSanchezVEVO",
+        "duration": 176,
+        "cover": "https://i.ytimg.com/vi/GxldQ9eX2wo/hqdefault.jpg"
+      },
+      {
+        "id": "dT2owtxkU8k",
+        "title": "Shawn Mendes - There's Nothing Holdin' Me Back (Official Music Video)",
+        "artist": "ShawnMendesVEVO",
+        "duration": 238,
+        "cover": "https://i.ytimg.com/vi/dT2owtxkU8k/hqdefault.jpg"
+      },
+      {
+        "id": "TUVcZfQe-Kw",
+        "title": "Dua Lipa - Levitating Featuring DaBaby (Official Music Video)",
+        "artist": "Dua Lipa",
+        "duration": 231,
+        "cover": "https://i.ytimg.com/vi/TUVcZfQe-Kw/hqdefault.jpg"
+      },
+      {
+        "id": "zjA-FR-f5Kc",
+        "title": "Jennifer Hudson I National Anthem at the FIFA World Cup 2026™ I Full Performance",
+        "artist": "FIFA",
+        "duration": 121,
+        "cover": "https://i.ytimg.com/vi/zjA-FR-f5Kc/hqdefault.jpg"
+      },
+      {
+        "id": "I3rznLsde8E",
+        "title": "How Deep Is Your Love?",
+        "artist": "The Rapture - Topic",
+        "duration": 386,
+        "cover": "https://i.ytimg.com/vi/I3rznLsde8E/hqdefault.jpg"
+      },
+      {
+        "id": "eVli-tstM5E",
+        "title": "Sabrina Carpenter - Espresso",
+        "artist": "SabrinaCarpenterVEVO",
+        "duration": 201,
+        "cover": "https://i.ytimg.com/vi/eVli-tstM5E/hqdefault.jpg"
+      },
+      {
+        "id": "0go2nfVXFgA",
+        "title": "The Vamps - Somebody To You ft. Demi Lovato",
+        "artist": "TheVampsVEVO",
+        "duration": 199,
+        "cover": "https://i.ytimg.com/vi/0go2nfVXFgA/hqdefault.jpg"
+      },
+      {
+        "id": "To4SWGZkEPk",
+        "title": "Tate McRae - greedy (Official Video)",
+        "artist": "TateMcRaeVEVO",
+        "duration": 155,
+        "cover": "https://i.ytimg.com/vi/To4SWGZkEPk/hqdefault.jpg"
+      },
+      {
+        "id": "AWGqoCNbsvM",
+        "title": "Colbie Caillat - Bubbly (Official Music Video)",
+        "artist": "ColbieCaillatVEVO",
+        "duration": 193,
+        "cover": "https://i.ytimg.com/vi/AWGqoCNbsvM/hqdefault.jpg"
+      },
+      {
+        "id": "fWNaR-rxAic",
+        "title": "Carly Rae Jepsen - Call Me Maybe",
+        "artist": "CarlyRaeJepsenVEVO",
+        "duration": 200,
+        "cover": "https://i.ytimg.com/vi/fWNaR-rxAic/hqdefault.jpg"
+      },
+      {
+        "id": "4NRXx6U8ABQ",
+        "title": "The Weeknd - Blinding Lights (Official Video)",
+        "artist": "TheWeekndVEVO",
+        "duration": 263,
+        "cover": "https://i.ytimg.com/vi/4NRXx6U8ABQ/hqdefault.jpg"
+      },
+      {
+        "id": "mxyucLe9YE4",
+        "title": "NIKI - lowkey (Official Visualizer)",
+        "artist": "88rising",
+        "duration": 172,
+        "cover": "https://i.ytimg.com/vi/mxyucLe9YE4/hqdefault.jpg"
+      },
+      {
+        "id": "O54qf2Yc390",
+        "title": "NDOTZ - Embrace It (Official Music Video)",
+        "artist": "NDOTZ",
+        "duration": 106,
+        "cover": "https://i.ytimg.com/vi/O54qf2Yc390/hqdefault.jpg"
+      },
+      {
+        "id": "oSHzUD-uqKY",
+        "title": "Elley Duhé - MIDDLE OF THE NIGHT (Official Video)",
+        "artist": "Elley Duhé",
+        "duration": 191,
+        "cover": "https://i.ytimg.com/vi/oSHzUD-uqKY/hqdefault.jpg"
+      },
+      {
+        "id": "4Va3DvTiVjs",
+        "title": "Huzuri",
+        "artist": "Eden's Echo - Topic",
+        "duration": 160,
+        "cover": "https://i.ytimg.com/vi/4Va3DvTiVjs/hqdefault.jpg"
+      },
+      {
+        "id": "SvEXeS7f4P0",
+        "title": "Surma",
+        "artist": "Frappe Ash - Topic",
+        "duration": 249,
+        "cover": "https://i.ytimg.com/vi/SvEXeS7f4P0/hqdefault.jpg"
+      },
+      {
+        "id": "vYAXTjfJ7bE",
+        "title": "August Diaries",
+        "artist": "DHARIA - Topic",
+        "duration": 224,
+        "cover": "https://i.ytimg.com/vi/vYAXTjfJ7bE/hqdefault.jpg"
+      },
+      {
+        "id": "CnEqrgMlWLQ",
+        "title": "I Think They Call This Love (Cover)",
+        "artist": "Matthew Ifield - Topic",
+        "duration": 197,
+        "cover": "https://i.ytimg.com/vi/CnEqrgMlWLQ/hqdefault.jpg"
+      },
+      {
+        "id": "wVvJRNTIYeY",
+        "title": "Tauba",
+        "artist": "DJ LYAN - Topic",
+        "duration": 171,
+        "cover": "https://i.ytimg.com/vi/wVvJRNTIYeY/hqdefault.jpg"
+      },
+      {
+        "id": "r7qovpFAGrQ",
+        "title": "Lil Nas X - Old Town Road (Official Video) ft. Billy Ray Cyrus",
+        "artist": "LilNasXVEVO",
+        "duration": 158,
+        "cover": "https://i.ytimg.com/vi/r7qovpFAGrQ/hqdefault.jpg"
+      },
+      {
+        "id": "zYzVDrASJ7Q",
+        "title": "Ari Abdul - BABYDOLL",
+        "artist": "Distraction",
+        "duration": 197,
+        "cover": "https://i.ytimg.com/vi/zYzVDrASJ7Q/hqdefault.jpg"
+      },
+      {
+        "id": "C7T4aQMxTTM",
+        "title": "Sugar Sugar",
+        "artist": "The Archies - Topic",
+        "duration": 168,
+        "cover": "https://i.ytimg.com/vi/C7T4aQMxTTM/hqdefault.jpg"
+      },
+      {
+        "id": "YwbGBFMgQ-E",
+        "title": "Goons",
+        "artist": "Hanumankind - Topic",
+        "duration": 189,
+        "cover": "https://i.ytimg.com/vi/YwbGBFMgQ-E/hqdefault.jpg"
+      },
+      {
+        "id": "QcIy9NiNbmo",
+        "title": "Taylor Swift - Bad Blood ft. Kendrick Lamar",
+        "artist": "Taylor Swift",
+        "duration": 245,
+        "cover": "https://i.ytimg.com/vi/QcIy9NiNbmo/hqdefault.jpg"
+      },
+      {
+        "id": "_NbASTLrJu4",
+        "title": "Bailamos (From \"Wild Wild West\")",
+        "artist": "Release - Topic",
+        "duration": 213,
+        "cover": "https://i.ytimg.com/vi/_NbASTLrJu4/hqdefault.jpg"
+      },
+      {
+        "id": "cvbOCoRheoM",
+        "title": "Swalla (feat. Nicki Minaj & Ty Dolla $ign)",
+        "artist": "Jason Derulo - Topic",
+        "duration": 217,
+        "cover": "https://i.ytimg.com/vi/cvbOCoRheoM/hqdefault.jpg"
+      },
+      {
+        "id": "jSPpbOGnFgk",
+        "title": "The Ronettes - Be My Baby (Official Audio)",
+        "artist": "TheRonettesVEVO",
+        "duration": 163,
+        "cover": "https://i.ytimg.com/vi/jSPpbOGnFgk/hqdefault.jpg"
+      },
+      {
+        "id": "_unQTJk1Y5E",
+        "title": "Spring Time",
+        "artist": "Jokhay - Topic",
+        "duration": 201,
+        "cover": "https://i.ytimg.com/vi/_unQTJk1Y5E/hqdefault.jpg"
+      },
+      {
+        "id": "WCTjFHyvEaM",
+        "title": "Tungevaag, Raaban  - Bad Boy (Official Video)",
+        "artist": "Tungevaag",
+        "duration": 198,
+        "cover": "https://i.ytimg.com/vi/WCTjFHyvEaM/hqdefault.jpg"
+      },
+      {
+        "id": "cMTAUr3Nm6I",
+        "title": "Meghan Trainor - NO (Official Video)",
+        "artist": "MeghanTrainorVEVO",
+        "duration": 223,
+        "cover": "https://i.ytimg.com/vi/cMTAUr3Nm6I/hqdefault.jpg"
+      },
+      {
+        "id": "7KDB4r_s-0c",
+        "title": "Hollow",
+        "artist": "Unora - Topic",
+        "duration": 128,
+        "cover": "https://i.ytimg.com/vi/7KDB4r_s-0c/hqdefault.jpg"
+      },
+      {
+        "id": "WrwXY-UrHRU",
+        "title": "Caller Tune",
+        "artist": "Neeraj Shridhar - Topic",
+        "duration": 274,
+        "cover": "https://i.ytimg.com/vi/WrwXY-UrHRU/hqdefault.jpg"
+      },
+      {
+        "id": "AKaZ8sFgDdA",
+        "title": "Juicy",
+        "artist": "JJerome87 - Topic",
+        "duration": 211,
+        "cover": "https://i.ytimg.com/vi/AKaZ8sFgDdA/hqdefault.jpg"
+      },
+      {
+        "id": "L_BpiSsIBFM",
+        "title": "Don Toliver - BROTHER STONE (FEAT. KODAK BLACK) [Official Music Video]",
+        "artist": "Don Toliver",
+        "duration": 237,
+        "cover": "https://i.ytimg.com/vi/L_BpiSsIBFM/hqdefault.jpg"
+      },
+      {
+        "id": "DD306he-rYc",
+        "title": "On The Floor",
+        "artist": "David Robert O'Connor 2022",
+        "duration": 285,
+        "cover": "https://i.ytimg.com/vi/DD306he-rYc/hqdefault.jpg"
+      },
+      {
+        "id": "PIh2xe4jnpk",
+        "title": "MAGIC! - Rude (Official Video)",
+        "artist": "ournameismagicVEVO",
+        "duration": 226,
+        "cover": "https://i.ytimg.com/vi/PIh2xe4jnpk/hqdefault.jpg"
+      },
+      {
+        "id": "ApXoWvfEYVU",
+        "title": "Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)",
+        "artist": "PostMaloneVEVO",
+        "duration": 162,
+        "cover": "https://i.ytimg.com/vi/ApXoWvfEYVU/hqdefault.jpg"
+      },
+      {
+        "id": "2xsuwmh8b3I",
+        "title": "So Good (Momentum)",
+        "artist": "Layup - Topic",
+        "duration": 140,
+        "cover": "https://i.ytimg.com/vi/2xsuwmh8b3I/hqdefault.jpg"
+      },
+      {
+        "id": "JMYoZanF__U",
+        "title": "Future, Metro Boomin - Runnin Outta Time (Lyrics)",
+        "artist": "MusicOnly",
+        "duration": 208,
+        "cover": "https://i.ytimg.com/vi/JMYoZanF__U/hqdefault.jpg"
+      },
+      {
+        "id": "J-6LD8988D4",
+        "title": "The Rope is Tied | Squid Game OST",
+        "artist": "Original Soundtrack",
+        "duration": 199,
+        "cover": "https://i.ytimg.com/vi/J-6LD8988D4/hqdefault.jpg"
+      },
+      {
+        "id": "3skZLJiyk9k",
+        "title": "Say My Name",
+        "artist": "David Guetta - Topic",
+        "duration": 199,
+        "cover": "https://i.ytimg.com/vi/3skZLJiyk9k/hqdefault.jpg"
+      },
+      {
+        "id": "dGYF-uZ11iQ",
+        "title": "Leave (Extended Mix)",
+        "artist": "EFIX - Topic",
+        "duration": 282,
+        "cover": "https://i.ytimg.com/vi/dGYF-uZ11iQ/hqdefault.jpg"
+      },
+      {
+        "id": "ONxOGXC_YNk",
+        "title": "Somebody",
+        "artist": "Jung Kook - Topic",
+        "duration": 169,
+        "cover": "https://i.ytimg.com/vi/ONxOGXC_YNk/hqdefault.jpg"
+      },
+      {
+        "id": "9Re5dNXd6XU",
+        "title": "Pretend",
+        "artist": "Brenda Lee - Topic",
+        "duration": 174,
+        "cover": "https://i.ytimg.com/vi/9Re5dNXd6XU/hqdefault.jpg"
+      },
+      {
+        "id": "W75vm1DjF9A",
+        "title": "Killing Time",
+        "artist": "Helsloot - Topic",
+        "duration": 332,
+        "cover": "https://i.ytimg.com/vi/W75vm1DjF9A/hqdefault.jpg"
+      },
+      {
+        "id": "f5v8O_1VR44",
+        "title": "Love Story",
+        "artist": "Indila - Topic",
+        "duration": 317,
+        "cover": "https://i.ytimg.com/vi/f5v8O_1VR44/hqdefault.jpg"
+      },
+      {
+        "id": "FgS1b2nU8AQ",
+        "title": "Beach Weather - Sex, Drugs, Etc. (Official Video)",
+        "artist": "BeachWeatherVEVO",
+        "duration": 209,
+        "cover": "https://i.ytimg.com/vi/FgS1b2nU8AQ/hqdefault.jpg"
+      },
+      {
+        "id": "_wKNQ1UTe10",
+        "title": "Swing Tree",
+        "artist": "Discovery - Topic",
+        "duration": 159,
+        "cover": "https://i.ytimg.com/vi/_wKNQ1UTe10/hqdefault.jpg"
+      },
+      {
+        "id": "_zq1Squ-Uqs",
+        "title": "Circadian Rhythm",
+        "artist": "Drake - Topic",
+        "duration": 127,
+        "cover": "https://i.ytimg.com/vi/_zq1Squ-Uqs/hqdefault.jpg"
+      },
+      {
+        "id": "qsvTtp-n_a0",
+        "title": "Sealed With A Kiss",
+        "artist": "Brian Hyland - Topic",
+        "duration": 164,
+        "cover": "https://i.ytimg.com/vi/qsvTtp-n_a0/hqdefault.jpg"
+      },
+      {
+        "id": "RWkoW64rtTw",
+        "title": "Vishnu",
+        "artist": "Peter Cat Recording Co. - Topic",
+        "duration": 266,
+        "cover": "https://i.ytimg.com/vi/RWkoW64rtTw/hqdefault.jpg"
+      },
+      {
+        "id": "c0zLGRqT7Mw",
+        "title": "Allies",
+        "artist": "Mutemath - Topic",
+        "duration": 195,
+        "cover": "https://i.ytimg.com/vi/c0zLGRqT7Mw/hqdefault.jpg"
+      },
+      {
+        "id": "rolCnUu8m-I",
+        "title": "Charlie Puth - Attention (Acoustic) [Official Audio]",
+        "artist": "Charlie Puth",
+        "duration": 207,
+        "cover": "https://i.ytimg.com/vi/rolCnUu8m-I/hqdefault.jpg"
+      },
+      {
+        "id": "V1Pl8CzNzCw",
+        "title": "Billie Eilish, Khalid - lovely",
+        "artist": "BillieEilishVEVO",
+        "duration": 201,
+        "cover": "https://i.ytimg.com/vi/V1Pl8CzNzCw/hqdefault.jpg"
+      },
+      {
+        "id": "ES8RKOBrg9c",
+        "title": "Gunna - still prevail [Official Lyric Video]",
+        "artist": "Gunna",
+        "duration": 192,
+        "cover": "https://i.ytimg.com/vi/ES8RKOBrg9c/hqdefault.jpg"
+      },
+      {
+        "id": "nT8O_mP2x6Y",
+        "title": "Chase Atlantic - FRIENDS (Official Lyric Video)",
+        "artist": "CHASE ATLANTIC",
+        "duration": 230,
+        "cover": "https://i.ytimg.com/vi/nT8O_mP2x6Y/hqdefault.jpg"
+      },
+      {
+        "id": "MWASeaYuHZo",
+        "title": "Alessia Cara - Scars To Your Beautiful (Official Video)",
+        "artist": "AlessiaCaraVEVO",
+        "duration": 311,
+        "cover": "https://i.ytimg.com/vi/MWASeaYuHZo/hqdefault.jpg"
+      },
+      {
+        "id": "nymbhueaoiM",
+        "title": "I've Fallen for You",
+        "artist": "Tom Redwood - Topic",
+        "duration": 198,
+        "cover": "https://i.ytimg.com/vi/nymbhueaoiM/hqdefault.jpg"
+      },
+      {
+        "id": "kTHNpusq654",
+        "title": "Katy Perry - Hot N Cold (Official Music Video)",
+        "artist": "KatyPerryVEVO",
+        "duration": 284,
+        "cover": "https://i.ytimg.com/vi/kTHNpusq654/hqdefault.jpg"
+      },
+      {
+        "id": "BcqxLCWn-CE",
+        "title": "Lauv - I Like Me Better [Official Video]",
+        "artist": "Lauv",
+        "duration": 206,
+        "cover": "https://i.ytimg.com/vi/BcqxLCWn-CE/hqdefault.jpg"
+      },
+      {
+        "id": "3elVQh4hz3M",
+        "title": "Nafeesisboujee - Stephanie (Official Music Video)",
+        "artist": "Nafeesisboujee",
+        "duration": 141,
+        "cover": "https://i.ytimg.com/vi/3elVQh4hz3M/hqdefault.jpg"
+      },
+      {
+        "id": "nUTfMokwrNc",
+        "title": "Everybody Get Up",
+        "artist": "Everet Almond - Topic",
+        "duration": 194,
+        "cover": "https://i.ytimg.com/vi/nUTfMokwrNc/hqdefault.jpg"
+      },
+      {
+        "id": "fdJrSjMgPFE",
+        "title": "LET THE WORLD BURN (Official Music Video)",
+        "artist": "Chris Grey",
+        "duration": 166,
+        "cover": "https://i.ytimg.com/vi/fdJrSjMgPFE/hqdefault.jpg"
+      },
+      {
+        "id": "GFGPSx6cPN0",
+        "title": "Blue - One Love",
+        "artist": "BlueVEVO",
+        "duration": 211,
+        "cover": "https://i.ytimg.com/vi/GFGPSx6cPN0/hqdefault.jpg"
+      },
+      {
+        "id": "HZXkU5X3fiU",
+        "title": "La vie à Paris",
+        "artist": "Jazzwaves - Topic",
+        "duration": 151,
+        "cover": "https://i.ytimg.com/vi/HZXkU5X3fiU/hqdefault.jpg"
+      },
+      {
+        "id": "TdrL3QxjyVw",
+        "title": "Lana Del Rey - Summertime Sadness (Official Music Video)",
+        "artist": "LanaDelReyVEVO",
+        "duration": 266,
+        "cover": "https://i.ytimg.com/vi/TdrL3QxjyVw/hqdefault.jpg"
+      },
+      {
+        "id": "BDHM8cyJQa8",
+        "title": "Gracie Abrams - That’s So True (Official Lyric Video)",
+        "artist": "GracieAbramsVEVO",
+        "duration": 167,
+        "cover": "https://i.ytimg.com/vi/BDHM8cyJQa8/hqdefault.jpg"
+      },
+      {
+        "id": "ccTca0aILxI",
+        "title": "Hey Beautiful (From \"How I Met Your Mother\"/Theme)",
+        "artist": "The Solids - Topic",
+        "duration": 224,
+        "cover": "https://i.ytimg.com/vi/ccTca0aILxI/hqdefault.jpg"
+      },
+      {
+        "id": "UJtB55MaoD0",
+        "title": "Jessie J - Domino (Official Video)",
+        "artist": "JessieJVEVO",
+        "duration": 235,
+        "cover": "https://i.ytimg.com/vi/UJtB55MaoD0/hqdefault.jpg"
+      },
+      {
+        "id": "zABLecsR5UE",
+        "title": "Lewis Capaldi - Someone You Loved",
+        "artist": "LewisCapaldiVEVO",
+        "duration": 186,
+        "cover": "https://i.ytimg.com/vi/zABLecsR5UE/hqdefault.jpg"
+      },
+      {
+        "id": "xIdRGejOFSY",
+        "title": "Siir Siir",
+        "artist": "Release - Topic",
+        "duration": 186,
+        "cover": "https://i.ytimg.com/vi/xIdRGejOFSY/hqdefault.jpg"
+      },
+      {
+        "id": "VBS4-hMEHfg",
+        "title": "🎵 Cristiano Ronaldo – GOODBYE | World Cup 2026 Song 🎵",
+        "artist": "Football MP3",
+        "duration": 150,
+        "cover": "https://i.ytimg.com/vi/VBS4-hMEHfg/hqdefault.jpg"
+      },
+      {
+        "id": "xslPDHq-yog",
+        "title": "Vintage Culture, Rooftime - I Will Find (Official Music Video)",
+        "artist": "Vintage Culture",
+        "duration": 249,
+        "cover": "https://i.ytimg.com/vi/xslPDHq-yog/hqdefault.jpg"
+      },
+      {
+        "id": "G5xSLbYMr-I",
+        "title": "Nicky Youre, dazy - Sunroof (Official Music Video)",
+        "artist": "Nicky Youre",
+        "duration": 175,
+        "cover": "https://i.ytimg.com/vi/G5xSLbYMr-I/hqdefault.jpg"
+      },
+      {
+        "id": "Zf1d8SGuxfs",
+        "title": "Tommy Richman - MILLION DOLLAR BABY (Official Music Video)",
+        "artist": "Tommy Richman",
+        "duration": 167,
+        "cover": "https://i.ytimg.com/vi/Zf1d8SGuxfs/hqdefault.jpg"
+      },
+      {
+        "id": "G7KNmW9a75Y",
+        "title": "Miley Cyrus - Flowers (Official Video)",
+        "artist": "MileyCyrusVEVO",
+        "duration": 202,
+        "cover": "https://i.ytimg.com/vi/G7KNmW9a75Y/hqdefault.jpg"
+      },
+      {
+        "id": "vGwIaL0jOUg",
+        "title": "Céline Dion - Think Twice (Official Remastered HD Video)",
+        "artist": "CelineDionVEVO",
+        "duration": 275,
+        "cover": "https://i.ytimg.com/vi/vGwIaL0jOUg/hqdefault.jpg"
+      },
+      {
+        "id": "ASEK1UPX1VU",
+        "title": "Mr. Lonely",
+        "artist": "Bobby Vinton - Topic",
+        "duration": 160,
+        "cover": "https://i.ytimg.com/vi/ASEK1UPX1VU/hqdefault.jpg"
+      },
+      {
+        "id": "oj7yF6YcTqk",
+        "title": "Since I Don't Have You",
+        "artist": "The Skyliners - Topic",
+        "duration": 160,
+        "cover": "https://i.ytimg.com/vi/oj7yF6YcTqk/hqdefault.jpg"
+      },
+      {
+        "id": "luwAMFcc2f8",
+        "title": "Robbie Williams - Angels",
+        "artist": "robbiewilliamsvevo",
+        "duration": 236,
+        "cover": "https://i.ytimg.com/vi/luwAMFcc2f8/hqdefault.jpg"
+      },
+      {
+        "id": "M8qwJkL3gl4",
+        "title": "Daulat",
+        "artist": "Fake Tattoos - Topic",
+        "duration": 254,
+        "cover": "https://i.ytimg.com/vi/M8qwJkL3gl4/hqdefault.jpg"
+      },
+      {
+        "id": "vIaH35-MLsk",
+        "title": "Akon - Right Now (Na Na Na) (Official Video)",
+        "artist": "AkonVEVO",
+        "duration": 301,
+        "cover": "https://i.ytimg.com/vi/vIaH35-MLsk/hqdefault.jpg"
+      },
+      {
+        "id": "UaK0btZR0_M",
+        "title": "Haunt",
+        "artist": "Washed Out - Topic",
+        "duration": 311,
+        "cover": "https://i.ytimg.com/vi/UaK0btZR0_M/hqdefault.jpg"
+      },
+      {
+        "id": "IRk9gAqjLgg",
+        "title": "I Will Follow Him",
+        "artist": "Peggy March - Topic",
+        "duration": 155,
+        "cover": "https://i.ytimg.com/vi/IRk9gAqjLgg/hqdefault.jpg"
+      },
+      {
+        "id": "Pd42d1vbD68",
+        "title": "Love Struck",
+        "artist": "Magnolia Celebration - Topic",
+        "duration": 230,
+        "cover": "https://i.ytimg.com/vi/Pd42d1vbD68/hqdefault.jpg"
+      },
+      {
+        "id": "3gOHvDP_vCs",
+        "title": "Justin Timberlake - SexyBack (Official Video) ft. Timbaland",
+        "artist": "justintimberlakeVEVO",
+        "duration": 266,
+        "cover": "https://i.ytimg.com/vi/3gOHvDP_vCs/hqdefault.jpg"
+      },
+      {
+        "id": "yw04QD1LaB0",
+        "title": "Nick Jonas - Jealous",
+        "artist": "NickJonasVEVO",
+        "duration": 223,
+        "cover": "https://i.ytimg.com/vi/yw04QD1LaB0/hqdefault.jpg"
+      },
+      {
+        "id": "9p9EauIOPm8",
+        "title": "Myles Smith - Stargazing (Take My Heart Don’t Break It) - Visualiser",
+        "artist": "Myles Smith",
+        "duration": 175,
+        "cover": "https://i.ytimg.com/vi/9p9EauIOPm8/hqdefault.jpg"
+      },
+      {
+        "id": "rYEDA3JcQqw",
+        "title": "Adele - Rolling in the Deep (Official Music Video)",
+        "artist": "Adele",
+        "duration": 234,
+        "cover": "https://i.ytimg.com/vi/rYEDA3JcQqw/hqdefault.jpg"
+      },
+      {
+        "id": "G_SjnHwxWMU",
+        "title": "Noah Cyrus - Again (Official Music Video) ft. XXXTENTACION",
+        "artist": "NoahCyrusVEVO",
+        "duration": 207,
+        "cover": "https://i.ytimg.com/vi/G_SjnHwxWMU/hqdefault.jpg"
+      },
+      {
+        "id": "x8TBs-UZhEI",
+        "title": "Hang on Sloopy",
+        "artist": "The McCoys - Topic",
+        "duration": 182,
+        "cover": "https://i.ytimg.com/vi/x8TBs-UZhEI/hqdefault.jpg"
+      },
+      {
+        "id": "fc6hMVKx6-w",
+        "title": "Kasoor (Acoustic)",
+        "artist": "Prateek Kuhad - Topic",
+        "duration": 214,
+        "cover": "https://i.ytimg.com/vi/fc6hMVKx6-w/hqdefault.jpg"
+      },
+      {
+        "id": "papuvlVeZg8",
+        "title": "Clean Bandit - Rockabye (feat. Sean Paul & Anne-Marie) [Official Video]",
+        "artist": "Clean Bandit",
+        "duration": 254,
+        "cover": "https://i.ytimg.com/vi/papuvlVeZg8/hqdefault.jpg"
+      },
+      {
+        "id": "Fp_P_e1cPOE",
+        "title": "Camila Cabello - Shameless (Official Video)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 227,
+        "cover": "https://i.ytimg.com/vi/Fp_P_e1cPOE/hqdefault.jpg"
+      },
+      {
+        "id": "ITHYU-YfsqA",
+        "title": "Taki Taki",
+        "artist": "DJ Snake - Topic",
+        "duration": 213,
+        "cover": "https://i.ytimg.com/vi/ITHYU-YfsqA/hqdefault.jpg"
+      },
+      {
+        "id": "XfRWGDk1MXw",
+        "title": "All These Years",
+        "artist": "Camila Cabello - Topic",
+        "duration": 165,
+        "cover": "https://i.ytimg.com/vi/XfRWGDk1MXw/hqdefault.jpg"
+      },
+      {
+        "id": "H5v3kku4y6Q",
+        "title": "Harry Styles - As It Was (Official Video)",
+        "artist": "HarryStylesVEVO",
+        "duration": 166,
+        "cover": "https://i.ytimg.com/vi/H5v3kku4y6Q/hqdefault.jpg"
+      },
+      {
+        "id": "YBHQbu5rbdQ",
+        "title": "Fifth Harmony - Worth It (Official Video) ft. Kid Ink",
+        "artist": "FifthHarmonyVEVO",
+        "duration": 225,
+        "cover": "https://i.ytimg.com/vi/YBHQbu5rbdQ/hqdefault.jpg"
+      },
+      {
+        "id": "KRaWnd3LJfs",
+        "title": "Maroon 5 - Payphone ft. Wiz Khalifa (Explicit) (Official Music Video)",
+        "artist": "Maroon5VEVO",
+        "duration": 280,
+        "cover": "https://i.ytimg.com/vi/KRaWnd3LJfs/hqdefault.jpg"
+      },
+      {
+        "id": "8nsWMmFYRqE",
+        "title": "Camila Cabello - Something's Gotta Give (Audio)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 238,
+        "cover": "https://i.ytimg.com/vi/8nsWMmFYRqE/hqdefault.jpg"
+      },
+      {
+        "id": "xdYFuCp3m9k",
+        "title": "Halsey - Bad At Love (Official Music Video)",
+        "artist": "HalseyVEVO",
+        "duration": 184,
+        "cover": "https://i.ytimg.com/vi/xdYFuCp3m9k/hqdefault.jpg"
+      },
+      {
+        "id": "k73EBmeJ950",
+        "title": "Camila Cabello - Consequences (orchestra)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 188,
+        "cover": "https://i.ytimg.com/vi/k73EBmeJ950/hqdefault.jpg"
+      },
+      {
+        "id": "Io0fBr1XBUA",
+        "title": "The Chainsmokers - Don't Let Me Down (Official Video) ft. Daya",
+        "artist": "ChainsmokersVEVO",
+        "duration": 218,
+        "cover": "https://i.ytimg.com/vi/Io0fBr1XBUA/hqdefault.jpg"
+      },
+      {
+        "id": "aJOTlE1K90k",
+        "title": "Maroon 5 - Girls Like You ft. Cardi B (Official Music Video)",
+        "artist": "Maroon5VEVO",
+        "duration": 271,
+        "cover": "https://i.ytimg.com/vi/aJOTlE1K90k/hqdefault.jpg"
+      },
+      {
+        "id": "jzD_yyEcp0M",
+        "title": "Marshmello & Anne-Marie - FRIENDS (Music Video) *OFFICIAL FRIENDZONE ANTHEM*",
+        "artist": "Marshmello",
+        "duration": 232,
+        "cover": "https://i.ytimg.com/vi/jzD_yyEcp0M/hqdefault.jpg"
+      },
+      {
+        "id": "fKopy74weus",
+        "title": "Imagine Dragons - Thunder",
+        "artist": "ImagineDragonsVEVO",
+        "duration": 205,
+        "cover": "https://i.ytimg.com/vi/fKopy74weus/hqdefault.jpg"
+      },
+      {
+        "id": "pRfmrE0ToTo",
+        "title": "Anne-Marie & James Arthur - Rewrite The Stars [from The Greatest Showman: Reimagined]",
+        "artist": "Anne-Marie",
+        "duration": 228,
+        "cover": "https://i.ytimg.com/vi/pRfmrE0ToTo/hqdefault.jpg"
+      },
+      {
+        "id": "mWRsgZuwf_8",
+        "title": "Imagine Dragons - Demons (Official Music Video)",
+        "artist": "ImagineDragonsVEVO",
+        "duration": 237,
+        "cover": "https://i.ytimg.com/vi/mWRsgZuwf_8/hqdefault.jpg"
+      },
+      {
+        "id": "HhjHYkPQ8F0",
+        "title": "Alan Walker & Ava Max - Alone, Pt. II",
+        "artist": "Alan Walker",
+        "duration": 246,
+        "cover": "https://i.ytimg.com/vi/HhjHYkPQ8F0/hqdefault.jpg"
+      },
+      {
+        "id": "XhGior4O2eM",
+        "title": "Love You Like A Love Song",
+        "artist": "Selena Gomez - Topic",
+        "duration": 189,
+        "cover": "https://i.ytimg.com/vi/XhGior4O2eM/hqdefault.jpg"
+      },
+      {
+        "id": "AG-erEMhumc",
+        "title": "Tate McRae - you broke me first (Official Video)",
+        "artist": "TateMcRaeVEVO",
+        "duration": 169,
+        "cover": "https://i.ytimg.com/vi/AG-erEMhumc/hqdefault.jpg"
+      },
+      {
+        "id": "hLjA8YV8AVQ",
+        "title": "Easy",
+        "artist": "Camila Cabello - Topic",
+        "duration": 195,
+        "cover": "https://i.ytimg.com/vi/hLjA8YV8AVQ/hqdefault.jpg"
+      },
+      {
+        "id": "-BjZmE2gtdo",
+        "title": "Taylor Swift - Lover (Official Music Video)",
+        "artist": "Taylor Swift",
+        "duration": 239,
+        "cover": "https://i.ytimg.com/vi/-BjZmE2gtdo/hqdefault.jpg"
+      },
+      {
+        "id": "31crA53Dgu0",
+        "title": "Sia - Cheap Thrills (Performance Edit)",
+        "artist": "SiaVEVO",
+        "duration": 218,
+        "cover": "https://i.ytimg.com/vi/31crA53Dgu0/hqdefault.jpg"
+      },
+      {
+        "id": "6GUm5g8SG4o",
+        "title": "R. City - Locked Away (Official Video) ft. Adam Levine",
+        "artist": "RockCityVEVO",
+        "duration": 266,
+        "cover": "https://i.ytimg.com/vi/6GUm5g8SG4o/hqdefault.jpg"
+      },
+      {
+        "id": "tD4HCZe-tew",
+        "title": "Zara Larsson - Lush Life (Official Video)",
+        "artist": "ZaraLarssonMusicVEVO",
+        "duration": 202,
+        "cover": "https://i.ytimg.com/vi/tD4HCZe-tew/hqdefault.jpg"
+      },
+      {
+        "id": "Il0S8BoucSA",
+        "title": "Ed Sheeran - Shivers [Official Video]",
+        "artist": "Ed Sheeran",
+        "duration": 238,
+        "cover": "https://i.ytimg.com/vi/Il0S8BoucSA/hqdefault.jpg"
+      },
+      {
+        "id": "husGDaTbYkk",
+        "title": "Kashi Vishwanath Gange",
+        "artist": "Release - Topic",
+        "duration": 392,
+        "cover": "https://i.ytimg.com/vi/husGDaTbYkk/hqdefault.jpg"
+      },
+      {
+        "id": "aXzVF3XeS8M",
+        "title": "Taylor Swift - Love Story (Taylor’s Version) [Official Lyric Video]",
+        "artist": "Taylor Swift",
+        "duration": 241,
+        "cover": "https://i.ytimg.com/vi/aXzVF3XeS8M/hqdefault.jpg"
+      },
+      {
+        "id": "euCqAq6BRa4",
+        "title": "DJ Snake - Let Me Love You (Official Music Video) ft. Justin Bieber",
+        "artist": "DJSnakeVEVO",
+        "duration": 206,
+        "cover": "https://i.ytimg.com/vi/euCqAq6BRa4/hqdefault.jpg"
+      },
+      {
+        "id": "ffxKSjUwKdU",
+        "title": "Ariana Grande - no tears left to cry (Official Video)",
+        "artist": "ArianaGrandeVevo",
+        "duration": 239,
+        "cover": "https://i.ytimg.com/vi/ffxKSjUwKdU/hqdefault.jpg"
+      },
+      {
+        "id": "jH1RNk8954Q",
+        "title": "Ava Max - Kings & Queens [Official Music Video]",
+        "artist": "Ava Max",
+        "duration": 163,
+        "cover": "https://i.ytimg.com/vi/jH1RNk8954Q/hqdefault.jpg"
+      },
+      {
+        "id": "1YTjTwJLAPQ",
+        "title": "Camila Cabello - Inside Out (Audio)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 185,
+        "cover": "https://i.ytimg.com/vi/1YTjTwJLAPQ/hqdefault.jpg"
+      },
+      {
+        "id": "GzU8KqOY8YA",
+        "title": "Sean Paul - No Lie ft. Dua Lipa",
+        "artist": "SeanPaulVEVO",
+        "duration": 229,
+        "cover": "https://i.ytimg.com/vi/GzU8KqOY8YA/hqdefault.jpg"
+      },
+      {
+        "id": "igIfiqqVHtA",
+        "title": "Taylor Swift - Enchanted (Taylor's Version) (Lyric Video)",
+        "artist": "Taylor Swift",
+        "duration": 357,
+        "cover": "https://i.ytimg.com/vi/igIfiqqVHtA/hqdefault.jpg"
+      },
+      {
+        "id": "VKC_hzJ3jzg",
+        "title": "Señorita",
+        "artist": "Shawn Mendes - Topic",
+        "duration": 191,
+        "cover": "https://i.ytimg.com/vi/VKC_hzJ3jzg/hqdefault.jpg"
+      },
+      {
+        "id": "y2tEPmwWEiI",
+        "title": "DHARIA - Sugar & Brownies (by Monoir) [Official Video]",
+        "artist": "Thrace Music",
+        "duration": 212,
+        "cover": "https://i.ytimg.com/vi/y2tEPmwWEiI/hqdefault.jpg"
+      },
+      {
+        "id": "nfWlot6h_JM",
+        "title": "Taylor Swift - Shake It Off",
+        "artist": "Taylor Swift",
+        "duration": 242,
+        "cover": "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg"
+      },
+      {
+        "id": "AByfaYcOm4A",
+        "title": "Demi Lovato - Heart Attack (Official Video)",
+        "artist": "DemiLovatoVEVO",
+        "duration": 216,
+        "cover": "https://i.ytimg.com/vi/AByfaYcOm4A/hqdefault.jpg"
+      },
+      {
+        "id": "lY2yjAdbvdQ",
+        "title": "Shawn Mendes - Treat You Better",
+        "artist": "ShawnMendesVEVO",
+        "duration": 257,
+        "cover": "https://i.ytimg.com/vi/lY2yjAdbvdQ/hqdefault.jpg"
+      },
+      {
+        "id": "mSgfvdBlysI",
+        "title": "LISA, Anitta and Rema perform Goals at the Opening Ceremony of FIFA World Cup 2026 in Los Angeles",
+        "artist": "FIFA",
+        "duration": 187,
+        "cover": "https://i.ytimg.com/vi/mSgfvdBlysI/hqdefault.jpg"
+      },
+      {
+        "id": "nKcKreZJYfI",
+        "title": "Camila Cabello - She Loves Control (Audio)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 179,
+        "cover": "https://i.ytimg.com/vi/nKcKreZJYfI/hqdefault.jpg"
+      },
+      {
+        "id": "Mgfe5tIwOj0",
+        "title": "Dua Lipa - IDGAF (Official Music Video)",
+        "artist": "Dua Lipa",
+        "duration": 231,
+        "cover": "https://i.ytimg.com/vi/Mgfe5tIwOj0/hqdefault.jpg"
+      },
+      {
+        "id": "NGPgr8tnWfw",
+        "title": "Camila Cabello - In the Dark (Audio)",
+        "artist": "CamilaCabelloVEVO",
+        "duration": 222,
+        "cover": "https://i.ytimg.com/vi/NGPgr8tnWfw/hqdefault.jpg"
+      },
+      {
+        "id": "tt2k8PGm-TI",
+        "title": "ZAYN - Dusk Till Dawn (Official Video) ft. Sia",
+        "artist": "ZaynVEVO",
+        "duration": 338,
+        "cover": "https://i.ytimg.com/vi/tt2k8PGm-TI/hqdefault.jpg"
+      },
+      {
+        "id": "XXYlFuWEuKI",
+        "title": "The Weeknd - Save Your Tears (Official Music Video)",
+        "artist": "TheWeekndVEVO",
+        "duration": 249,
+        "cover": "https://i.ytimg.com/vi/XXYlFuWEuKI/hqdefault.jpg"
+      },
+      {
+        "id": "ZAfAud_M_mg",
+        "title": "Halsey - Without Me",
+        "artist": "HalseyVEVO",
+        "duration": 237,
+        "cover": "https://i.ytimg.com/vi/ZAfAud_M_mg/hqdefault.jpg"
+      },
+      {
+        "id": "5GL9JoH4Sws",
+        "title": "Fifth Harmony - Work from Home (Official Video) ft. Ty Dolla $ign",
+        "artist": "FifthHarmonyVEVO",
+        "duration": 220,
+        "cover": "https://i.ytimg.com/vi/5GL9JoH4Sws/hqdefault.jpg"
+      },
+      {
+        "id": "oygrmJFKYZY",
+        "title": "Dua Lipa - Don't Start Now (Official Music Video)",
+        "artist": "Dua Lipa",
+        "duration": 182,
+        "cover": "https://i.ytimg.com/vi/oygrmJFKYZY/hqdefault.jpg"
+      },
+      {
+        "id": "-kSAvHlXRUs",
+        "title": "Future, Metro Boomin, The Weeknd - Young Metro (Official Music Video)",
+        "artist": "FutureVEVO",
+        "duration": 205,
+        "cover": "https://i.ytimg.com/vi/-kSAvHlXRUs/hqdefault.jpg"
+      }
+    ]
+  }
+}
