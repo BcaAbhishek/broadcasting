@@ -256,6 +256,23 @@ export default function BroadcastingRadioPlayer() {
   const nextTrack = nowPlaying?.nextTrack;
   const progressPct = track ? (displayElapsed / track.duration) * 100 : 0;
 
+  // If nothing's arrived after a few seconds, it's very likely a free-tier
+  // backend cold start (Render puts idle servers to sleep) rather than a
+  // stuck page — say so instead of leaving "Loading…" up indefinitely.
+  const [slowStart, setSlowStart] = useState(false);
+  useEffect(() => {
+    if (nowPlaying) {
+      setSlowStart(false);
+      return;
+    }
+    const id = setTimeout(() => setSlowStart(true), 5000);
+    return () => clearTimeout(id);
+  }, [nowPlaying]);
+
+  const loadingLabel = slowStart
+    ? "Waking up the radio server… (can take up to a minute)"
+    : "Loading…";
+
   return (
     <div className="dsr-root">
       <link
@@ -530,7 +547,7 @@ export default function BroadcastingRadioPlayer() {
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <div style={{ minWidth: 0, flex: 1 }}>
-                <p className="dsr-title">{track ? track.title : "Loading…"}</p>
+                <p className="dsr-title">{track ? track.title : loadingLabel}</p>
                 <p className="dsr-artist">{track ? track.artist : ""}</p>
               </div>
 

@@ -32,10 +32,33 @@ export default function ScheduleBoard() {
   const [nowPlayingId, setNowPlayingId] = useState(null);
 
   useEffect(() => {
-    fetch(`${SERVER_URL}/api/schedule`)
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setError(true));
+    let stopped = false;
+    let attempt = 0;
+
+    function load() {
+      fetch(`${SERVER_URL}/api/schedule`)
+        .then((r) => r.json())
+        .then((d) => {
+          if (!stopped) setData(d);
+        })
+        .catch(() => {
+          if (stopped) return;
+          attempt += 1;
+          // Likely a free-tier backend cold start — keep retrying instead
+          // of giving up after the very first attempt, which is often
+          // exactly when the server is still waking up.
+          if (attempt <= 10) {
+            setTimeout(load, Math.min(3000 * attempt, 15000));
+          } else {
+            setError(true);
+          }
+        });
+    }
+
+    load();
+    return () => {
+      stopped = true;
+    };
   }, []);
 
   // Re-check which slot is "on air" every minute, in case the page is
@@ -222,39 +245,50 @@ export default function ScheduleBoard() {
       </div>
 
       <div className="dsb-slots">
-        {slots.map((slot, i) => {
-          const active = slot.allDay || isSlotActiveNow(slot, data.timezone);
-          const timeLabel = slot.allDay ? "All day" : `${formatHour(slot.start)} \u2013 ${formatHour(slot.end)}`;
+        {(() => {
+          // Mirror the server's own rule exactly: whichever scheduled slot
+          // matches FIRST wins, even if another slot's range also overlaps
+          // the current hour. Only one slot is ever actually playing.
+          const activeIndex = slots.findIndex((slot) => slot.allDay || isSlotActiveNow(slot, data.timezone));
+          return slots.map((slot, i) => {
+            const active = i === activeIndex;
+            const timeLabel = slot.allDay ? "All day" : `${formatHour(slot.start)} \u2013 ${formatHour(slot.end)}`;
+            return (
+              <div key={i} className={`dsb-slot ${active ? "dsb-slot-active" : ""}`}>
+                <div className="dsb-slot-head">
+                  <div className="dsb-slot-top">
+                    {slot.allDay && !slot.label && <Radio size={12} strokeWidth={2.25} style={{ color: "#fbf3e6" }} />}
+                    <span className="dsb-slot-label">{slot.label || timeLabel}</span>
+                    {active && <span className="dsb-live-label">ON AIR</span>}
+                    {active && <span className="dsb-live-dot" />}
+                  </div>
+                  {slot.label && <div className="dsb-slot-time">{timeLabel}</div>}
+                </div>
+                <div className="dsb-tracks">
+                  {slot.tracks.map(renderTrackRow)}
+                </div>
+              </div>
+            );
+          });
+        })()}
+
+        {hasSchedule && data.fallback && (() => {
+          const fallbackActive = !slots.some((slot) => slot.allDay || isSlotActiveNow(slot, data.timezone));
           return (
-            <div key={i} className={`dsb-slot ${active ? "dsb-slot-active" : ""}`}>
+            <div className={`dsb-slot ${fallbackActive ? "dsb-slot-active" : ""}`}>
               <div className="dsb-slot-head">
                 <div className="dsb-slot-top">
-                  {slot.allDay && !slot.label && <Radio size={12} strokeWidth={2.25} style={{ color: "#fbf3e6" }} />}
-                  <span className="dsb-slot-label">{slot.label || timeLabel}</span>
-                  {active && <span className="dsb-live-label">ON AIR</span>}
-                  {active && <span className="dsb-live-dot" />}
+                  <span className="dsb-slot-label">Outside schedule</span>
+                  {fallbackActive && <span className="dsb-live-label">ON AIR</span>}
+                  {fallbackActive && <span className="dsb-live-dot" />}
                 </div>
-                {slot.label && <div className="dsb-slot-time">{timeLabel}</div>}
               </div>
               <div className="dsb-tracks">
-                {slot.tracks.map(renderTrackRow)}
+                {data.fallback.tracks.map(renderTrackRow)}
               </div>
             </div>
           );
-        })}
-
-        {hasSchedule && data.fallback && (
-          <div className="dsb-slot">
-            <div className="dsb-slot-head">
-              <div className="dsb-slot-top">
-                <span className="dsb-slot-label">Outside schedule</span>
-              </div>
-            </div>
-            <div className="dsb-tracks">
-              {data.fallback.tracks.map(renderTrackRow)}
-            </div>
-          </div>
-        )}
+        })()}
       </div>
     </div>
   );
