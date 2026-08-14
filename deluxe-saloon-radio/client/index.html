@@ -1,50 +1,45 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Broadcasting Radio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="theme-color" content="#2a1608" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Radio" />
 
-<head>
-  <meta name="google-site-verification" content="srXLZQ-4geM514AK2lBzzH3Hy_usCV0CUSEVtKCvPQQ" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Broadcasting Radio</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <!-- Social share preview. Replace YOUR_DOMAIN_HERE below with your
+    <!-- Social share preview. Replace YOUR_DOMAIN_HERE below with your
          actual deployed client URL once you know it. -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Broadcasting Radio" />
-  <meta property="og:description" content="Tune in live — everyone hears the same song, at the same moment." />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Broadcasting Radio" />
-  <meta name="twitter:description" content="Tune in live — everyone hears the same song, at the same moment." />
-  <meta property="og:image" content="https://broadcastingfm.vercel.app/og-image.png" />
-  <meta property="og:url" content="https://broadcastingfm.vercel.app/" />
-  <meta name="twitter:image" content="https://broadcastingfm.vercel.app/og-image.png" />
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #1a0e08;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(12px, 4vw, 24px);
-      box-sizing: border-box;
-    }
-
-    #root {
-      width: 100%;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Broadcasting Radio" />
+    <meta property="og:description" content="Tune in live — everyone hears the same song, at the same moment." />
+    <meta property="og:image" content="https://broadcastingfm.vercel.app/og-image.png" />
+    <meta property="og:url" content="https://broadcastingfm.vercel.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Broadcasting Radio" />
+    <meta name="twitter:description" content="Tune in live — everyone hears the same song, at the same moment." />
+    <meta name="twitter:image" content="https://broadcastingfm.vercel.app/og-image.png" />
+    <style>
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: #1a0e08;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: clamp(12px, 4vw, 24px);
+        box-sizing: border-box;
+      }
+      #root { width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
