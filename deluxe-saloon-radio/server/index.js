@@ -17,7 +17,7 @@ if (!existsSync(DATA_PATH)) {
 }
 
 const data = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
-const { timezone, schedule, specialDays, fallbackPlaylistId, playlists } = data;
+const { timezone, schedule, fallbackPlaylistId, playlists } = data;
 
 for (const [id, tracks] of Object.entries(playlists)) {
   if (!tracks || tracks.length === 0) {
@@ -26,27 +26,10 @@ for (const [id, tracks] of Object.entries(playlists)) {
   }
 }
 
-// Is today (in TIMEZONE) a configured special day? Returns the matching
-// entry, or null. Recurs every year automatically since it only compares
-// month-day, not the year.
-function getTodaySpecialDay(nowMs = Date.now()) {
-  if (!specialDays || specialDays.length === 0) return null;
-  const parts = new Intl.DateTimeFormat("en-CA", { month: "2-digit", day: "2-digit", timeZone: timezone })
-    .formatToParts(nowMs)
-    .reduce((acc, p) => ({ ...acc, [p.type]: p.value }), {});
-  const todayKey = `${parts.month}-${parts.day}`;
-  return specialDays.find((s) => s.date === todayKey) || null;
-}
-
-// Which playlist ID is "on air" right now. A special day (e.g.
-// Independence Day) takes priority and plays all day, overriding the
-// normal hourly schedule entirely. Otherwise, based on the configured
-// schedule and timezone, falling back to fallbackPlaylistId outside any
+// Which playlist ID is "on air" right now, based on the configured
+// schedule and timezone. Falls back to fallbackPlaylistId outside any
 // scheduled window (or if no schedule is configured at all).
 function getActivePlaylistId(nowMs = Date.now()) {
-  const special = getTodaySpecialDay(nowMs);
-  if (special) return special.playlistId;
-
   if (!schedule || schedule.length === 0) return fallbackPlaylistId;
 
   const hour = Number(
@@ -101,7 +84,6 @@ function syncPayload() {
   const state = getPlaybackState();
   const tracks = playlists[state.playlistId];
   const nextTrack = tracks[(state.trackIndex + 1) % tracks.length];
-  const special = getTodaySpecialDay();
   return {
     playlistId: state.playlistId,
     trackIndex: state.trackIndex,
@@ -116,7 +98,6 @@ function syncPayload() {
       title: nextTrack.title,
       artist: nextTrack.artist,
     },
-    specialDay: special ? { label: special.label } : null,
     offset: state.offset,
     serverTime: Date.now(),
   };
@@ -128,32 +109,8 @@ app.get("/api/now-playing", (req, res) => {
 
 app.get("/api/schedule", (req, res) => {
   const stripTrack = ({ id, title, artist, duration }) => ({ id, title, artist, duration });
-
-  const special = getTodaySpecialDay();
-  if (special) {
-    // On a special day, show ONLY that playlist — the normal schedule is
-    // fully overridden for the whole day, so the sidebar should reflect
-    // that rather than showing slots that aren't actually playing.
-    res.json({
-      timezone,
-      specialDay: { label: special.label },
-      schedule: [
-        {
-          start: 0,
-          end: 24,
-          label: special.label || "Today's Special",
-          playlistId: special.playlistId,
-          tracks: (playlists[special.playlistId] || []).map(stripTrack),
-        },
-      ],
-      fallback: null,
-    });
-    return;
-  }
-
   res.json({
     timezone,
-    specialDay: null,
     schedule: (schedule || []).map((slot) => ({
       start: slot.start,
       end: slot.end,
