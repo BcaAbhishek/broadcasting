@@ -3,14 +3,8 @@ import ScheduleBoard from "./ScheduleBoard.jsx";
 
 export default function App() {
   return (
-    <div className="page-wrap">
+    <div className="app-shell">
       <style>{`
-        .page-wrap {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-        }
         .app-shell {
           display: flex;
           align-items: flex-start;
@@ -42,20 +36,9 @@ export default function App() {
             flex: 1 1 auto;
           }
         }
-
-        .page-footer {
-          margin-top: clamp(14px, 2.5vw, 22px);
-          font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
-          font-size: clamp(11px, 1.4vw, 13px);
-          color: rgba(251,243,230,0.4);
-          text-align: center;
-        }
       `}</style>
-      <div className="app-shell">
-        <BroadcastingRadioPlayer />
-        <ScheduleBoard />
-      </div>
-      <div className="page-footer">Created by Abhi</div>
+      <BroadcastingRadioPlayer />
+      <ScheduleBoard />
     </div>
   );
 }

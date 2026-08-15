@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX, Users, Share2, Check, WifiOff, SkipForward, PartyPopper } from "lucide-react";
+import { Volume2, VolumeX, Users, Share2, Check, WifiOff, SkipForward } from "lucide-react";
 
 // Point this at your running server (see server/README).
 const SERVER_URL = "https://broadcasting-github-io.onrender.com";
@@ -368,24 +368,6 @@ export default function BroadcastingRadioPlayer() {
           font-size: clamp(10.5px, 1.4vw, 14px);
         }
 
-        .dsr-special {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: clamp(8px, 1.4vw, 13px) clamp(10px, 1.6vw, 16px);
-          border-radius: 12px;
-          background: rgba(28,16,8,0.72);
-          backdrop-filter: blur(6px);
-          border: 1px solid rgba(255,255,255,0.14);
-          border-top: 4px solid;
-          border-image: linear-gradient(90deg, #ff9933 33%, #ffffff 33%, #ffffff 66%, #138808 66%) 1;
-          color: #fbf3e6;
-          font-size: clamp(11px, 1.6vw, 15px);
-          font-weight: 600;
-          justify-content: center;
-          text-align: center;
-        }
-
         .dsr-bottom-stack {
           position: absolute;
           left: clamp(10px, 2.5vw, 18px);
@@ -513,13 +495,6 @@ export default function BroadcastingRadioPlayer() {
           <div className="dsr-offline">
             <WifiOff size={14} strokeWidth={2.25} style={{ flexShrink: 0, color: "#e88a72" }} />
             <span>Connection lost — reconnecting…</span>
-          </div>
-        )}
-
-        {nowPlaying?.specialDay?.label && (
-          <div className="dsr-special">
-            <PartyPopper size={15} strokeWidth={2.25} style={{ flexShrink: 0 }} />
-            <span>{nowPlaying.specialDay.label}</span>
           </div>
         )}
       </div>
