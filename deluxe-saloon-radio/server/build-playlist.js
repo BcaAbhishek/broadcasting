@@ -14,6 +14,7 @@ import "dotenv/config";
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID;
 const SCHEDULE_RAW = process.env.YOUTUBE_SCHEDULE;
+const SPECIAL_DAYS_RAW = process.env.SPECIAL_DAYS;
 const TIMEZONE = process.env.TIMEZONE || "Asia/Kolkata";
 const OUT_FILE = path.join(process.cwd(), "playlists.json");
 
@@ -49,6 +50,32 @@ function parseSchedule(raw) {
 
 const schedule = parseSchedule(SCHEDULE_RAW);
 
+// "08-15:PLxxxx:Happy Independence Day,10-02:PLyyyy:Gandhi Jayanti" ->
+// [{date:"08-15", playlistId, label}, ...]. Recurs every year on that
+// month-day, in TIMEZONE's calendar. When today matches, that playlist
+// plays ALL DAY, overriding the normal hourly schedule entirely.
+function parseSpecialDays(raw) {
+  if (!raw) return [];
+  return raw.split(",").map((entry) => {
+    const trimmed = entry.trim();
+    const firstColon = trimmed.indexOf(":");
+    if (firstColon === -1) {
+      throw new Error(`Bad SPECIAL_DAYS entry: "${entry}". Expected format like "08-15:PLxxxx:Happy Independence Day".`);
+    }
+    const date = trimmed.slice(0, firstColon).trim(); // MM-DD
+    const rest = trimmed.slice(firstColon + 1);
+    const secondColon = rest.indexOf(":");
+    const playlistId = (secondColon === -1 ? rest : rest.slice(0, secondColon)).trim();
+    const label = secondColon === -1 ? null : rest.slice(secondColon + 1).trim() || null;
+    if (!/^\d{2}-\d{2}$/.test(date) || !playlistId) {
+      throw new Error(`Bad SPECIAL_DAYS entry: "${entry}". Expected format like "08-15:PLxxxx:Happy Independence Day".`);
+    }
+    return { date, playlistId, label };
+  });
+}
+
+const specialDays = parseSpecialDays(SPECIAL_DAYS_RAW);
+
 if (schedule.length === 0 && !PLAYLIST_ID) {
   console.error(
     "Set either YOUTUBE_PLAYLIST_ID (single playlist) or YOUTUBE_SCHEDULE " +
@@ -59,7 +86,7 @@ if (schedule.length === 0 && !PLAYLIST_ID) {
 
 // Every distinct playlist ID we need to fetch: everything in the
 // schedule, plus the fallback/default playlist if set.
-const playlistIds = [...new Set([...schedule.map((s) => s.playlistId), ...(PLAYLIST_ID ? [PLAYLIST_ID] : [])])];
+const playlistIds = [...new Set([...schedule.map((s) => s.playlistId), ...specialDays.map((s) => s.playlistId), ...(PLAYLIST_ID ? [PLAYLIST_ID] : [])])];
 
 // PT#H#M#S -> seconds
 function parseISODuration(iso) {
@@ -157,6 +184,7 @@ async function run() {
   const output = {
     timezone: TIMEZONE,
     schedule,
+    specialDays,
     fallbackPlaylistId: PLAYLIST_ID || schedule[0]?.playlistId,
     playlists,
   };
@@ -164,6 +192,12 @@ async function run() {
   writeFileSync(OUT_FILE, JSON.stringify(output, null, 2));
 
   console.log(`\nWrote ${playlistIds.length} playlist(s) to playlists.json`);
+  if (specialDays.length > 0) {
+    console.log("Special days configured:");
+    for (const s of specialDays) {
+      console.log(`  ${s.date}${s.label ? ` (${s.label})` : ""} -> ${s.playlistId} (${playlists[s.playlistId].length} tracks)`);
+    }
+  }
   if (schedule.length > 0) {
     console.log("Schedule (times are in " + TIMEZONE + "):");
     for (const s of schedule) {
