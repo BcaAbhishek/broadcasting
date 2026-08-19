@@ -44,9 +44,6 @@ export default function ScheduleBoard() {
         .catch(() => {
           if (stopped) return;
           attempt += 1;
-          // Likely a free-tier backend cold start — keep retrying instead
-          // of giving up after the very first attempt, which is often
-          // exactly when the server is still waking up.
           if (attempt <= 10) {
             setTimeout(load, Math.min(3000 * attempt, 15000));
           } else {
@@ -61,15 +58,11 @@ export default function ScheduleBoard() {
     };
   }, []);
 
-  // Re-check which slot is "on air" every minute, in case the page is
-  // left open across a schedule boundary.
   useEffect(() => {
     const id = setInterval(() => forceTick((t) => t + 1), 60000);
     return () => clearInterval(id);
   }, []);
 
-  // Poll which exact track is playing right now, so we can highlight
-  // that specific row with a live indicator.
   useEffect(() => {
     const fetchNowPlaying = () => {
       fetch(`${SERVER_URL}/api/now-playing`)
@@ -110,10 +103,11 @@ export default function ScheduleBoard() {
         .dsb-root {
           font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
           width: 100%;
-          border-radius: clamp(14px, 3vw, 22px);
-          background: #2a1608;
-          box-shadow: 0 24px 70px rgba(15,8,3,0.5);
-          padding: clamp(14px, 1.8vw, 22px);
+          border-radius: clamp(20px, 3vw, 32px);
+          background: #0b0a10;
+          border: 1px solid rgba(255,255,255,0.06);
+          box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+          padding: clamp(16px, 1.8vw, 24px);
           box-sizing: border-box;
           max-height: 100%;
         }
@@ -121,10 +115,11 @@ export default function ScheduleBoard() {
           display: flex;
           align-items: center;
           gap: 8px;
-          color: #fbf3e6;
-          font-size: clamp(13px, 1.6vw, 17px);
-          font-weight: 600;
-          margin-bottom: clamp(10px, 1.6vw, 16px);
+          font-family: 'Space Grotesk', 'Poppins', sans-serif;
+          color: #fff;
+          font-size: clamp(14px, 1.6vw, 17px);
+          font-weight: 700;
+          margin-bottom: clamp(12px, 1.6vw, 18px);
         }
         .dsb-slots {
           display: flex;
@@ -138,14 +133,14 @@ export default function ScheduleBoard() {
         .dsb-slots::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
 
         .dsb-slot {
-          border-radius: 12px;
-          background: rgba(255,255,255,0.04);
+          border-radius: 14px;
+          background: rgba(255,255,255,0.03);
           border: 1px solid rgba(255,255,255,0.06);
           overflow: hidden;
         }
         .dsb-slot-active {
-          background: rgba(232,161,58,0.10);
-          border: 1px solid rgba(232,161,58,0.4);
+          background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(244,114,182,0.10));
+          border: 1px solid rgba(244,114,182,0.35);
         }
         .dsb-slot-head {
           padding: 10px clamp(10px, 1.8vw, 15px);
@@ -158,7 +153,7 @@ export default function ScheduleBoard() {
         .dsb-slot-label {
           font-size: clamp(11.5px, 1.4vw, 14px);
           font-weight: 600;
-          color: #fbf3e6;
+          color: #fff;
         }
         .dsb-slot-time {
           display: flex;
@@ -166,7 +161,7 @@ export default function ScheduleBoard() {
           gap: 6px;
           font-size: clamp(10px, 1.1vw, 11.5px);
           font-weight: 500;
-          color: rgba(251,243,230,0.55);
+          color: rgba(255,255,255,0.4);
           margin-top: 2px;
         }
         .dsb-live-dot {
@@ -195,18 +190,18 @@ export default function ScheduleBoard() {
           padding: 0 clamp(10px, 1.8vw, 15px) 10px;
         }
         .dsb-tracks::-webkit-scrollbar { width: 4px; }
-        .dsb-tracks::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
+        .dsb-tracks::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
         .dsb-track {
           display: flex;
           align-items: baseline;
           justify-content: space-between;
           gap: 8px;
           padding: 4px 0;
-          border-top: 1px solid rgba(255,255,255,0.05);
+          border-top: 1px solid rgba(255,255,255,0.04);
         }
         .dsb-track:first-child { border-top: none; }
         .dsb-track-live {
-          border-top-color: rgba(126,216,88,0.18);
+          border-top-color: rgba(126,216,88,0.15);
         }
         .dsb-track-dot {
           width: 6px;
@@ -220,7 +215,7 @@ export default function ScheduleBoard() {
         }
         .dsb-track-title {
           font-size: clamp(10.5px, 1.3vw, 13px);
-          color: rgba(251,243,230,0.85);
+          color: rgba(255,255,255,0.7);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -233,7 +228,7 @@ export default function ScheduleBoard() {
         }
         .dsb-track-duration {
           font-size: 10px;
-          color: rgba(251,243,230,0.45);
+          color: rgba(255,255,255,0.3);
           font-variant-numeric: tabular-nums;
           flex-shrink: 0;
         }
@@ -246,9 +241,6 @@ export default function ScheduleBoard() {
 
       <div className="dsb-slots">
         {(() => {
-          // Mirror the server's own rule exactly: whichever scheduled slot
-          // matches FIRST wins, even if another slot's range also overlaps
-          // the current hour. Only one slot is ever actually playing.
           const activeIndex = slots.findIndex((slot) => slot.allDay || isSlotActiveNow(slot, data.timezone));
           return slots.map((slot, i) => {
             const active = i === activeIndex;
@@ -257,7 +249,7 @@ export default function ScheduleBoard() {
               <div key={i} className={`dsb-slot ${active ? "dsb-slot-active" : ""}`}>
                 <div className="dsb-slot-head">
                   <div className="dsb-slot-top">
-                    {slot.allDay && !slot.label && <Radio size={12} strokeWidth={2.25} style={{ color: "#fbf3e6" }} />}
+                    {slot.allDay && !slot.label && <Radio size={12} strokeWidth={2.25} style={{ color: "#fff" }} />}
                     <span className="dsb-slot-label">{slot.label || timeLabel}</span>
                     {active && <span className="dsb-live-label">ON AIR</span>}
                     {active && <span className="dsb-live-dot" />}

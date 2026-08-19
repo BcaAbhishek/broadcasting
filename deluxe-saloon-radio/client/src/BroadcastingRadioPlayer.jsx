@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX, Users, Share2, Check, WifiOff, SkipForward } from "lucide-react";
+import { Volume2, VolumeX, Users, Share2, Check, WifiOff, SkipForward, PartyPopper } from "lucide-react";
 
 // Point this at your running server (see server/README).
 const SERVER_URL = "https://broadcasting-github-io.onrender.com";
@@ -274,10 +274,10 @@ export default function BroadcastingRadioPlayer() {
     : "Loading…";
 
   return (
-    <div className="dsr-root">
+    <div className={`dsr-root ${!joined ? "is-dim" : ""}`}>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Bebas+Neue&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
       />
       <style>{`
         .dsr-root {
@@ -286,112 +286,283 @@ export default function BroadcastingRadioPlayer() {
           max-width: 880px;
           margin: 0 auto;
           position: relative;
-          border-radius: clamp(14px, 3vw, 22px);
+          border-radius: clamp(20px, 3vw, 32px);
           overflow: hidden;
-          aspect-ratio: 16 / 15;
-          box-shadow: 0 24px 70px rgba(15,8,3,0.5);
-          background: #2a1608;
-        }
-        @media (max-width: 480px) {
-          .dsr-root { aspect-ratio: 3 / 4; border-radius: 16px; }
+          background: #0b0a10;
+          box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+          border: 1px solid rgba(255,255,255,0.06);
+          padding: clamp(18px, 3vw, 30px);
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          min-height: clamp(480px, 60vw, 620px);
         }
         @media (min-width: 1300px) {
           .dsr-root { max-width: 960px; }
         }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes drift1 { 0% { transform: translate(0,0); opacity:0; } 15% { opacity:0.5; } 100% { transform: translate(30px,-90px); opacity:0; } }
-        @keyframes drift2 { 0% { transform: translate(0,0); opacity:0; } 15% { opacity:0.4; } 100% { transform: translate(-24px,-110px); opacity:0; } }
+
+        /* Aurora background — slow-moving blurred gradient blobs */
+        .dsr-aurora {
+          position: absolute;
+          inset: -20%;
+          z-index: 0;
+          filter: blur(70px);
+          opacity: 0.65;
+          transition: opacity 0.6s ease;
+        }
+        .dsr-root.is-dim .dsr-aurora { opacity: 0.28; }
+        .dsr-blob {
+          position: absolute;
+          border-radius: 50%;
+        }
+        .dsr-blob-1 {
+          width: 46%; height: 46%; top: 4%; left: 6%;
+          background: #8b5cf6;
+          animation: drift1 14s ease-in-out infinite;
+        }
+        .dsr-blob-2 {
+          width: 40%; height: 40%; bottom: 6%; right: 8%;
+          background: #f472b6;
+          animation: drift2 17s ease-in-out infinite;
+        }
+        .dsr-blob-3 {
+          width: 34%; height: 34%; bottom: 20%; left: 24%;
+          background: #fb923c;
+          animation: drift3 20s ease-in-out infinite;
+        }
+        @keyframes drift1 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(8%, 10%) scale(1.15); }
+        }
+        @keyframes drift2 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(-10%, -6%) scale(1.1); }
+        }
+        @keyframes drift3 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(6%, -12%) scale(1.2); }
+        }
+
+        .dsr-grain {
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          background: rgba(11,10,16,0.35);
+          backdrop-filter: blur(60px);
+        }
+
+        .dsr-content {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
         @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(126,216,88,0.5);} 50% { box-shadow: 0 0 0 6px rgba(126,216,88,0);} }
-        @keyframes waveOut { 0% { transform: scale(0.85); opacity: 0.5; } 100% { transform: scale(1.35); opacity: 0; } }
-        @keyframes eqA { 0%,100% { height: 4px; } 50% { height: 12px; } }
-        @keyframes eqB { 0%,100% { height: 10px; } 50% { height: 3px; } }
-        @keyframes eqC { 0%,100% { height: 6px; } 50% { height: 14px; } }
-        .dsr-eq span { display:inline-block; width: clamp(2.5px, 0.6vw, 3px); background:#e8a13a; border-radius:2px; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes eqA { 0%,100% { height: 5px; } 50% { height: 16px; } }
+        @keyframes eqB { 0%,100% { height: 14px; } 50% { height: 4px; } }
+        @keyframes eqC { 0%,100% { height: 8px; } 50% { height: 18px; } }
+        .dsr-eq span { display:inline-block; width: 3px; border-radius: 2px; background: linear-gradient(180deg, #f472b6, #8b5cf6); }
         .dsr-eq span:nth-child(1){ animation: eqA 0.9s ease-in-out infinite; }
         .dsr-eq span:nth-child(2){ animation: eqB 0.9s ease-in-out infinite 0.15s; }
         .dsr-eq span:nth-child(3){ animation: eqC 0.9s ease-in-out infinite 0.3s; }
 
-        .dsr-top-stack {
+        .dsr-wordmark {
+          position: relative;
+          z-index: 4;
+          text-align: center;
+          font-family: 'Space Grotesk', 'Poppins', sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          font-size: clamp(14px, 2.4vw, 21px);
+          margin: 0 0 clamp(12px, 2.4vw, 18px);
+          background: linear-gradient(90deg, #8b5cf6, #f472b6, #fb923c);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          filter: drop-shadow(0 0 10px rgba(244,114,182,0.45)) drop-shadow(0 0 22px rgba(139,92,246,0.3));
+          animation: neonPulse 4.5s ease-in-out infinite;
+        }
+        @keyframes neonPulse {
+          0%, 100% { filter: drop-shadow(0 0 10px rgba(244,114,182,0.45)) drop-shadow(0 0 22px rgba(139,92,246,0.3)); }
+          50% { filter: drop-shadow(0 0 16px rgba(251,146,60,0.5)) drop-shadow(0 0 30px rgba(139,92,246,0.45)); }
+        }
+
+        .dsr-static {
           position: absolute;
-          top: clamp(10px, 2.5vw, 18px);
-          left: clamp(10px, 2.5vw, 18px);
-          right: clamp(10px, 2.5vw, 18px);
+          inset: 0;
+          z-index: 1;
+          pointer-events: none;
+          opacity: 0.05;
+          mix-blend-mode: overlay;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+        }
+
+        .dsr-top-stack {
           display: flex;
           flex-direction: column;
           gap: 8px;
-          z-index: 5;
+          margin-bottom: clamp(14px, 3vw, 22px);
         }
-
         .dsr-badge-row {
           display: flex;
           align-items: center;
           gap: 8px;
         }
+        .dsr-clock-spacer { margin-right: auto; }
         .dsr-badge {
           display: flex;
           align-items: center;
           gap: 6px;
-          padding: clamp(5px, 1.2vw, 6px) clamp(10px, 2.5vw, 13px);
+          padding: 7px 13px;
           border-radius: 999px;
-          background: rgba(15,8,3,0.42);
-          backdrop-filter: blur(6px);
-          color: rgba(255,246,232,0.92);
-          font-size: clamp(10.5px, 1.4vw, 14px);
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.08);
+          backdrop-filter: blur(10px);
+          color: rgba(255,255,255,0.85);
+          font-size: clamp(11px, 1.3vw, 13px);
           font-weight: 500;
           white-space: nowrap;
           margin-left: auto;
         }
         .dsr-share-btn {
-          width: clamp(26px, 3.4vw, 32px);
-          height: clamp(26px, 3.4vw, 32px);
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
-          border: none;
-          background: rgba(15,8,3,0.42);
-          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255,255,255,0.08);
+          background: rgba(255,255,255,0.06);
+          backdrop-filter: blur(10px);
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           flex-shrink: 0;
         }
-
         .dsr-offline {
           display: flex;
           align-items: center;
           gap: 8px;
-          padding: clamp(8px, 1.4vw, 13px) clamp(10px, 1.6vw, 16px);
+          padding: 10px 14px;
           border-radius: 12px;
-          background: rgba(58,20,14,0.75);
-          backdrop-filter: blur(6px);
-          border: 1px solid rgba(220,110,90,0.4);
-          color: #fbf3e6;
-          font-size: clamp(10.5px, 1.4vw, 14px);
+          background: rgba(244,63,94,0.12);
+          border: 1px solid rgba(244,63,94,0.3);
+          color: #fecdd3;
+          font-size: clamp(11px, 1.3vw, 13px);
+        }
+        .dsr-special {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px 14px;
+          border-radius: 12px;
+          background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(244,114,182,0.18), rgba(251,146,60,0.18));
+          border: 1px solid rgba(255,255,255,0.12);
+          color: #fff;
+          font-size: clamp(12px, 1.5vw, 14px);
+          font-weight: 600;
+          text-align: center;
         }
 
-        .dsr-bottom-stack {
-          position: absolute;
-          left: clamp(10px, 2.5vw, 18px);
-          right: clamp(10px, 2.5vw, 18px);
-          bottom: clamp(10px, 2.5vw, 18px);
+        .dsr-center {
+          flex: 1;
           display: flex;
           flex-direction: column;
-          gap: 7px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: clamp(14px, 3vw, 20px);
+          padding: clamp(6px, 2vw, 14px) 8px;
+        }
+
+        .dsr-album-wrap {
+          position: relative;
+          width: clamp(120px, 26vw, 190px);
+          height: clamp(120px, 26vw, 190px);
+        }
+        .dsr-album-ring {
+          position: absolute;
+          inset: -8px;
+          border-radius: 50%;
+          background: conic-gradient(from 0deg, #8b5cf6, #f472b6, #fb923c, #8b5cf6);
+          opacity: 0.9;
+          filter: blur(1px);
+        }
+        .dsr-album-ring.spinning { animation: spin 6s linear infinite; }
+        .dsr-dial-ticks {
+          position: absolute;
+          inset: -20px;
+          border-radius: 50%;
+          background: repeating-conic-gradient(
+            rgba(255,255,255,0.35) 0deg 1.2deg,
+            transparent 1.2deg 9deg
+          );
+          -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px), #000 100%, transparent 100%);
+          mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px), #000 100%, transparent 100%);
+          opacity: 0.5;
+        }
+        .dsr-album {
+          position: absolute;
+          inset: 5px;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .dsr-album.spinning { animation: spin 8s linear infinite; }
+        .dsr-album-dot {
+          position: absolute;
+          top: 50%; left: 50%;
+          width: 22%; height: 22%;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+          background: rgba(11,10,16,0.75);
+          border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .dsr-title {
+          margin: 0;
+          font-family: 'Space Grotesk', 'Poppins', sans-serif;
+          font-weight: 700;
+          font-size: clamp(19px, 3.4vw, 30px);
+          line-height: 1.15;
+          letter-spacing: -0.01em;
+          background: linear-gradient(90deg, #ffffff, #e9d5ff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          max-width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .dsr-artist {
+          margin: 0;
+          color: rgba(255,255,255,0.5);
+          font-size: clamp(12px, 1.8vw, 15px);
+          font-weight: 500;
+          max-width: 85%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .dsr-nextup {
-          display: flex;
+          display: inline-flex;
           align-items: center;
           gap: 6px;
-          align-self: flex-start;
-          max-width: 100%;
-          padding: 4px clamp(9px, 1.6vw, 12px);
+          padding: 5px 12px;
           border-radius: 999px;
-          background: rgba(15,8,3,0.42);
-          backdrop-filter: blur(6px);
-          color: rgba(251,243,230,0.75);
-          font-size: clamp(9.5px, 1.1vw, 12px);
-          white-space: nowrap;
-          overflow: hidden;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.08);
+          color: rgba(255,255,255,0.55);
+          font-size: clamp(10.5px, 1.2vw, 12px);
+          max-width: 92%;
         }
         .dsr-nextup span {
           overflow: hidden;
@@ -399,42 +570,53 @@ export default function BroadcastingRadioPlayer() {
           white-space: nowrap;
         }
 
-        .dsr-pill {
-          border-radius: 999px;
-          background: linear-gradient(90deg, rgba(24,13,6,0.85) 0%, rgba(42,20,8,0.75) 100%);
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
-          border: 1px solid rgba(255,255,255,0.08);
-          padding: clamp(7px, 1.4vw, 15px) clamp(10px, 1.8vw, 22px) clamp(7px, 1.4vw, 15px) clamp(6px, 1.2vw, 14px);
+        .dsr-bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: clamp(10px, 2.5vw, 16px);
+        }
+        .dsr-progress-row {
           display: flex;
           align-items: center;
-          gap: clamp(8px, 1.4vw, 16px);
-          transition: opacity 0.4s ease;
+          gap: 10px;
         }
-
-        .dsr-album {
-          width: clamp(42px, 6vw, 72px);
-          height: clamp(42px, 6vw, 72px);
-          border-radius: 50%;
-          flex-shrink: 0;
+        .dsr-progress-track {
+          flex: 1;
+          height: 4px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.1);
+          position: relative;
+          overflow: hidden;
+        }
+        .dsr-progress-fill {
+          position: absolute;
+          left: 0; top: 0; bottom: 0;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #8b5cf6, #f472b6, #fb923c);
+          transition: width 0.9s linear;
+        }
+        .dsr-time {
+          font-size: clamp(10px, 1.2vw, 12px);
+          color: rgba(255,255,255,0.4);
+          font-variant-numeric: tabular-nums;
+          white-space: nowrap;
+          min-width: 62px;
+          text-align: right;
+        }
+        .dsr-controls-row {
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+          gap: 14px;
         }
-
-        .dsr-title { margin: 0; color: #fbf3e6; font-size: clamp(12.5px, 1.8vw, 20px); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .dsr-artist { margin: 1px 0 0; color: rgba(251,243,230,0.62); font-size: clamp(10.5px, 1.4vw, 15px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .dsr-time { font-size: clamp(9.5px, 1.1vw, 13px); color: rgba(251,243,230,0.55); font-variant-numeric: tabular-nums; white-space: nowrap; }
-
         .dsr-icon-btn {
-          width: clamp(30px, 4.5vw, 42px);
-          height: clamp(30px, 4.5vw, 42px);
-          min-width: 30px;
-          min-height: 30px;
+          width: 42px;
+          height: 42px;
           border-radius: 50%;
-          border: none;
-          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.06);
+          backdrop-filter: blur(10px);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -442,89 +624,164 @@ export default function BroadcastingRadioPlayer() {
           flex-shrink: 0;
         }
 
+        .dsr-join-overlay {
+          position: absolute;
+          inset: 0;
+          z-index: 3;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          background: rgba(6,5,10,0.88);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          cursor: pointer;
+          text-align: center;
+          padding: 20px;
+        }
         .dsr-join-circle {
-          width: clamp(52px, 8vw, 92px);
-          height: clamp(52px, 8vw, 92px);
+          width: clamp(64px, 10vw, 84px);
+          height: clamp(64px, 10vw, 84px);
           border-radius: 50%;
-          background: #fbf3e6;
+          background: linear-gradient(135deg, #8b5cf6, #f472b6, #fb923c);
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+          box-shadow: 0 12px 32px rgba(139,92,246,0.4);
         }
-        .dsr-join-title { margin: 0; color: #fbf3e6; font-size: clamp(13px, 2vw, 20px); font-weight: 600; text-align: center; padding: 0 12px; }
-        .dsr-join-sub { margin: 0; color: rgba(251,243,230,0.65); font-size: clamp(11px, 1.5vw, 16px); }
+        .dsr-join-title {
+          margin: 0;
+          font-family: 'Space Grotesk', 'Poppins', sans-serif;
+          font-weight: 700;
+          font-size: clamp(16px, 2.6vw, 22px);
+          color: #fff;
+        }
+        .dsr-join-sub {
+          margin: 0;
+          color: rgba(255,255,255,0.55);
+          font-size: clamp(11.5px, 1.6vw, 14px);
+        }
       `}</style>
+
+      <div className="dsr-aurora">
+        <div className="dsr-blob dsr-blob-1" />
+        <div className="dsr-blob dsr-blob-2" />
+        <div className="dsr-blob dsr-blob-3" />
+      </div>
+      <div className="dsr-grain" />
+      <div className="dsr-static" />
+
       {/* Hidden YouTube player — audio only, no visible video frame */}
       <div style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}>
         <div ref={ytContainerRef} />
       </div>
 
-      <Scene dim={!joined} />
+      <p className="dsr-wordmark">Broadcasting Radio</p>
 
-      {joined && (
-        <>
-          <span style={{ position: "absolute", left: "58%", top: "62%", width: 3, height: 3, borderRadius: "50%", background: "#f5d99a", animation: "drift1 6s linear infinite" }} />
-          <span style={{ position: "absolute", left: "68%", top: "58%", width: 2, height: 2, borderRadius: "50%", background: "#f5d99a", animation: "drift2 7.5s linear infinite 1.2s" }} />
-          <span style={{ position: "absolute", left: "50%", top: "66%", width: 2.5, height: 2.5, borderRadius: "50%", background: "#f5d99a", animation: "drift1 8.2s linear infinite 3s" }} />
-        </>
-      )}
-
-      <div className="dsr-top-stack">
-        <div className="dsr-badge-row">
-          <div className="dsr-badge">
-            <span
-              style={{
-                width: 7,
-                height: 7,
-                borderRadius: "50%",
-                background: connected ? "#7ed858" : "#8a5a5a",
-                animation: connected ? "pulseGlow 2s ease-out infinite" : "none",
-                flexShrink: 0,
-              }}
-            />
-            <Users size={13} strokeWidth={2.25} style={{ flexShrink: 0 }} />
-            <span>{listeners} listening</span>
+      <div className="dsr-content">
+        <div className="dsr-top-stack">
+          <div className="dsr-badge-row">
+            <div className="dsr-badge">
+              <span
+                style={{
+                  width: 7,
+                  height: 7,
+                  borderRadius: "50%",
+                  background: connected ? "#7ed858" : "#8a5a5a",
+                  animation: connected ? "pulseGlow 2s ease-out infinite" : "none",
+                  flexShrink: 0,
+                }}
+              />
+              <Users size={13} strokeWidth={2.25} style={{ flexShrink: 0 }} />
+              <span>{listeners} listening</span>
+            </div>
+            <button className="dsr-share-btn" onClick={handleShare} aria-label="Share">
+              {shareCopied ? <Check size={14} color="#7ed858" /> : <Share2 size={14} color="#fff" />}
+            </button>
           </div>
-          <button className="dsr-share-btn" onClick={handleShare} aria-label="Share">
-            {shareCopied ? <Check size={14} color="#7ed858" /> : <Share2 size={14} color="#fbf3e6" />}
-          </button>
+
+          {showOffline && (
+            <div className="dsr-offline">
+              <WifiOff size={14} strokeWidth={2.25} style={{ flexShrink: 0 }} />
+              <span>Connection lost — reconnecting…</span>
+            </div>
+          )}
+
+          {nowPlaying?.specialDay?.label && (
+            <div className="dsr-special">
+              <PartyPopper size={15} strokeWidth={2.25} style={{ flexShrink: 0 }} />
+              <span>{nowPlaying.specialDay.label}</span>
+            </div>
+          )}
         </div>
 
-        {showOffline && (
-          <div className="dsr-offline">
-            <WifiOff size={14} strokeWidth={2.25} style={{ flexShrink: 0, color: "#e88a72" }} />
-            <span>Connection lost — reconnecting…</span>
+        <div className="dsr-center">
+          <div className="dsr-album-wrap">
+            <div className="dsr-dial-ticks" />
+            <div className={`dsr-album-ring ${joined ? "spinning" : ""}`} />
+            <div
+              className={`dsr-album ${joined ? "spinning" : ""}`}
+              style={{
+                background: track?.cover ? `url(${track.cover}) center/cover, #1a1625` : "linear-gradient(135deg, #8b5cf6, #f472b6)",
+              }}
+            >
+              <div className="dsr-album-dot" />
+            </div>
           </div>
-        )}
+
+          <div>
+            <p className="dsr-title">{track ? track.title : loadingLabel}</p>
+            <p className="dsr-artist">{track ? track.artist : ""}</p>
+          </div>
+
+          {joined && (
+            <div className="dsr-eq" style={{ display: "flex", alignItems: "flex-end", gap: 3, height: 18 }}>
+              <span style={{ height: 5 }} />
+              <span style={{ height: 14 }} />
+              <span style={{ height: 8 }} />
+            </div>
+          )}
+
+          {track && nextTrack && (
+            <div className="dsr-nextup">
+              <SkipForward size={11} strokeWidth={2.25} style={{ flexShrink: 0, color: "#f472b6" }} />
+              <span>Up next: {nextTrack.title} — {nextTrack.artist}</span>
+            </div>
+          )}
+        </div>
+
+        <div className="dsr-bottom">
+          <div className="dsr-progress-row">
+            <div className="dsr-progress-track">
+              <div className="dsr-progress-fill" style={{ width: `${progressPct}%` }} />
+            </div>
+            <span className="dsr-time">
+              {track ? `${formatTime(displayElapsed)} / ${formatTime(track.duration)}` : "0:00 / 0:00"}
+            </span>
+          </div>
+
+          {joined && (
+            <div className="dsr-controls-row">
+              <button onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"} className="dsr-icon-btn">
+                {muted ? <VolumeX size={17} color="#fff" /> : <Volume2 size={17} color="#fff" />}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       {!joined && track && (
-        <div
-          onClick={handleJoin}
-          role="button"
-          tabIndex={0}
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 14,
-            background: "rgba(10,6,2,0.55)",
-            cursor: "pointer",
-          }}
-        >
+        <div className="dsr-join-overlay" onClick={handleJoin} role="button" tabIndex={0}>
           <div className="dsr-join-circle">
             <div
               style={{
                 width: 0,
                 height: 0,
                 marginLeft: 5,
-                borderTop: "12px solid transparent",
-                borderBottom: "12px solid transparent",
-                borderLeft: "18px solid #6b3f16",
+                borderTop: "13px solid transparent",
+                borderBottom: "13px solid transparent",
+                borderLeft: "20px solid #ffffff",
               }}
             />
           </div>
@@ -532,199 +789,6 @@ export default function BroadcastingRadioPlayer() {
           <p className="dsr-join-sub">{listeners} already listening</p>
         </div>
       )}
-
-      <div className="dsr-bottom-stack">
-        {track && nextTrack && (
-          <div className="dsr-nextup">
-            <SkipForward size={11} strokeWidth={2.25} style={{ flexShrink: 0, color: "#e8a13a" }} />
-            <span>Up next: {nextTrack.title} — {nextTrack.artist}</span>
-          </div>
-        )}
-
-        <div className="dsr-pill" style={{ opacity: joined ? 1 : 0.5 }}>
-          <AlbumArt cover={track?.cover || null} spinning={joined} />
-
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <div style={{ minWidth: 0, flex: 1 }}>
-                <p className="dsr-title">{track ? track.title : loadingLabel}</p>
-                <p className="dsr-artist">{track ? track.artist : ""}</p>
-              </div>
-
-              {joined && (
-                <div className="dsr-eq" style={{ display: "flex", alignItems: "flex-end", gap: 2, height: 14, marginRight: 2, flexShrink: 0 }}>
-                  <span style={{ height: 4 }} />
-                  <span style={{ height: 10 }} />
-                  <span style={{ height: 6 }} />
-                </div>
-              )}
-
-              {joined && (
-                <button onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"} className="dsr-icon-btn">
-                  {muted ? <VolumeX size={15} color="#fbf3e6" /> : <Volume2 size={15} color="#fbf3e6" />}
-                </button>
-              )}
-            </div>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 7 }}>
-              <div style={{ flex: 1, height: 4, borderRadius: 999, background: "rgba(255,255,255,0.16)", position: "relative" }}>
-                <div
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    bottom: 0,
-                    width: `${progressPct}%`,
-                    borderRadius: 999,
-                    background: "#e8a13a",
-                    transition: "width 0.9s linear",
-                  }}
-                />
-              </div>
-              <span className="dsr-time" style={{ minWidth: 60, textAlign: "right" }}>
-                {track ? `${formatTime(displayElapsed)} / ${formatTime(track.duration)}` : "0:00 / 0:00"}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  );
-}
-
-function AlbumArt({ cover, spinning }) {
-  return (
-    <div
-      className="dsr-album"
-      style={{
-        background: cover
-          ? `url(${cover}) center/cover, #1a0e08`
-          : "radial-gradient(circle, #d9a441 0%, #d9a441 22%, #1a0e08 23%, #1a0e08 100%)",
-        animation: spinning ? "spin 4.5s linear infinite" : "none",
-      }}
-    >
-      <div
-        style={{
-          width: "27%",
-          height: "27%",
-          borderRadius: "50%",
-          background: "rgba(20,10,6,0.55)",
-          border: "2px solid rgba(255,255,255,0.25)",
-        }}
-      />
-    </div>
-  );
-}
-
-// Flat-illustration backdrop: a warm listening room with a vintage
-// broadcast radio set as the centerpiece, plus a wordmark plaque on top.
-function Scene({ dim }) {
-  return (
-    <svg
-      viewBox="0 0 720 675"
-      width="100%"
-      height="100%"
-      preserveAspectRatio="xMidYMid slice"
-      style={{
-        position: "absolute",
-        inset: 0,
-        display: "block",
-        filter: dim ? "brightness(0.55) saturate(0.7)" : "brightness(1) saturate(1)",
-        transition: "filter 0.6s ease",
-      }}
-    >
-      {/* room walls */}
-      <rect x="0" y="0" width="720" height="675" fill="#4a2c18" />
-      <rect x="0" y="0" width="720" height="675" fill="#2e1810" opacity="0.35" />
-      <rect x="0" y="480" width="720" height="195" fill="#1c1008" />
-
-      {/* warm glow behind the radio */}
-      <circle cx="360" cy="400" r="230" fill="#e8a13a" opacity="0.10" />
-      <circle cx="360" cy="400" r="160" fill="#e8a13a" opacity="0.10" />
-
-      {/* wordmark plaque */}
-      <rect x="55" y="34" width="610" height="104" rx="10" fill="#1c1008" opacity="0.35" />
-      <rect x="48" y="26" width="610" height="104" rx="10" fill="#c1622c" />
-      <rect x="48" y="26" width="610" height="104" rx="10" fill="none" stroke="#2e1810" strokeWidth="4" />
-      <text
-        x="360"
-        y="97"
-        textAnchor="middle"
-        fontFamily="'Bebas Neue', sans-serif"
-        fontSize="58"
-        letterSpacing="4"
-        fill="#fbf3e6"
-      >
-        BROADCASTING RADIO
-      </text>
-
-      {/* floor rug under the set */}
-      <ellipse cx="360" cy="560" rx="230" ry="40" fill="#7a2a1f" opacity="0.4" />
-
-      {/* sound wave arcs from the speaker */}
-      <g opacity={dim ? 0 : 1} style={{ transition: "opacity 0.6s ease" }}>
-        <path d="M 275 400 a 55 55 0 0 1 0 -90" fill="none" stroke="#f5d99a" strokeWidth="4" strokeLinecap="round" opacity="0.5" />
-        <path d="M 258 400 a 75 75 0 0 1 0 -130" fill="none" stroke="#f5d99a" strokeWidth="3" strokeLinecap="round" opacity="0.3" />
-      </g>
-
-      {/* --- vintage radio set --- */}
-      <g transform="translate(220,255)">
-        {/* legs */}
-        <rect x="20" y="238" width="16" height="26" rx="4" fill="#2e1810" />
-        <rect x="244" y="238" width="16" height="26" rx="4" fill="#2e1810" />
-
-        {/* body */}
-        <rect x="0" y="0" width="280" height="245" rx="26" fill="#6b4423" />
-        <rect x="0" y="0" width="280" height="245" rx="26" fill="none" stroke="#3a2414" strokeWidth="5" />
-
-        {/* inner brass panel */}
-        <rect x="20" y="20" width="240" height="170" rx="14" fill="#caa15a" />
-
-        {/* speaker grille */}
-        <circle cx="80" cy="105" r="58" fill="#241408" />
-        <circle cx="80" cy="105" r="46" fill="none" stroke="#caa15a" strokeWidth="3" opacity="0.5" />
-        <circle cx="80" cy="105" r="32" fill="none" stroke="#caa15a" strokeWidth="3" opacity="0.4" />
-        <circle cx="80" cy="105" r="18" fill="none" stroke="#caa15a" strokeWidth="3" opacity="0.35" />
-
-        {/* dial */}
-        <circle cx="196" cy="90" r="42" fill="#f5e6d0" stroke="#241408" strokeWidth="5" />
-        {Array.from({ length: 10 }).map((_, i) => {
-          const angle = (i / 9) * Math.PI * 1.3 - Math.PI * 1.15;
-          const x1 = 196 + Math.cos(angle) * 32;
-          const y1 = 90 + Math.sin(angle) * 32;
-          const x2 = 196 + Math.cos(angle) * 40;
-          const y2 = 90 + Math.sin(angle) * 40;
-          return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#241408" strokeWidth="2.5" />;
-        })}
-        <line x1="196" y1="90" x2="222" y2="72" stroke="#c1622c" strokeWidth="4" strokeLinecap="round" />
-        <circle cx="196" cy="90" r="5" fill="#241408" />
-
-        {/* knobs */}
-        <circle cx="70" cy="215" r="17" fill="#241408" />
-        <circle cx="70" cy="215" r="17" fill="none" stroke="#caa15a" strokeWidth="2" opacity="0.5" />
-        <circle cx="140" cy="215" r="17" fill="#241408" />
-        <circle cx="140" cy="215" r="17" fill="none" stroke="#caa15a" strokeWidth="2" opacity="0.5" />
-        <circle cx="210" cy="215" r="17" fill="#241408" />
-        <circle cx="210" cy="215" r="17" fill="none" stroke="#caa15a" strokeWidth="2" opacity="0.5" />
-
-        {/* antenna */}
-        <line x1="235" y1="10" x2="300" y2="-95" stroke="#241408" strokeWidth="5" strokeLinecap="round" />
-        <circle cx="300" cy="-95" r="7" fill="#e8a13a" />
-      </g>
-
-      {/* two seated listener silhouettes, low corners */}
-      <g transform="translate(70,545)" opacity="0.9">
-        <ellipse cx="24" cy="90" rx="40" ry="12" fill="#1c1008" opacity="0.4" />
-        <path d="M0,90 v-40 q0,-30 24,-30 q24,0 24,30 v40 Z" fill="#3f6b7a" />
-        <circle cx="24" cy="10" r="17" fill="#c98a5f" />
-      </g>
-      <g transform="translate(560,555)" opacity="0.9">
-        <ellipse cx="24" cy="82" rx="38" ry="11" fill="#1c1008" opacity="0.4" />
-        <path d="M0,82 v-36 q0,-28 24,-28 q24,0 24,28 v36 Z" fill="#c1622c" />
-        <circle cx="24" cy="8" r="16" fill="#8a4a2a" />
-      </g>
-
-      <rect x="0" y="620" width="720" height="55" fill="#1c1008" opacity="0.4" />
-    </svg>
   );
 }
