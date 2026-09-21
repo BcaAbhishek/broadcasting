@@ -104,7 +104,7 @@ export default function ScheduleBoard() {
           font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
           width: 100%;
           border-radius: clamp(20px, 3vw, 32px);
-          background: #0b0a10;
+          background: #2a1608;
           border: 1px solid rgba(255,255,255,0.06);
           box-shadow: 0 30px 80px rgba(0,0,0,0.6);
           padding: clamp(16px, 1.8vw, 24px);
@@ -139,7 +139,7 @@ export default function ScheduleBoard() {
           overflow: hidden;
         }
         .dsb-slot-active {
-          background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(244,114,182,0.10));
+          background: background: rgba(232,161,58,0.10); border: 1px solid rgba(232,161,58,0.4);
           border: 1px solid rgba(244,114,182,0.35);
         }
         .dsb-slot-head {
