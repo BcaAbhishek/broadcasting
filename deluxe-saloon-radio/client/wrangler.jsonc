@@ -3,7 +3,7 @@
   "name": "broadcasting01",
   "compatibility_date": "2026-09-21",
   "assets": {
-    "directory": "./dist",
+    "directory": "./deluxe-saloon-radio/client",
     "not_found_handling": "single-page-application"
   }
 }
