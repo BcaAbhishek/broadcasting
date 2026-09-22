@@ -7,7 +7,7 @@ The application uses the YouTube Data API to fetch playlist information, the You
 ## 🚀 Live Demo
 
 🔗 **Live Website:**  
-https://broadcasting-github-io.vercel.app/
+https://broadcastingfm.vercel.app/
 
 ---
 
